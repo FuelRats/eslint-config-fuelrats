@@ -6,15 +6,17 @@ Standard configurations for various ECMAScript projects
 
 ### eslint-config-fuelrats
 
-Base ESLint ruleset with babel-eslint as the primary parser.
+* Base ESLint ruleset with babel-eslint as the primary parser.
+
 
 ### eslint-config-fuelrats-react
 
-eslint-config-fuelrats + react+jsx plugins and rules
+* eslint-config-fuelrats + react+jsx plugins and rules
+
 
 ### eslint-config-fuelrats-backend
 
-eslint-config-fuelrats + backend node.js rules.
+* eslint-config-fuelrats + backend node.js rules.
 
 
 
