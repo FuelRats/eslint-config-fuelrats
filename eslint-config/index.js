@@ -8,7 +8,6 @@ module.exports = {
     es6: true,
   },
   extends: [
-    './common',
     './rules/bestpractices',
     './rules/errors',
     './rules/es6',
