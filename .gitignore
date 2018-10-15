@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+.next
+.env
+.dist
+bower_components
+node_modules
+static/compiled
+static/fonts/font-awesome
+logs/
