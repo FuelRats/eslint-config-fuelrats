@@ -1,0 +1,59 @@
+{
+  "name": "@fuelrats/eslint-config",
+  "version": "0.1.0",
+  "description": "ESLint configs for fuelrats projects.",
+  "author": {
+    "name": "Cameron Welter",
+    "email": "clapton@fuelrats.com",
+    "url": "https://fuelrats.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
+  },
+  "contributors": [
+    {
+      "name": "Cameron Welter",
+      "email": "clapton@fuelrats.com",
+      "url": "https://github.com/UncleClapton"
+    },
+    {
+      "name": "Trezy",
+      "email": "tre@trezy.com",
+      "url": "https://trezy.com"
+    },
+    {
+      "name": "Alex S. Glomsaas",
+      "url": "https://github.com/xlexi"
+    }
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FuelRats/eslint-config-fuelrats"
+  },
+  "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "fuelrats",
+    "javascript",
+    "ecma2018",
+    "es2018"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "dependencies": {
+    "eslint-restricted-globals": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
