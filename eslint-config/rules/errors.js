@@ -74,10 +74,7 @@ module.exports = {
 
 
     // disallow unnecessary parentheses
-    'no-extra-parens': ['error', 'all', {
-      conditionalAssign: true,
-      ignoreJSX: 'all',
-    }],
+    'no-extra-parens': ['off'],
 
 
     // disallow unnecessary semicolons

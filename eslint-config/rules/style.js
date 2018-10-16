@@ -405,22 +405,22 @@ module.exports = {
     // enforce consistent line breaks inside braces
     'object-curly-newline': ['error', {
       ExportDeclaration: {
-        minProperties: 2,
+        minProperties: 5,
         multiline: true,
         consistent: true,
       },
       ImportDeclaration: {
-        minProperties: 2,
+        minProperties: 5,
         multiline: true,
         consistent: true,
       },
       ObjectExpression: {
-        minProperties: 2,
+        minProperties: 5,
         multiline: true,
         consistent: true,
       },
       ObjectPattern: {
-        minProperties: 2,
+        minProperties: 5,
         multiline: true,
         consistent: true,
       },
