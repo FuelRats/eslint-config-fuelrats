@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "ESLint config for our react projects",
   "author": {
     "name": "Cameron Welter",
@@ -44,7 +44,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@fuelrats/eslint-config": "^0.3.0"
+    "@fuelrats/eslint-config": "^0.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
