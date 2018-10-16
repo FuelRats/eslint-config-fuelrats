@@ -11,6 +11,7 @@ module.exports = {
   extends: [
     '@fuelrats/eslint-config',
     './rules/plugin-react',
+    './rules/plugin-react-jsx',
     './rules/plugin-jsx-a11y',
   ].map(require.resolve),
   parserOptions: {
