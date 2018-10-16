@@ -44,7 +44,7 @@ module.exports = {
 
 
     // Rule enforces consistent usage of destructuring assignment in component
-    'react/destructuring-assignment': ['error', 'always'],
+    'react/destructuring-assignment': ['off'],
 
 
     // Prevent missing displayName in a React component definition
@@ -94,7 +94,7 @@ module.exports = {
 
 
     // Prevent usage of deprecated methods, including component lifecyle methods
-    'react/no-deprecated': ['error'],
+    'react/no-deprecated': ['warn'],
 
 
     // Prevent usage of setState in componentDidMount
@@ -154,7 +154,7 @@ module.exports = {
 
 
     // Prevent usage of UNSAFE_ methods
-    'react/no-unsafe': ['error'],
+    'react/no-unsafe': ['warn'],
 
 
     // Prevent definitions of unused prop types
