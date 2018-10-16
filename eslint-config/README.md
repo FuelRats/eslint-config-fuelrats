@@ -22,10 +22,9 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 
 ## Setup
-1. Run `yarn add @fuelrats/eslint-config`.
-2. Install all peerDependencies.
-    1. Run `yarn global add install-peerdeps`. (this is such a useful tool you should have it anyway 😃)
-    2. Then run `install-peerdeps @fuelrats/eslint-config`.
+1. Run `yarn global add install-peerdeps`. (this is such a useful tool you should have it anyway 😃)
+2. Add the config and all peerdeps by running: `install-peerdeps @fuelrats/eslint-config`.
+    * alternatively, if you use `npx` you could run `npx install-peerdeps @fuelrats/eslint-config`.
 3. Add `"extends": ["@fuelrats/eslint-config"],` to your `.eslintrc` file.
 4. Setup additional env options. By default, we only enable the es6 envronment. all other env settings are up to the project.
     * For more information on eslint envrionment settings, visit [the eslint docs][eslint-env]
