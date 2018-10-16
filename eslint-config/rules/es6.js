@@ -115,7 +115,7 @@ module.exports = {
         object: false,
       },
     }, {
-      enforceForRenamedProperties: true,
+      enforceForRenamedProperties: false,
     }],
 
 
