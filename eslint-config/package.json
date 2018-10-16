@@ -1,11 +1,11 @@
 {
   "name": "@fuelrats/eslint-config",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ESLint configs for fuelrats projects.",
   "author": {
     "name": "Cameron Welter",
     "email": "clapton@fuelrats.com",
-    "url": "https://fuelrats.com/"
+    "url": "https://github.com/UncleClapton"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -23,6 +23,7 @@
     },
     {
       "name": "Alex S. Glomsaas",
+      "email": "alex@sorlie.co.uk",
       "url": "https://github.com/xlexi"
     }
   ],
@@ -41,16 +42,16 @@
     "es2018"
   ],
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
+    "eslint-restricted-globals": "^0.1.1"
+  },
+  "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
     "eslint-plugin-babel": "^5.2.1",
     "eslint-plugin-import": "^2.14.0"
   },
-  "dependencies": {
-    "eslint-restricted-globals": "^0.1.1"
-  },
-  "devDependencies": {
+  "peerDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
     "eslint-plugin-babel": "^5.2.1",

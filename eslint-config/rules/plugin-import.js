@@ -6,9 +6,10 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: [
-          '.mjs',
           '.js',
           '.json',
+          '.jsx',
+          '.mjs',
         ],
       },
     },

@@ -3,6 +3,9 @@
 Standard configurations for Fuel Rats ECMAScript projects
 
 
+
+
+
 ## Motivation
 
 The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.
@@ -13,22 +16,24 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 
 
+
+
 ## Flavors
 This config currently comes in 2 flavors
 
 
-### @fuelrats/eslint-config
+### [@fuelrats/eslint-config][baseconfig]
 
-* Base ESLint ruleset with babel-eslint as the primary parser. Intended for node.js backend projects.
+* Base ESLint ruleset with babel-eslint as the primary parser. Generally intended for node.js backend projects.
     * Assumes an ES2018 class-based environment with babel transforms.
     * Includes `eslint-plugin-import` for additional ESModule linting.
     * Includes `eslint-plugin-babel` for providing core rule compatibility for common babel plugins
 
 
-### @fuelrats/eslint-config-react
+### [@fuelrats/eslint-config-react][reactconfig]
 
 * `@fuelrats/eslint-config` + react plugins and rules. Built specifically for our react projects.
-    * Includes `eslint-plugin-react` for react and better JSX linting
+    * Includes `eslint-plugin-react` for react and JSX linting
     * Includes `eslint-plugin-jsxa11y` for enforcing website accessibility best practices.
 
 
@@ -36,18 +41,21 @@ This config currently comes in 2 flavors
 
 
 ## Setup
-1. perform `yarn add @fuelrats/eslint-config` or `yarn add @fuelrats/eslint-config-react`
-2. Install all peerDependencies for your flavor
-    1. run `yarn global add install-peerdeps` (this is such a useful package you should have it anyway 😃)
-    2. then run `install-peerdeps @fuelrats/eslint-config` or `install-peerdeps @fuelrats/eslint-config-react`
-3. add `"extends": ["@fuelrats"],` or `"extends": ["@fuelrats/eslint-config-react"],` to your `.eslintrc` file
-4. Setup additional env options. By default, we only enable the es6 envronment. all other env settings are up to the project.
-    * for more information on this, visit [the eslint docs](https://eslint.org/docs/user-guide/configuring#specifying-environments)
+1. Choose your flavor. `@fuelrats/eslint-config` or `@fuelrats/eslint-config-react`.
+2. Go to the associated directory of your flavor in this repo for more setup information 😅.
 
 
 
 
 
 ## Credits
-Our code style and this config set was inspired by and derived from the AirBnB javascript style guide
-[Send some love their way 😍🎉🎊](https://github.com/airbnb/javascript)
+Our code style and this config set was inspired by and derived from the AirBnB javascript style guide.
+[Send some love their way 😍🎉🎊][airbnb]
+
+
+
+
+
+[airbnb]: https://github.com/airbnb/javascript
+[baseconfig]: https://www.npmjs.com/package/@fuelrats/eslint-config
+[reactconfig]: https://www.npmjs.com/package/@fuelrats/eslint-config-react
