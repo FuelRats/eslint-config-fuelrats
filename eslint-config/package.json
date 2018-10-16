@@ -1,7 +1,7 @@
 {
   "name": "@fuelrats/eslint-config",
   "version": "0.2.1",
-  "description": "ESLint configs for fuelrats projects.",
+  "description": "ESLint config for fuelrats projects",
   "author": {
     "name": "Cameron Welter",
     "email": "clapton@fuelrats.com",
