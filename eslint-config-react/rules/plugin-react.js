@@ -146,7 +146,7 @@ module.exports = {
 
 
     // Prevent invalid characters from appearing in markup
-    'react/no-unescaped-entities': ['error'],
+    'react/no-unescaped-entities': ['off'],
 
 
     // Prevent usage of unknown DOM property (fixable)
@@ -154,7 +154,8 @@ module.exports = {
 
 
     // Prevent usage of UNSAFE_ methods
-    'react/no-unsafe': ['warn'],
+    // ENABLE: React@v17.0.0: ['Error']
+    'react/no-unsafe': ['off'],
 
 
     // Prevent definitions of unused prop types

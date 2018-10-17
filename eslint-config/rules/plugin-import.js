@@ -229,10 +229,12 @@ module.exports = {
 
 
     // Prefer named exports to be grouped together in a single export declaration
-    'import/group-exports': ['error'],
+    // DISABLED: This can be cumbersome and hinders maintainability in many use cases.
+    'import/group-exports': ['off'],
 
 
     // Enforce a leading comment with the webpackChunkName for dynamic imports
+    // DISABLED: unused in our environments
     'import/dynamic-import-chunkname': ['off'],
   },
 }

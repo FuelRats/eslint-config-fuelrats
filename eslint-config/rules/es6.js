@@ -8,7 +8,7 @@ module.exports = {
 
     // require parentheses around arrow function arguments
     'arrow-parens': ['error', 'as-needed', {
-      requireForBlockBody: false,
+      requireForBlockBody: true,
     }],
 
 
@@ -32,7 +32,9 @@ module.exports = {
 
 
     // disallow arrow functions where they could be confused with comparisons
-    'no-confusing-arrow': ['error'],
+    'no-confusing-arrow': ['error', {
+      allowParens: true,
+    }],
 
 
     // disallow reassigning const variables

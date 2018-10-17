@@ -168,6 +168,7 @@ module.exports = {
         -1, // for decrement
         0, // for explicit length checks
         1, // for increment
+        2, // for halving values
         24, // for time math
         60, // for time math
         100, // for currency math

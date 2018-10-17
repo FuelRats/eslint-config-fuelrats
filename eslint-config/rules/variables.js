@@ -35,7 +35,8 @@ module.exports = {
 
 
     // disallow the use of undefined as an identifier
-    'no-undefined': ['error'],
+    // DISABLED: undefined us useful in default implicit return arrow functions.
+    'no-undefined': ['off'],
 
 
     // disallow unused variables

@@ -41,7 +41,7 @@ module.exports = {
 
     // Enforce event handler naming conventions in JSX
     'react/jsx-handler-names': ['error', {
-      eventHandlerPrefix: 'handle',
+      eventHandlerPrefix: '_?handle',
       eventHandlerPropPrefix: 'on',
     }],
 
@@ -104,9 +104,7 @@ module.exports = {
 
 
     // Limit to one expression per line in JSX
-    'react/jsx-one-expression-per-line': ['error', {
-      allow: 'single-child',
-    }],
+    'react/jsx-one-expression-per-line': ['off'],
 
 
     // Enforce curly braces or disallow unnecessary curly braces in JSX

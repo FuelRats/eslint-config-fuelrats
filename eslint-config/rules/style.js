@@ -217,7 +217,8 @@ module.exports = {
 
 
     // enforce a maximum number of line of code in a function
-    'max-lines-per-function': ['error', 100],
+    // DISABLED: we prefer to judge function length by statements instead of a hard limit on lines used
+    'max-lines-per-function': ['off'],
 
 
     // enforce a maximum depth that callbacks can be nested
@@ -225,11 +226,12 @@ module.exports = {
 
 
     // enforce a maximum number of parameters in function definitions
+    // tip: use objects to pass parameters instead
     'max-params': ['error', 10],
 
 
     // enforce a maximum number of statements allowed in function blocks
-    'max-statements': ['error', 30],
+    'max-statements': ['error', 50],
 
 
     // enforce a maximum number of statements allowed per line
@@ -434,7 +436,7 @@ module.exports = {
 
     // enforce placing object properties on separate lines
     'object-property-newline': ['error', {
-      allowAllPropertiesOnSameLine: false,
+      allowAllPropertiesOnSameLine: true,
     }],
 
 
