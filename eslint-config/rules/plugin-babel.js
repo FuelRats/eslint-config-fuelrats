@@ -10,10 +10,11 @@ module.exports = {
       capIsNew: true,
       newIsCapExceptions: [],
       capIsNewExceptions: [
-        'GET',
+        'GET', // For HTTP methods
         'POST',
         'PUT',
         'DELETE',
+        'Stripe', // For Stripe lib (which exists as window.Stripe)
       ],
       properties: true,
     }],

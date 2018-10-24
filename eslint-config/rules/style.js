@@ -132,15 +132,15 @@ module.exports = {
       outerIIFEBody: 1,
       MemberExpression: 1,
       FunctionDeclaration: {
-        parameters: 'first',
+        parameters: 1,
         body: 1,
       },
       FunctionExpression: {
-        parameters: 'first',
+        parameters: 1,
         body: 1,
       },
       CallExpression: {
-        arguments: 'first',
+        arguments: 1,
       },
       ArrayExpression: 1,
       ObjectExpression: 1,
@@ -352,7 +352,7 @@ module.exports = {
       },
       {
         selector: 'LabeledStatement',
-        message: 'Labels are like GOTOs, they make your code less readable for little benefit. ',
+        message: 'Labels are like GOTOs, they make your code less readable for little benefit.',
       },
       {
         selector: 'BinaryExpression[operator=\'in\']',

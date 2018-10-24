@@ -341,7 +341,7 @@ module.exports = {
 
 
     // require parentheses around immediate function invocations
-    'wrap-iife': ['error', 'outside', {
+    'wrap-iife': ['error', 'inside', {
       functionPrototypeMethods: false,
     }],
 
