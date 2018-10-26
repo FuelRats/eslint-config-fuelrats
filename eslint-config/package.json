@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "ESLint config for fuelrats projects",
   "author": {
     "name": "Cameron Welter",
@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.7.0",
+    "eslint": "^5.8.0",
     "eslint-plugin-babel": "^5.2.1",
     "eslint-plugin-import": "^2.14.0"
   },
