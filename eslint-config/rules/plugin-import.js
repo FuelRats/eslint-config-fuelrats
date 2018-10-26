@@ -132,7 +132,8 @@ module.exports = {
         '**/protractor.conf.js', // protractor config
         '**/protractor.conf.*.js', // protractor config
       ],
-      optionalDependencies: false,
+      optionalDependencies: true,
+      peerDependencies: false,
     }],
 
 
