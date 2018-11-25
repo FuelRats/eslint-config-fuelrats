@@ -222,6 +222,8 @@ module.exports = {
         'res', // for Express responses
         'response', // for Express responses
         'target', // for ESNext decorators
+        'desc', // for ESNext decorators
+        'descriptor', // for ESNext decorators
       ],
     }],
 
