@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "ESLint config for our react projects",
   "author": {
     "name": "Cameron Welter",
@@ -44,22 +44,22 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@fuelrats/eslint-config": "^0.7.0"
+    "@fuelrats/eslint-config": "^0.8.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-babel": "^5.2.1",
+    "eslint": "^5.9.0",
+    "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1"
   },
   "peerDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.7.0",
-    "eslint-plugin-babel": "^5.2.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "babel-eslint": ">=10",
+    "eslint": ">=5",
+    "eslint-plugin-babel": ">=5.3",
+    "eslint-plugin-import": ">=2.14",
+    "eslint-plugin-jsx-a11y": ">=6.1",
+    "eslint-plugin-react": ">=7.11"
   }
 }
