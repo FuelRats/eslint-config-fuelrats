@@ -7,9 +7,7 @@ module.exports = {
 
 
     // require parentheses around arrow function arguments
-    'arrow-parens': ['error', 'as-needed', {
-      requireForBlockBody: true,
-    }],
+    'arrow-parens': ['error', 'always'],
 
 
     // enforce consistent spacing before and after the arrow in arrow functions
