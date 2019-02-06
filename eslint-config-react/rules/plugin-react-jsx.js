@@ -39,6 +39,10 @@ module.exports = {
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
 
 
+    // Enforce shorthand or standard form for React fragments
+    'react/jsx-fragments': ['error', 'syntax'],
+
+
     // Enforce event handler naming conventions in JSX
     'react/jsx-handler-names': ['error', {
       eventHandlerPrefix: '_?handle',

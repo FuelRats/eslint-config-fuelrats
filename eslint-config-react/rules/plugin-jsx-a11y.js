@@ -51,6 +51,10 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': ['error'],
 
 
+    // Enforce that a control (an interactive element) has a text label.
+    'jsx-a11y/control-has-associated-label': ['error'],
+
+
     // Enforce heading (h1, h2, etc) elements contain accessible content.
     'jsx-a11y/heading-has-content': ['error', { components: [''] }],
 
