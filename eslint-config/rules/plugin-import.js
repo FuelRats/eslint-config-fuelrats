@@ -225,6 +225,11 @@ module.exports = {
     'import/no-default-export': ['off'],
 
 
+
+    // Forbid named exports
+    'import/no-named-export': ['off'],
+
+
     // Forbid anonymous values as default exports
     'import/no-anonymous-default-export': ['error'],
 
