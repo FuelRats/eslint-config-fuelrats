@@ -481,10 +481,6 @@ module.exports = {
     'quotes': ['off'],
 
 
-    // require JSDoc comments
-    'require-jsdoc': ['off'],
-
-
     // require or disallow semicolons instead of ASI
     // DISABLED: using babel/semi for compatibility
     'semi': ['off'],

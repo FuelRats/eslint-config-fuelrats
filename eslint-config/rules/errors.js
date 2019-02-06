@@ -145,11 +145,6 @@ module.exports = {
     'use-isnan': ['error'],
 
 
-    // enforce valid JSDoc comments
-    // DISABLED: To be determined by project
-    'valid-jsdoc': ['off'],
-
-
     // enforce comparing typeof expressions against valid strings
     // DISABLED: using babel/valid-typeof for compatibility
     'valid-typeof': ['off'],
