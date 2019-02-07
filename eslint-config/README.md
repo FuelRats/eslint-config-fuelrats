@@ -3,7 +3,7 @@
 * Base ESLint ruleset with babel-eslint as the primary parser. Intended for node.js backend projects.
     * Assumes an ES2018 class-based environment with babel transforms.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
-    * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins
+    * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
 
 
 

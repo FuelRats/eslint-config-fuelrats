@@ -1,7 +1,8 @@
 # @fuelrats/eslint-config-react
 
 * [`@fuelrats/eslint-config`][eslint-config-fuelrats] + react plugins and rules. Built specifically for our react projects.
-    * Includes [`eslint-plugin-react`][eslint-plugin-react] for react and better JSX linting
+    * Includes [`eslint-plugin-react`][eslint-plugin-react] for react and better JSX linting.
+    * Includes [`eslint-plugin-react-hooks`][eslint-plugin-react-hooks] for react "rules of hooks" enforcement.
     * Includes [`eslint-plugin-jsx-a11y`][eslint-plugin-jsx-a11y] for enforcing website accessibility best practices.
 
 
@@ -49,4 +50,5 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 [eslint-env]: https://eslint.org/docs/user-guide/configuring#specifying-environments
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
 [eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
+[eslint-plugin-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks
 [eslint-plugin-react-config]: https://github.com/yannickcr/eslint-plugin-react#configuration

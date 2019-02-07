@@ -90,10 +90,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@fuelrats/eslint-config@^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.npmjs.org/@fuelrats/eslint-config/-/eslint-config-0.10.0.tgz#139d25a75af6deeb4e34041ef365c995441655cf"
-  integrity sha512-ytDvZoqc2fQlPJLKi/U/Q3SXS02Pl/5PP2ey/E8SFSD/yW6Dj5I7MG6T5v6WlWzJqgbEkxLlQf87iyCp+MzjLA==
+"@fuelrats/eslint-config@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.npmjs.org/@fuelrats/eslint-config/-/eslint-config-0.10.1.tgz#904f5b6427255d34cdd19248e9483beef16d9269"
+  integrity sha512-bvu0YK+Db95VfYETeKmDSdy9qkL1Od7FpTi2TtbnzI5PyxmjybkdOWqB4eBk/q1RqnGfOMXJXnAdgYwoZuL7mg==
   dependencies:
     eslint-restricted-globals "^0.2.0"
 
