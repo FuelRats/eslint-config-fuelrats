@@ -19,7 +19,7 @@ module.exports = {
   ].map(require.resolve),
   parser: 'babel-eslint',
   parserOptions: {
-    codeFrame: false,
+    codeFrame: true,
     ecmaVersion: 2018,
     sourceType: 'module',
   },
