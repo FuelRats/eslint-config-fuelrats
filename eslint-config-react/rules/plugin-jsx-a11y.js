@@ -52,7 +52,10 @@ module.exports = {
 
 
     // Enforce that a control (an interactive element) has a text label.
-    'jsx-a11y/control-has-associated-label': ['error'],
+    'jsx-a11y/control-has-associated-label': ['error', {
+      labelAttributes: ['aria-hidden'], // No label needed on hidden elements.
+      ignoreElements: ['link'], // workaround for https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/552
+    }],
 
 
     // Enforce heading (h1, h2, etc) elements contain accessible content.
