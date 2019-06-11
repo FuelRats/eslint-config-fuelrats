@@ -138,7 +138,9 @@ module.exports = {
 
 
     // Prevent using string references in ref attribute.
-    'react/no-string-refs': ['error'],
+    'react/no-string-refs': ['error', {
+      noTemplateLiterals: true,
+    }],
 
 
     // Prevent using this in stateless functional components
@@ -175,6 +177,9 @@ module.exports = {
 
     // Enforce ES5 or ES6 class for React Components
     'react/prefer-es6-class': ['error', 'always'],
+
+    // Enforce that props are read-only
+    'react/prefer-read-only-props': ['error'],
 
 
     // Enforce stateless React Components to be written as a pure function
@@ -225,6 +230,14 @@ module.exports = {
       requiredFirst: false,
       sortShapeProp: true,
     }],
+
+
+    // Enforce the state initialization style to be either in a constructor or with a class property
+    'react/state-in-constructor': ['error', 'never'],
+
+
+    // Enforce where React component static properties should be positioned.
+    'react/static-property-placement': ['off'],
 
 
     // Enforce style prop value being an object

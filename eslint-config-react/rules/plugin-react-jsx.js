@@ -51,7 +51,10 @@ module.exports = {
 
 
     // Validate JSX indentation (fixable)
-    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent': ['error', 2, {
+      checkAttributes: true,
+      indentLogicalExpressions: true,
+    }],
 
 
     // Validate props indentation in JSX (fixable)
@@ -126,6 +129,9 @@ module.exports = {
 
     // Disallow multiple spaces between inline JSX props (fixable)
     'react/jsx-props-no-multi-spaces': ['error'],
+
+    // Disallow JSX props spreading
+    'react/jsx-props-no-spreading': ['off'],
 
 
     // Enforce default props alphabetical sorting
