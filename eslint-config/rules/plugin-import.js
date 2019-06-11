@@ -79,11 +79,17 @@ module.exports = {
 
 
     // Prevent unnecessary path segments in import and require statements
-    'import/no-useless-path-segments': ['error'],
+    'import/no-useless-path-segments': ['error', {
+      noUselessIndex: true,
+    }],
 
 
     // Forbid importing modules from parent directories
     'import/no-relative-parent-imports': ['off'],
+
+
+    // Forbid modules without any export, and exports not imported by any modules.
+    'import/no-unused-modules': ['off'],
 
 
 
