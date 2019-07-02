@@ -4,7 +4,7 @@
     * Assumes an ES2018 class-based environment with babel transforms.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
     * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
-
+    * Optional `purejs` config available which does not use `babel-eslint` or `eslint-plugin-babel`
 
 
 
@@ -15,8 +15,6 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 `@fuelrats/eslint-config` aims to help unify style and standards across all major FuelRats projects.
 
-**These configs are in a draft stage, and are subject to frequent adjustments as we begin to unify across projects**
-
 
 
 
@@ -26,6 +24,7 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 2. Add the config and all peerdeps by running: `install-peerdeps @fuelrats/eslint-config`.
     * alternatively, if you use `npx` you could run `npx install-peerdeps @fuelrats/eslint-config`.
 3. Add `"extends": ["@fuelrats/eslint-config"],` to your `.eslintrc` file.
+    * Or use `@fuelrats/eslint-config/purejs` if you do not wish to use the babel parser and plugin.
 4. Setup additional env options. By default, we only enable the es6 envronment. all other env settings are up to the project.
     * For more information on eslint envrionment settings, visit [the eslint docs][eslint-env]
 

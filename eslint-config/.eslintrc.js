@@ -11,5 +11,6 @@ module.exports = {
   rules: {
     'no-magic-numbers': ['off'], // since defining a bunch of consts for lint rules is cumbersome
     'quote-props': ['error', 'consistent-as-needed'], // since the majority of rules are in quotes with little outlyers;
+    'sort-keys': ['off'], // because we order by documentation order
   }
 }

@@ -142,8 +142,7 @@ module.exports = {
 
 
     // disallow this keywords outside of classes or class-like objects
-    // DISABLED: using babel/no-invalid-this for compatibility
-    'no-invalid-this': ['off'],
+    'no-invalid-this': ['error'],
 
 
     // disallow the use of the __iterator__ property
@@ -281,8 +280,11 @@ module.exports = {
 
 
     // disallow unused expressions
-    // DISABLED: using babel/no-unused-expressions for compatibility
-    'no-unused-expressions': ['off'],
+    'no-unused-expressions': ['error', {
+      allowShortCircuit: false,
+      allowTaggedTemplates: false,
+      allowTernary: false,
+    }],
 
 
     // disallow unused labels

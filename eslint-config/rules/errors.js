@@ -146,7 +146,6 @@ module.exports = {
 
 
     // enforce comparing typeof expressions against valid strings
-    // DISABLED: using babel/valid-typeof for compatibility
-    'valid-typeof': ['off'],
+    'valid-typeof': ['error'],
   },
 }

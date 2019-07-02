@@ -249,8 +249,19 @@ module.exports = {
 
 
     // require constructor names to begin with a capital letter
-    // DISABLED: using babel/new-cap for compatibility
-    'new-cap': ['off'],
+    'new-cap': ['error', {
+      newIsCap: true,
+      capIsNew: true,
+      newIsCapExceptions: [],
+      capIsNewExceptions: [
+        'GET', // For HTTP methods
+        'POST',
+        'PUT',
+        'DELETE',
+        'Stripe', // For Stripe lib (which exists as window.Stripe)
+      ],
+      properties: true,
+    }],
 
 
     // require parentheses when invoking a constructor with no arguments
@@ -430,8 +441,7 @@ module.exports = {
 
 
     // enforce consistent spacing inside braces
-    // DISABLED: using babel/object-curly-spacing for compatibility
-    'object-curly-spacing': ['off'],
+    'object-curly-spacing': ['error', 'always'],
 
 
     // enforce placing object properties on separate lines
@@ -477,13 +487,16 @@ module.exports = {
 
 
     // enforce the consistent use of either backticks, double, or single quotes
-    // DISABLED: using babel/quotes for compatibility
-    'quotes': ['off'],
+    'quotes': ['error', 'single', {
+      avoidEscape: true,
+      allowTemplateLiterals: false,
+    }],
 
 
     // require or disallow semicolons instead of ASI
-    // DISABLED: using babel/semi for compatibility
-    'semi': ['off'],
+    'semi': ['error', 'never', {
+      beforeStatementContinuationChars: 'always',
+    }],
 
 
     // enforce consistent spacing before and after semicolons
@@ -498,7 +511,7 @@ module.exports = {
 
 
     // require object keys to be sorted
-    'sort-keys': ['off', 'asc', {
+    'sort-keys': ['error', 'asc', {
       caseSensitive: false,
       natural: true,
     }],

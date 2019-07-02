@@ -19,6 +19,13 @@ module.exports = {
     'react/jsx-closing-tag-location': ['error'],
 
 
+    // Enforce or disallow newlines inside of curly braces in JSX attributes and expressions (fixable)
+    'react/jsx-curly-newline': ['error', {
+      multiline: 'require',
+      singleline: 'require',
+    }],
+
+
     // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions (fixable)
     'react/jsx-curly-spacing': ['error', 'never', {
       allowMultiline: true,
@@ -62,7 +69,9 @@ module.exports = {
 
 
     // Validate JSX has key prop when in array or iterator
-    'react/jsx-key': ['error'],
+    'react/jsx-key': ['error', {
+      checkFragmentShorthand: true,
+    }],
 
 
     // Validate JSX maximum depth
