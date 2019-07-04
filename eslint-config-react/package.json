@@ -44,7 +44,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@fuelrats/eslint-config": "^0.12.0"
+    "@fuelrats/eslint-config": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
