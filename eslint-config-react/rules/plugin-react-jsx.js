@@ -21,14 +21,18 @@ module.exports = {
 
     // Enforce or disallow newlines inside of curly braces in JSX attributes and expressions (fixable)
     'react/jsx-curly-newline': ['error', {
-      multiline: 'require',
-      singleline: 'require',
+      multiline: 'consistent',
+      singleline: 'consistent',
     }],
 
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions (fixable)
-    'react/jsx-curly-spacing': ['error', 'never', {
+    'react/jsx-curly-spacing': ['error', 'always', {
       allowMultiline: true,
+      children: true,
+      spacing: {
+        objectLiterals: 'never',
+      },
     }],
 
 
