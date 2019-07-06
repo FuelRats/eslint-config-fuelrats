@@ -27,9 +27,10 @@ module.exports = {
 
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions (fixable)
-    'react/jsx-curly-spacing': ['error', 'always', {
-      allowMultiline: true,
+    'react/jsx-curly-spacing': ['error', {
+      when: 'always',
       children: true,
+      allowMultiline: true,
       spacing: {
         objectLiterals: 'never',
       },
