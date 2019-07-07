@@ -511,10 +511,7 @@ module.exports = {
 
 
     // require object keys to be sorted
-    'sort-keys': ['error', 'asc', {
-      caseSensitive: false,
-      natural: true,
-    }],
+    'sort-keys': ['off'],
 
 
     // require variables within the same declaration block to be sorted
