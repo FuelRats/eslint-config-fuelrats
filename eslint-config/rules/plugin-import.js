@@ -220,7 +220,12 @@ module.exports = {
 
 
     // Forbid unassigned imports
-    'import/no-unassigned-import': ['error'],
+    'import/no-unassigned-import': ['error', {
+      allow: [
+        '**/*.css',
+        '**/*.scss',
+      ],
+    }],
 
 
     // Forbid named default exports

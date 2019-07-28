@@ -138,7 +138,8 @@ module.exports = {
 
 
     // disallow assignments that can lead to race conditions due to usage of await or yield
-    'require-atomic-updates': ['error'],
+    // Disabled until fixed? there seems to be a lot of false positives with this one.
+    'require-atomic-updates': ['off'],
 
 
     // require calls to isNaN() when checking for NaN
