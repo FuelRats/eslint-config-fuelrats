@@ -66,7 +66,7 @@ module.exports = {
 
 
     // enforce consistent spacing inside computed property brackets
-    'computed-property-spacing': ['error', 'never'],
+    'computed-property-spacing': ['error', 'never', { enforceForClassMembers: true }],
 
 
     // enforce consistent naming when capturing the current execution context
@@ -98,6 +98,10 @@ module.exports = {
     'func-style': ['error', 'expression'],
 
 
+    // enforce line breaks between arguments of a function call
+    'function-call-argument-newline': ['error', 'consistent'],
+
+
     // enforce consistent line breaks inside function parentheses
     'function-paren-newline': ['error', 'consistent'],
 
@@ -108,7 +112,7 @@ module.exports = {
 
     // enforce minimum and maximum identifier lengths
     'id-length': ['error', {
-      min: 2,
+      min: 3,
       max: 35,
     }],
 

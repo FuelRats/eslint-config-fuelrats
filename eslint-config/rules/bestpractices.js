@@ -2,6 +2,7 @@ module.exports = {
   rules: {
     // enforce getter and setter pairs in objects
     'accessor-pairs': ['error', {
+      enforceForClassMembers: true,
       getWithoutSet: false,
       setWithoutGet: true,
     }],
@@ -38,6 +39,10 @@ module.exports = {
     'default-case': ['error', {
       commentPattern: '^I have no idea what I\'m doing$',
     }],
+
+
+    // enforce default parameters to be last
+    'default-param-last': ['error'],
 
 
     // enforce consistent newlines before and after dots
@@ -210,19 +215,17 @@ module.exports = {
     // disallow reassigning function parameters
     'no-param-reassign': ['error', {
       props: true,
+      ignorePropertyModificationsForRegex: [
+        '^acc(umulator)?', // for reduce accumulators
+        '^desc(riptor)?', // for ESNext decorators
+        '^req(uest)?', // for Express requests
+        '^res(ponse)?', // for Express responses
+      ],
       ignorePropertyModificationsFor: [
-        'acc', // for reduce accumulators
-        'accumulator', // for reduce accumulators
         'Component', // for React HOCs
-        'e', // for e.returnvalue
         'ctx', // for Koa routing
-        'req', // for Express requests
-        'request', // for Express requests
-        'res', // for Express responses
-        'response', // for Express responses
+        'event', // for event.returnvalue
         'target', // for ESNext decorators
-        'desc', // for ESNext decorators
-        'descriptor', // for ESNext decorators
       ],
     }],
 
@@ -334,6 +337,10 @@ module.exports = {
     'prefer-promise-reject-errors': ['error', {
       allowEmptyReject: false,
     }],
+
+
+    // disallow use of the RegExp constructor in favor of regular expression literals
+    'prefer-regex-literals': ['error'],
 
 
     // enforce the consistent use of the radix argument when using parseInt()

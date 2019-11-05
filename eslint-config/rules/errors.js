@@ -85,6 +85,10 @@ module.exports = {
     'no-func-assign': ['error'],
 
 
+    // disallow assigning to imported bindings
+    'no-import-assign': ['error'],
+
+
     // disallow variable or function declarations in nested blocks
     'no-inner-declarations': ['error'],
 
@@ -134,7 +138,9 @@ module.exports = {
 
 
     // disallow negating the left operand of relational operators
-    'no-unsafe-negation': ['error'],
+    'no-unsafe-negation': ['error', {
+      enforceForOrderingRelations: true,
+    }],
 
 
     // disallow assignments that can lead to race conditions due to usage of await or yield
@@ -143,7 +149,10 @@ module.exports = {
 
 
     // require calls to isNaN() when checking for NaN
-    'use-isnan': ['error'],
+    'use-isnan': ['error', {
+      enforceForSwitchCase: true,
+      enforceForIndexOf: true,
+    }],
 
 
     // enforce comparing typeof expressions against valid strings

@@ -17,7 +17,7 @@ module.exports = {
     './rules/plugin-import',
   ].map(require.resolve),
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
 }
