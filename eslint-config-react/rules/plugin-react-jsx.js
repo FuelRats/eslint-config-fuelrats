@@ -121,6 +121,10 @@ module.exports = {
     'react/jsx-no-undef': ['error'],
 
 
+    // Disallow unnecessary fragments
+    'react/jsx-no-useless-fragment': ['error'],
+
+
     // Limit to one expression per line in JSX
     'react/jsx-one-expression-per-line': ['off'],
 
