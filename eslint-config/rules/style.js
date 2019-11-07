@@ -112,7 +112,7 @@ module.exports = {
 
     // enforce minimum and maximum identifier lengths
     'id-length': ['error', {
-      min: 3,
+      min: 2,
       max: 35,
     }],
 

@@ -42,7 +42,7 @@ module.exports = {
 
 
     // enforce default parameters to be last
-    'default-param-last': ['error'],
+    'default-param-last': ['off'],
 
 
     // enforce consistent newlines before and after dots
