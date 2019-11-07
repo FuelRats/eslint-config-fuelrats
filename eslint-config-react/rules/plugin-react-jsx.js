@@ -132,7 +132,7 @@ module.exports = {
     // Enforce curly braces or disallow unnecessary curly braces in JSX
     'react/jsx-curly-brace-presence': ['error', {
       props: 'never',
-      children: 'always',
+      children: 'ignore',
     }],
 
 
