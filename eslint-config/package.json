@@ -28,9 +28,13 @@
     }
   ],
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FuelRats/eslint-config-fuelrats"
+    "url": "https://github.com/FuelRats/eslint-config-fuelrats",
+    "directory": "eslint-config"
   },
   "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
   "keywords": [
