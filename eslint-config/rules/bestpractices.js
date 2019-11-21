@@ -224,6 +224,7 @@ module.exports = {
       ignorePropertyModificationsFor: [
         'Component', // for React HOCs
         'ctx', // for Koa routing
+        'draftState', // for immer producers
         'event', // for event.returnvalue
         'target', // for ESNext decorators
       ],
