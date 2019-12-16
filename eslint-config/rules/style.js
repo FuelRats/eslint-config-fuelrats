@@ -482,6 +482,10 @@ module.exports = {
     'padding-line-between-statements': ['off'],
 
 
+    // disallow the use of `Math.pow` in favor of the `**` operator
+    'prefer-exponentiation-operator': ['error'],
+
+
     // disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead.
     'prefer-object-spread': ['error'],
 

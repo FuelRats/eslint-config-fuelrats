@@ -59,6 +59,10 @@ module.exports = {
     }],
 
 
+    // require grouped accessor pairs in object literals and classes
+    'grouped-accessor-pairs': ['off'],
+
+
     // require for-in loops to include an if statement
     'guard-for-in': ['error'],
 
@@ -77,6 +81,10 @@ module.exports = {
 
     // disallow lexical declarations in case clauses
     'no-case-declarations': ['error'],
+
+
+    // disallow returning value from constructor
+    'no-constructor-return': ['error'],
 
 
     // disallow division operators explicitly at the beginning of regular expressions

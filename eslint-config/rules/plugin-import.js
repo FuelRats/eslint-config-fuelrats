@@ -112,7 +112,7 @@ module.exports = {
 
 
     // Report imported names marked with @deprecated documentation tag
-    'import/no-deprecated': ['off'],
+    'import/no-deprecated': ['error'],
 
 
     // Forbid the use of extraneous packages
@@ -186,7 +186,9 @@ module.exports = {
 
 
     // Report repeated import of the same module in multiple places
-    'import/no-duplicates': ['error'],
+    'import/no-duplicates': ['error', {
+      considerQueryString: true,
+    }],
 
 
     // Report namespace imports
@@ -203,7 +205,15 @@ module.exports = {
 
     // Enforce a convention in module import order
     'import/order': ['error', {
-      groups: [['builtin', 'external', 'internal']],
+      'alphabetize': {
+        order: 'asc',
+      },
+      'groups': [
+        ['builtin', 'external'],
+        'internal',
+        ['parent', 'sibling', 'index'],
+      ],
+      'newlines-between': 'always',
     }],
 
 
@@ -212,7 +222,7 @@ module.exports = {
 
 
     // Prefer a default export if module exports a single name
-    'import/prefer-default-export': ['error'],
+    'import/prefer-default-export': ['off'],
 
 
     // Limit the maximum number of dependencies a module can have
@@ -228,7 +238,7 @@ module.exports = {
     }],
 
 
-    // Forbid named default exports
+    // Forbid named default imports
     'import/no-named-default': ['error'],
 
 
