@@ -54,9 +54,9 @@ module.exports = {
 
     // Enforce event handler naming conventions in JSX
     'react/jsx-handler-names': ['error', {
-      eventHandlerPrefix: '(_|#)?handle',
+      eventHandlerPrefix: '(_|#)?(handle|on)',
       eventHandlerPropPrefix: 'on',
-      checkLocalVariables: false,
+      checkLocalVariables: true,
     }],
 
 
