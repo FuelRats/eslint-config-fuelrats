@@ -54,7 +54,7 @@ module.exports = {
 
     // Enforce event handler naming conventions in JSX
     'react/jsx-handler-names': ['error', {
-      eventHandlerPrefix: '_?handle',
+      eventHandlerPrefix: '(_|#)?handle',
       eventHandlerPropPrefix: 'on',
       checkLocalVariables: true,
     }],
@@ -90,11 +90,11 @@ module.exports = {
 
     // Prevent usage of .bind() and arrow functions in JSX props
     'react/jsx-no-bind': ['error', {
-      ignoreRefs: true,
-      allowArrowFunctions: true,
+      ignoreDOMComponents: false,
+      ignoreRefs: false,
+      allowArrowFunctions: false,
       allowFunctions: false,
       allowBind: false,
-      ignoreDOMComponents: true,
     }],
 
 
