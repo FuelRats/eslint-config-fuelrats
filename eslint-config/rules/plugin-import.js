@@ -205,15 +205,15 @@ module.exports = {
 
     // Enforce a convention in module import order
     'import/order': ['error', {
-      'alphabetize': {
+      alphabetize: {
         order: 'asc',
       },
-      'groups': [
-        ['builtin', 'external'],
+      groups: [
+        ['external', 'builtin'],
         'internal',
         ['parent', 'sibling', 'index'],
+        'unknown',
       ],
-      'newlines-between': 'always',
     }],
 
 
