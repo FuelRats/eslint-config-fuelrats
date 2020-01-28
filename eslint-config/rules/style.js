@@ -95,7 +95,9 @@ module.exports = {
 
 
     // enforce the consistent use of either function declarations or expressions
-    'func-style': ['error', 'expression'],
+    'func-style': ['error', 'declaration', {
+      allowArrowFunctions: true,
+    }],
 
 
     // enforce line breaks between arguments of a function call
