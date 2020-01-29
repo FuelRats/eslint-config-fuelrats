@@ -3,30 +3,42 @@ module.exports = {
     'react',
   ],
   rules: {
-    // Enforce boolean attributes notation in JSX (fixable)
+    /**
+     * Enforce boolean attributes notation in JSX (fixable)
+     */
     'react/jsx-boolean-value': ['error', 'never'],
 
 
-    // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
+    /**
+     * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
+     */
     'react/jsx-child-element-spacing': ['off'],
 
 
-    // Validate closing bracket location in JSX (fixable)
+    /**
+     * Validate closing bracket location in JSX (fixable)
+     */
     'react/jsx-closing-bracket-location': ['error', 'after-props'],
 
 
-    // Validate closing tag location in JSX (fixable)
+    /**
+     * Validate closing tag location in JSX (fixable)
+     */
     'react/jsx-closing-tag-location': ['error'],
 
 
-    // Enforce or disallow newlines inside of curly braces in JSX attributes and expressions (fixable)
+    /**
+     * Enforce or disallow newlines inside of curly braces in JSX attributes and expressions (fixable)
+     */
     'react/jsx-curly-newline': ['error', {
       multiline: 'consistent',
       singleline: 'forbid',
     }],
 
 
-    // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions (fixable)
+    /**
+     * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions (fixable)
+     */
     'react/jsx-curly-spacing': ['error', {
       when: 'never',
       children: true,
@@ -34,25 +46,35 @@ module.exports = {
     }],
 
 
-    // Enforce or disallow spaces around equal signs in JSX attributes (fixable)
+    /**
+     * Enforce or disallow spaces around equal signs in JSX attributes (fixable)
+     */
     'react/jsx-equals-spacing': ['error', 'never'],
 
 
-    // Restrict file extensions that may contain JSX
+    /**
+     * Restrict file extensions that may contain JSX
+     */
     'react/jsx-filename-extension': ['error', {
       extensions: ['.js'],
     }],
 
 
-    // Enforce position of the first prop in JSX (fixable)
+    /**
+     * Enforce position of the first prop in JSX (fixable)
+     */
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
 
 
-    // Enforce shorthand or standard form for React fragments
+    /**
+     * Enforce shorthand or standard form for React fragments
+     */
     'react/jsx-fragments': ['error', 'syntax'],
 
 
-    // Enforce event handler naming conventions in JSX
+    /**
+     * Enforce event handler naming conventions in JSX
+     */
     'react/jsx-handler-names': ['error', {
       eventHandlerPrefix: '(_|#)?(handle|on)',
       eventHandlerPropPrefix: 'on',
@@ -60,35 +82,47 @@ module.exports = {
     }],
 
 
-    // Validate JSX indentation (fixable)
+    /**
+     * Validate JSX indentation (fixable)
+     */
     'react/jsx-indent': ['error', 2, {
       checkAttributes: true,
       indentLogicalExpressions: true,
     }],
 
 
-    // Validate props indentation in JSX (fixable)
+    /**
+     * Validate props indentation in JSX (fixable)
+     */
     'react/jsx-indent-props': ['error', 2],
 
 
-    // Validate JSX has key prop when in array or iterator
+    /**
+     * Validate JSX has key prop when in array or iterator
+     */
     'react/jsx-key': ['error', {
       checkFragmentShorthand: true,
     }],
 
 
-    // Validate JSX maximum depth
+    /**
+     * Validate JSX maximum depth
+     */
     'react/jsx-max-depth': ['off'],
 
 
-    // Limit maximum of props on a single line in JSX (fixable)
+    /**
+     * Limit maximum of props on a single line in JSX (fixable)
+     */
     'react/jsx-max-props-per-line': ['error', {
       maximum: 1,
       when: 'multiline',
     }],
 
 
-    // Prevent usage of .bind() and arrow functions in JSX props
+    /**
+     * Prevent usage of `.bind()` and arrow functions in JSX props
+     */
     'react/jsx-no-bind': ['error', {
       ignoreDOMComponents: false,
       ignoreRefs: false,
@@ -98,69 +132,103 @@ module.exports = {
     }],
 
 
-    // Prevent comments from being inserted as text nodes
+    /**
+     * Prevent comments from being inserted as text nodes
+     */
     'react/jsx-no-comment-textnodes': ['error'],
 
 
-    // Prevent duplicate props in JSX
+    /**
+     * Prevent duplicate props in JSX
+     */
     'react/jsx-no-duplicate-props': ['error', {
       ignoreCase: true,
     }],
 
 
-    // Prevent usage of unwrapped JSX strings
+    /**
+     * Prevent usage of unwrapped JSX strings
+     */
     'react/jsx-no-literals': ['off'],
 
 
-    // Prevent usage of unsafe target='_blank'
+    /**
+     * Prevent usage of `javascript:` URLs
+     */
+    'react/jsx-no-script-url': ['error'],
+
+
+    /**
+     * Prevent usage of unsafe `target='_blank'`
+     */
     'react/jsx-no-target-blank': ['error', {
       enforceDynamicLinks: 'always',
     }],
 
 
-    // Disallow undeclared variables in JSX
+    /**
+     * Disallow undeclared variables in JSX
+     */
     'react/jsx-no-undef': ['error'],
 
 
-    // Disallow unnecessary fragments
+    /**
+     * Disallow unnecessary fragments
+     */
     'react/jsx-no-useless-fragment': ['error'],
 
 
-    // Limit to one expression per line in JSX
+    /**
+     * Limit to one expression per line in JSX
+     */
     'react/jsx-one-expression-per-line': ['off'],
 
 
-    // Enforce curly braces or disallow unnecessary curly braces in JSX
+    /**
+     * Enforce curly braces or disallow unnecessary curly braces in JSX
+     */
     'react/jsx-curly-brace-presence': ['error', {
       props: 'never',
       children: 'ignore',
     }],
 
 
-    // Enforce PascalCase for user-defined JSX components
+    /**
+     * Enforce PascalCase for user-defined JSX components
+     */
     'react/jsx-pascal-case': ['error', {
       allowAllCaps: false,
       ignore: [],
     }],
 
-    // Disallow multiple spaces between inline JSX props (fixable)
+    /**
+     * Disallow multiple spaces between inline JSX props (fixable)
+     */
     'react/jsx-props-no-multi-spaces': ['error'],
 
-    // Disallow JSX props spreading
+    /**
+     * Disallow JSX props spreading
+     */
     'react/jsx-props-no-spreading': ['off'],
 
 
-    // Enforce default props alphabetical sorting
+    /**
+     * Enforce default props alphabetical sorting
+     */
     'react/jsx-sort-default-props': ['error', {
       ignoreCase: true,
     }],
 
 
-    // Enforce props alphabetical sorting (fixable)
+    /**
+     * Enforce props alphabetical sorting (fixable)
+     */
     'react/jsx-sort-props': ['off'],
 
 
-    // Validate whitespace in and around the JSX opening and closing brackets (fixable)
+    /**
+     * Validate whitespace in and around the JSX opening and closing brackets (fixable)
+     */
     'react/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
       beforeSelfClosing: 'always',
@@ -169,15 +237,21 @@ module.exports = {
     }],
 
 
-    // Prevent React to be incorrectly marked as unused
+    /**
+     * Prevent React to be incorrectly marked as unused
+     */
     'react/jsx-uses-react': ['error'],
 
 
-    // Prevent variables used in JSX to be incorrectly marked as unused
+    /**
+     * Prevent variables used in JSX to be incorrectly marked as unused
+     */
     'react/jsx-uses-vars': ['error'],
 
 
-    // Prevent missing parentheses around multilines JSX (fixable)
+    /**
+     * Prevent missing parentheses around multilines JSX (fixable)
+     */
     'react/jsx-wrap-multilines': ['error', {
       declaration: 'parens-new-line',
       assignment: 'parens-new-line',

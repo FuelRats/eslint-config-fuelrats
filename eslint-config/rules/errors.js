@@ -1,30 +1,44 @@
 module.exports = {
   rules: {
-    // enforce “for” loop update clause moving the counter in the right direction.
+    /**
+     * enforce “for” loop update clause moving the counter in the right direction.
+     */
     'for-direction': ['error'],
 
 
-    // enforce return statements in getters
+    /**
+     * enforce return statements in getters
+     */
     'getter-return': ['error'],
 
 
-    // disallow using an async function as a Promise executor
+    /**
+     * disallow using an async function as a Promise executor
+     */
     'no-async-promise-executor': ['error'],
 
 
-    // disallow await inside of loops
+    /**
+     * disallow await inside of loops
+     */
     'no-await-in-loop': ['error'],
 
 
-    // disallow comparing against -0
+    /**
+     * disallow comparing against -0
+     */
     'no-compare-neg-zero': ['error'],
 
 
-    // disallow assignment operators in conditional expressions
+    /**
+     * disallow assignment operators in conditional expressions
+     */
     'no-cond-assign': ['error', 'always'],
 
 
-    // disallow the use of console
+    /**
+     * disallow the use of console
+     */
     'no-console': ['warn', {
       allow: [
         'error',
@@ -33,137 +47,204 @@ module.exports = {
     }],
 
 
-    // disallow constant expressions in conditions
+    /**
+     * disallow constant expressions in conditions
+     */
     'no-constant-condition': ['error'],
 
 
-    // disallow control characters in regular expressions
+    /**
+     * disallow control characters in regular expressions
+     */
     'no-control-regex': ['error'],
 
 
-    // disallow the use of debugger
+    /**
+     * disallow the use of debugger
+     */
     'no-debugger': ['error'],
 
 
-    // disallow duplicate arguments in function definitions
+    /**
+     * disallow duplicate arguments in function definitions
+     */
     'no-dupe-args': ['error'],
 
 
-    // disallow duplicate conditions in if-else-if chains
+    /**
+     * disallow duplicate conditions in if-else-if chains
+     */
     'no-dupe-else-if': ['error'],
 
 
-    // disallow duplicate keys in object literals
+    /**
+     * disallow duplicate keys in object literals
+     */
     'no-dupe-keys': ['error'],
 
 
-    // disallow duplicate case labels
+    /**
+     * disallow duplicate case labels
+     */
     'no-duplicate-case': ['error'],
 
 
-    // disallow empty block statements
+    /**
+     * disallow empty block statements
+     */
     'no-empty': ['error'],
 
 
-    // disallow empty character classes in regular expressions
+    /**
+     * disallow empty character classes in regular expressions
+     */
     'no-empty-character-class': ['error'],
 
 
-    // disallow reassigning exceptions in catch clauses
+    /**
+     * disallow reassigning exceptions in catch clauses
+     */
     'no-ex-assign': ['error'],
 
 
-    // disallow unnecessary boolean casts
+    /**
+     * disallow unnecessary boolean casts
+     */
     'no-extra-boolean-cast': ['error'],
 
 
-    // disallow unnecessary parentheses
+    /**
+     * disallow unnecessary parentheses
+     */
     'no-extra-parens': ['off'],
 
 
-    // disallow unnecessary semicolons
+    /**
+     * disallow unnecessary semicolons
+     */
     'no-extra-semi': ['error'],
 
 
-    // disallow reassigning function declarations
+    /**
+     * disallow reassigning function declarations
+     */
     'no-func-assign': ['error'],
 
 
-    // disallow assigning to imported bindings
+    /**
+     * disallow assigning to imported bindings
+     */
     'no-import-assign': ['error'],
 
 
-    // disallow variable or function declarations in nested blocks
+    /**
+     * disallow variable or function declarations in nested blocks
+     */
     'no-inner-declarations': ['error'],
 
 
-    // disallow invalid regular expression strings in RegExp constructors
+    /**
+     * disallow invalid regular expression strings in RegExp constructors
+     */
     'no-invalid-regexp': ['error'],
 
 
-    // disallow irregular whitespace outside of strings and comments
+    /**
+     * disallow irregular whitespace outside of strings and comments
+     */
     'no-irregular-whitespace': ['error'],
 
 
-    // disallow characters which are made with multiple code points in character class syntax
+    /**
+     * disallow characters which are made with multiple code points in character class syntax
+     */
     'no-misleading-character-class': ['error'],
 
 
-    // disallow calling global object properties as functions
+    /**
+     * disallow calling global object properties as functions
+     */
     'no-obj-calls': ['error'],
 
 
-    // disallow calling some Object.prototype methods directly on objects
+    /**
+     * disallow calling some Object.prototype methods directly on objects
+     */
     'no-prototype-builtins': ['error'],
 
 
-    // disallow multiple spaces in regular expressions
+    /**
+     * disallow multiple spaces in regular expressions
+     */
     'no-regex-spaces': ['error'],
 
 
-    // disallow returning values from setters
+    /**
+     * disallow returning values from setters
+     */
     'no-setter-return': ['error'],
 
 
-    // disallow sparse arrays
+    /**
+     * disallow sparse arrays
+     */
     'no-sparse-arrays': ['error'],
 
 
-    // disallow template literal placeholder syntax in regular strings
+    /**
+     * disallow template literal placeholder syntax in regular strings
+     */
     'no-template-curly-in-string': ['error'],
 
 
-    // disallow confusing multiline expressions
+    /**
+     * disallow confusing multiline expressions
+     */
     'no-unexpected-multiline': ['error'],
 
 
-    // disallow unreachable code after return, throw, continue, and break statements
+    /**
+     * disallow unreachable code after return, throw, continue, and break statements
+     */
     'no-unreachable': ['error'],
 
 
-    // disallow control flow statements in finally blocks
+    /**
+     * disallow control flow statements in finally blocks
+     */
     'no-unsafe-finally': ['error'],
 
 
-    // disallow negating the left operand of relational operators
+    /**
+     * disallow negating the left operand of relational operators
+     */
     'no-unsafe-negation': ['error', {
       enforceForOrderingRelations: true,
     }],
 
 
-    // disallow assignments that can lead to race conditions due to usage of await or yield
-    // Disabled until fixed? there seems to be a lot of false positives with this one.
+    /**
+     * disallow assignments that can lead to race conditions due to usage of await or yield
+     *
+     * _DISABLED: until fixed? Persistent false positives has lead the TSC to remove this rule from eslint:recommended_
+     *
+     * See [eslint/eslint#12599](https://github.com/eslint/eslint/pull/12599)
+     */
     'require-atomic-updates': ['off'],
 
 
-    // require calls to isNaN() when checking for NaN
+    /**
+     * require calls to isNaN() when checking for NaN
+     */
     'use-isnan': ['error', {
       enforceForSwitchCase: true,
       enforceForIndexOf: true,
     }],
 
 
-    // enforce comparing typeof expressions against valid strings
+    /**
+     * enforce comparing typeof expressions against valid strings
+     */
     'valid-typeof': ['error'],
   },
 }
