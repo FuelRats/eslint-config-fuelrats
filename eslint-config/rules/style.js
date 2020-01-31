@@ -352,6 +352,7 @@ module.exports = {
         'DELETE',
         'Stripe', // For Stripe lib (which exists as window.Stripe)
       ],
+      capIsNewExceptionPattern: '^(type|Sequelize)..', // Exceptions for our API, which use methods which are in ALLCAPS
       properties: true,
     }],
 
@@ -474,12 +475,8 @@ module.exports = {
      */
     'no-restricted-syntax': ['error',
       {
-        selector: 'ForInStatement',
-        message: 'ಠ_ಠ We use modern ECMAScript m8. Use Object.{keys|values|entries}(obj).forEach(...) instead.',
-      },
-      {
-        selector: 'ForOfStatement',
-        message: 'For-of is too slow in most environments compared to it\'s alternatives. Use array.forEach(...) instead.',
+        selector: 'ForStatement',
+        message: 'Go back to C you mad man.',
       },
       {
         selector: 'WithStatement',
@@ -491,7 +488,7 @@ module.exports = {
       },
       {
         selector: 'BinaryExpression[operator=\'in\']',
-        message: 'In operator can cause problematic behavior. Use Obj.isOwnProperty() instead.',
+        message: 'In operator can cause problematic behavior. Use Obj.isOwnProperty() or Reflect.has() instead.',
       },
       {
         selector: 'no-restricted-syntax',
@@ -681,7 +678,7 @@ module.exports = {
     /**
      * enforce location of semicolons
      */
-    'semi-style': ['error', 'last'],
+    'semi-style': ['error', 'first'],
 
 
     /**
