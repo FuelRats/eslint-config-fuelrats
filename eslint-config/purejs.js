@@ -15,6 +15,7 @@ module.exports = {
     './rules/style',
     './rules/variables',
     './rules/plugin-import',
+    './rules/plugin-jsdoc',
   ].map(require.resolve),
   parserOptions: {
     ecmaVersion: 2020,

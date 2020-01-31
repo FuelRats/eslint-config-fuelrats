@@ -16,6 +16,7 @@ module.exports = {
     './rules/variables',
     './rules/plugin-babel',
     './rules/plugin-import',
+    './rules/plugin-jsdoc',
   ].map(require.resolve),
   parser: 'babel-eslint',
   parserOptions: {
