@@ -26,8 +26,10 @@ module.exports = {
 
     /**
      * enforce that class methods utilize this
+     *
+     * _DISABLED: To be determined by project_
      */
-    'class-methods-use-this': ['error'],
+    'class-methods-use-this': ['off'],
 
 
     /**
@@ -98,8 +100,10 @@ module.exports = {
 
     /**
      * enforce a maximum number of classes per file
+     *
+     * _DISABLED: To be determined by project_
      */
-    'max-classes-per-file': ['error', 2],
+    'max-classes-per-file': ['off'],
 
 
     /**
