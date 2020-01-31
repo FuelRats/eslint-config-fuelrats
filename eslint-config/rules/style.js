@@ -346,13 +346,14 @@ module.exports = {
       capIsNew: true,
       newIsCapExceptions: [],
       capIsNewExceptions: [
-        'GET', // For HTTP methods
+        'DELETE', // For HTTP methods
+        'GET',
+        'PATCH',
         'POST',
         'PUT',
-        'DELETE',
         'Stripe', // For Stripe lib (which exists as window.Stripe)
       ],
-      capIsNewExceptionPattern: '^(type|Sequelize)..', // Exceptions for our API, which use methods which are in ALLCAPS
+      capIsNewExceptionPattern: '^(type|Sequelize)..', // Sequelize exceptions
       properties: true,
     }],
 
