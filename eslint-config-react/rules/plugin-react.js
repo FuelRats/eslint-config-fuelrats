@@ -4,30 +4,6 @@ module.exports = {
   ],
   rules: {
     /**
-     * enforce that class methods utilize this
-     */
-    'class-methods-use-this': ['error', {
-      exceptMethods: [
-        'componentDidMount',
-        'shouldComponentUpdate',
-        'getSnapshotBeforeUpdate',
-        'render',
-        'componentDidUpdate',
-        'componentDidCatch',
-        'componentWillUnmount',
-
-        // These should no longer be used, but leaving them until react 17
-        'componentWillMount',
-        'UNSAFE_componentWillMount',
-        'componentWillReceiveProps',
-        'UNSAFE_componentWillReceiveProps',
-        'componentWillUpdate',
-        'UNSAFE_componentWillUpdate',
-      ],
-    }],
-
-
-    /**
      * Enforces consistent naming for boolean props
      */
     'react/boolean-prop-naming': ['off'],
