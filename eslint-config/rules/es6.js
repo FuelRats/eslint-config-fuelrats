@@ -3,9 +3,7 @@ module.exports = {
     /**
      * require braces around arrow function bodies
      */
-    'arrow-body-style': ['error', 'as-needed', {
-      requireReturnForObjectLiteral: false,
-    }],
+    'arrow-body-style': ['error', 'always'],
 
 
     /**
