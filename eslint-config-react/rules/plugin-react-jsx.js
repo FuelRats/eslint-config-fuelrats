@@ -31,7 +31,7 @@ module.exports = {
      * Enforce or disallow newlines inside of curly braces in JSX attributes and expressions (fixable)
      */
     'react/jsx-curly-newline': ['error', {
-      multiline: 'consistent',
+      multiline: 'require',
       singleline: 'forbid',
     }],
 
@@ -149,7 +149,7 @@ module.exports = {
     /**
      * Prevent usage of unwrapped JSX strings
      */
-    'react/jsx-no-literals': ['off'],
+    'react/jsx-no-literals': ['error'],
 
 
     /**
