@@ -94,6 +94,18 @@ module.exports = {
 
 
     /**
+     * Checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.
+     */
+    'jsdoc/no-bad-blocks': ['off'],
+
+
+    /**
+     * Reports defaults being used on the relevant portion of `@param` or `@default`.
+     */
+    'jsdoc/no-defaults': ['off'],
+
+
+    /**
      * This rule reports types being used on `@param` or `@returns`.
      */
     'jsdoc/no-types': ['off'],
@@ -178,12 +190,6 @@ module.exports = {
 
 
     /**
-     * Requires that all `@typedef` and `@namespace` tags have `@property` when their type is a plain `object`, `Object`, or `PlainObject`.
-     */
-    'jsdoc/require-property': ['off'],
-
-
-    /**
      * Requires that each `@property` tag has a `description` value.
      */
     'jsdoc/require-property-description': ['off'],
@@ -199,6 +205,12 @@ module.exports = {
      * Requires that each `@property` tag has a `type` value.
      */
     'jsdoc/require-property-type': ['off'],
+
+
+    /**
+     * Requires that all `@typedef` and `@namespace` tags have `@property` when their type is a plain `object`, `Object`, or `PlainObject`.
+     */
+    'jsdoc/require-property': ['off'],
 
 
     /**
