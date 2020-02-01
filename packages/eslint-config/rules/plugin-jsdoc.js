@@ -96,7 +96,7 @@ module.exports = {
     /**
      * Checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.
      */
-    'jsdoc/no-bad-blocks': ['off'],
+    'jsdoc/no-bad-blocks': ['error'],
 
 
     /**
@@ -198,13 +198,13 @@ module.exports = {
     /**
      * Requires that each `@property` tag has a `name` value.
      */
-    'jsdoc/require-property-name': ['off'],
+    'jsdoc/require-property-name': ['warn'],
 
 
     /**
      * Requires that each `@property` tag has a `type` value.
      */
-    'jsdoc/require-property-type': ['off'],
+    'jsdoc/require-property-type': ['warn'],
 
 
     /**
@@ -228,7 +228,7 @@ module.exports = {
     /**
      * Requires that the `@returns` tag has a `type` value.
      */
-    'jsdoc/require-returns-type': ['off'],
+    'jsdoc/require-returns-type': ['warn'],
 
 
     /**
