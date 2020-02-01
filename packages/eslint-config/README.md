@@ -1,11 +1,11 @@
 # [@fuelrats/eslint-config][eslint-config-fuelrats]
 
 * Base ESLint ruleset with `babel-eslint` as the primary parser. Generally intended for node.js backend projects.
-    * Assumes an ES2018 class-based environment with babel transforms.
+    * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
     * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
     * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting. If you do not use JSDoc, add `"jsdoc/require-jsdoc": ["off"]` to your rules in your `.eslintrc` file.
-    * Also includes a `purejs` preset which disables `eslint-plugin-babel`.
+    * Also includes a `purejs` preset which disables `babel-eslint` and `eslint-plugin-babel`.
 
 
 
@@ -69,6 +69,10 @@ eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-plugin-jsdoc
 ```json
 "extends": "@fuelrats/eslint-config",
 ```
+If you don't use [`Babel`][babel]:
+```json
+"extends": `@fuelrats/eslint-config/purejs`
+```
 2. Setup additional environment options. This config only enables the `"es6"` environment. All other env settings are up to your project.
     * For more information on eslint envrionment settings, visit [the eslint docs][eslint-env]
 
@@ -78,6 +82,7 @@ eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-plugin-jsdoc
 
 ## Credits
 Our code style and this config set was inspired by and derived from the AirBnB javascript style guide.
+
 [Send some love their way 😍🎉🎊][airbnb]
 
 
@@ -85,6 +90,7 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 
 [airbnb]: https://github.com/airbnb/javascript
+[babel]: https://babeljs.io/
 [eslint-env]: https://eslint.org/docs/user-guide/configuring#specifying-environments
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
 [eslint-plugin-babel]: https://www.npmjs.com/package/eslint-plugin-babel

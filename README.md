@@ -22,12 +22,12 @@ This config has two separate packages. The first is the main config and the seco
 
 ### [@fuelrats/eslint-config][eslint-config-fuelrats]
 
-* Base ESLint ruleset with `babel-eslint` as the primary parser. Generally intended for node.js backend projects.
-    * Assumes an ES2018 class-based environment with babel transforms.
+* Base ESLint ruleset with [`babel-eslint`][babel-eslint] as the primary parser. Generally intended for node.js backend projects.
+    * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
     * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
     * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting. If you do not use JSDoc, set `jsdoc/"require-jsdoc": ["off"]` in your `.eslintrc` file.
-    * Also includes a `purejs` preset which disables `eslint-plugin-babel`.
+    * Also includes a `purejs` preset which disables [`babel-eslint`][babel-eslint] and [`eslint-plugin-babel`][eslint-plugin-babel].
 
 
 ### [@fuelrats/eslint-config-react][eslint-config-fuelrats-react]
@@ -73,8 +73,9 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 
 
-
 [airbnb]: https://github.com/airbnb/javascript
+[babel]: https://babeljs.io/
+[babel-eslint]: https://www.npmjs.com/package/babel-eslint
 [eslint-config-fuelrats]: packages/eslint-config
 [eslint-config-fuelrats-react]: packages/eslint-config-react
 [eslint-plugin-babel]: https://www.npmjs.com/package/eslint-plugin-babel

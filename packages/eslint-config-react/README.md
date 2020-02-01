@@ -83,6 +83,7 @@ eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-plugin-jsdoc
 
 ## Credits
 Our code style and this config set was inspired by and derived from the AirBnB javascript style guide.
+
 [Send some love their way 😍🎉🎊][airbnb]
 
 
