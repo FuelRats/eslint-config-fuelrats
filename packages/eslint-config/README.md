@@ -1,10 +1,10 @@
-# @fuelrats/eslint-config
+# [@fuelrats/eslint-config][eslint-config-fuelrats]
 
-* Base ESLint ruleset with `babel-eslin`t as the primary parser. Generally intended for node.js backend projects.
+* Base ESLint ruleset with `babel-eslint` as the primary parser. Generally intended for node.js backend projects.
     * Assumes an ES2018 class-based environment with babel transforms.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
     * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
-    * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting. If you do not use JSDoc, set `jsdoc/"require-jsdoc": ["off"]` in your `.eslintrc` file.
+    * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting. If you do not use JSDoc, add `"jsdoc/require-jsdoc": ["off"]` to your rules in your `.eslintrc` file.
     * Also includes a `purejs` preset which disables `eslint-plugin-babel`.
 
 
@@ -24,7 +24,9 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 ### Installation
 
-We recommend the `install-peerdeps` package for automatically adding your peerdeps
+We recommend the [`install-peerdeps`][install-peerdeps] package for automatically adding the peer dependencies required by this config.
+
+**NOTE:** The commands below assume you are installing to devDependencies. If you want to install to your main dependencies (not recommended), remove the `-d` flag.
 
 #### Via `npm` v5+
 
@@ -84,5 +86,8 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 [airbnb]: https://github.com/airbnb/javascript
 [eslint-env]: https://eslint.org/docs/user-guide/configuring#specifying-environments
-[eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
+[eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
 [eslint-plugin-babel]: https://www.npmjs.com/package/eslint-plugin-babel
+[eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
+[eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
+[install-peerdeps]: https://www.npmjs.com/package/install-peerdeps

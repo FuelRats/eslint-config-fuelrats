@@ -23,7 +23,9 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 ### Installation
 
-We recommend the `install-peerdeps` package for automatically adding your peerdeps
+We recommend the [`install-peerdeps`][install-peerdeps] package for automatically adding the peer dependencies required by this config.
+
+**NOTE:** The commands below assume you are installing to devDependencies. If you want to install to your main dependencies (not recommended), remove the `-d` flag.
 
 #### Via `npm` v5+
 
@@ -94,3 +96,4 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 [eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
 [eslint-plugin-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks
 [eslint-plugin-react-config]: https://github.com/yannickcr/eslint-plugin-react#configuration
+[install-peerdeps]: https://www.npmjs.com/package/install-peerdeps
