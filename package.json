@@ -34,6 +34,17 @@
     "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git"
   },
   "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
+  "scripts": {
+    "eslint": "yarn workspaces run eslint .",
+    "release-base": "yarn workspace @fuelrats/eslint-config publish --non-interactive",
+    "release-react": "yarn workspace @fuelrats/eslint-config-react publish --non-interactive",
+    "release": "yarn release-base && yarn release-react",
+    "release-canary-base": "yarn workspace @fuelrats/eslint-config publish --non-interactive --tag canary",
+    "release-canary-react": "yarn workspace @fuelrats/eslint-config-react publish --non-interactive --tag canary",
+    "release-canary": "yarn release-canary-base && yarn release-canary-react",
+    "version-release": "yarn workspaces run version",
+    "version-canary": "yarn workspaces run version --preid canary"
+  },
   "workspaces": [
     "packages/*"
   ],
