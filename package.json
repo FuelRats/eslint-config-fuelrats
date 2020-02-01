@@ -1,7 +1,8 @@
 {
-  "name": "@fuelrats/eslint-config-react",
-  "version": "1.2.5",
-  "description": "ESLint config for fuelrats react projects",
+  "name": "eslint-config-fuelrats",
+  "description": "Monorepo for @fuelrats/eslint-config[-react]!",
+  "private": true,
+  "license": "MIT",
   "author": {
     "name": "Cameron Welter",
     "email": "clapton@fuelrats.com",
@@ -18,53 +19,33 @@
     },
     {
       "name": "Trezy",
-      "email": "tre@trezy.com",
+      "email": "trezy@fuelrats.com",
       "url": "https://trezy.com"
     },
     {
       "name": "Alex S. Glomsaas",
-      "email": "alex@sorlie.co.uk",
+      "email": "xlexious@fuelrats.com",
       "url": "https://github.com/xlexi"
     }
   ],
-  "main": "index.js",
+  "main": "./packages/eslint-config-react/develop.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FuelRats/eslint-config-fuelrats",
-    "directory": "eslint-config-react"
+    "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git"
   },
   "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "fuelrats",
-    "javascript",
-    "ecma2018",
-    "es2018",
-    "react"
+  "workspaces": [
+    "packages/*"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "@fuelrats/eslint-config": "^1.2.2"
-  },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsdoc": "^21.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "react": "^16.12.0"
-  },
-  "peerDependencies": {
-    "babel-eslint": ">=10",
-    "eslint": ">=6.7",
-    "eslint-plugin-babel": ">=5.3",
-    "eslint-plugin-import": ">=2.19",
-    "eslint-plugin-jsx-a11y": ">=6.2",
-    "eslint-plugin-react": ">=7.18",
-    "eslint-plugin-react-hooks": ">=2.3",
-    "react": ">=16.8"
   }
 }

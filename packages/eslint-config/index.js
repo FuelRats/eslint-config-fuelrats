@@ -5,24 +5,23 @@
 
 module.exports = {
   env: {
-    browser: true,
+    es6: true,
   },
   extends: [
-    '@fuelrats/eslint-config',
-    './rules/plugin-react',
-    './rules/plugin-react-jsx',
-    './rules/plugin-react-hooks',
-    './rules/plugin-jsx-a11y',
+    './rules/bestpractices',
+    './rules/errors',
+    './rules/es6',
+    './rules/node',
+    './rules/style',
+    './rules/variables',
+    './rules/plugin-babel',
+    './rules/plugin-import',
+    './rules/plugin-jsdoc',
   ].map(require.resolve),
+  parser: 'babel-eslint',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  settings: {
-    react: {
-      pragma: 'React',
-      version: 'detect',
-    },
+    codeFrame: true,
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
 }

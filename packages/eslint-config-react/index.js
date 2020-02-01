@@ -1,9 +1,13 @@
+/***************************************************************************\
+  All the credit and love to AirBnB for an amazing config project structure
+  https://github.com/airbnb/javascript
+\***************************************************************************/
+
 module.exports = {
   env: {
     browser: true,
   },
   extends: [
-    '../eslint-config',
     './rules/plugin-react',
     './rules/plugin-react-jsx',
     './rules/plugin-react-hooks',
