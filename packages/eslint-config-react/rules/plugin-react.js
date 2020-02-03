@@ -124,7 +124,7 @@ module.exports = {
     /**
      * Prevent usage of `setState` in `componentDidMount`
      */
-    'react/no-did-mount-set-state': ['off'],
+    'react/no-did-mount-set-state': ['error'],
 
 
     /**
