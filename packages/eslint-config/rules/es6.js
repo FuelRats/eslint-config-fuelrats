@@ -201,7 +201,7 @@ module.exports = {
     /**
      * enforce sorted import declarations within modules
      *
-     * _DISABLED: To be determined by project_
+     * _DISABLED: Enforced via import plugin_
      */
     'sort-imports': ['off'],
 
