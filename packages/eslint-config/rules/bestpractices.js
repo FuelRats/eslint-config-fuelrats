@@ -355,14 +355,10 @@ module.exports = {
 
     /**
      * disallow certain properties on certain objects
+     *
+     * _DISABLED: We don't have any properties to restrict_
      */
-    'no-restricted-properties': ['error',
-      {
-        object: 'arguments',
-        property: 'callee',
-        message: 'arguments.callee is deprecated.',
-      },
-    ],
+    'no-restricted-properties': ['off'],
 
 
     /**
