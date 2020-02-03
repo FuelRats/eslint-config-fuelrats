@@ -10,7 +10,8 @@ module.exports = {
 
 
     /**
-     * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
+     * Ensures inline tags are not rendered without spaces between them
+     *
      */
     'react/jsx-child-element-spacing': ['off'],
 
@@ -107,6 +108,8 @@ module.exports = {
 
     /**
      * Validate JSX maximum depth
+     *
+     * _DISABLED: To be determined by project._
      */
     'react/jsx-max-depth': ['off'],
 
@@ -208,6 +211,8 @@ module.exports = {
 
     /**
      * Disallow JSX props spreading
+     *
+     * _DISABLED: We allow prop spreading. This is quite important when passing props to inputs_
      */
     'react/jsx-props-no-spreading': ['off'],
 
@@ -223,7 +228,14 @@ module.exports = {
     /**
      * Enforce props alphabetical sorting (fixable)
      */
-    'react/jsx-sort-props': ['off'],
+    'react/jsx-sort-props': ['error', {
+      callbacksLast: true,
+      shorthandFirst: true,
+      shorthandLast: false,
+      ignoreCase: true,
+      noSortAlphabetically: false,
+      reservedFirst: true,
+    }],
 
 
     /**
