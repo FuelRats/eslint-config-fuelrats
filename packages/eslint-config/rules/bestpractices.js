@@ -82,7 +82,7 @@ module.exports = {
      * require the use of === and !==
      */
     'eqeqeq': ['error', 'always', {
-      null: 'always',
+      null: 'never',
     }],
 
 
