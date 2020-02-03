@@ -29,6 +29,8 @@ module.exports = {
 
     /**
      * Enforce all anchors are valid, navigable elements.
+     *
+     * _DISABLED: In our experience this has lead to many false positives_
      */
     'jsx-a11y/anchor-is-valid': ['off'],
 
@@ -112,12 +114,16 @@ module.exports = {
 
     /**
      * Enforce that a label tag has a text label and an associated control.
+     *
+     * _DISABLED: Too many false positives_
      */
     'jsx-a11y/label-has-associated-control': ['off'],
 
 
     /**
      * Enforce that <label> elements have the htmlFor prop.
+     *
+     * _DISABLED: Too many false positives_
      */
     'jsx-a11y/label-has-for': ['off'],
 
@@ -210,7 +216,7 @@ module.exports = {
     /**
      * Enforce usage of onBlur over onChange on select menus for accessibility.
      */
-    'jsx-a11y/no-onchange': ['off'],
+    'jsx-a11y/no-onchange': ['error'],
 
 
     /**
