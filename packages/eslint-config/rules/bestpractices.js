@@ -326,17 +326,18 @@ module.exports = {
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsForRegex: [
-        '^acc(umulator)?', // for reduce accumulators
+        '^acc(umulator)?', // for Array.reduce() accumulators
         '^desc(riptor)?', // for ESNext decorators
         '^req(uest)?', // for Express requests
         '^res(ponse)?', // for Express responses
       ],
       ignorePropertyModificationsFor: [
         'Component', // for React HOCs
+        'connection', // alternative name for Koa ctx
         'ctx', // for Koa routing
         'draftState', // for immer producers
-        'event', // for event.returnvalue
         'target', // for ESNext decorators
+        'client', // for Websocket servers
       ],
     }],
 
