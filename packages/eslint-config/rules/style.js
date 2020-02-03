@@ -158,6 +158,9 @@ module.exports = {
     'id-length': ['error', {
       min: 2,
       max: 35,
+      exceptions: [
+        '_',
+      ],
     }],
 
 
