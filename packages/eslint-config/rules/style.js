@@ -2,6 +2,8 @@ module.exports = {
   rules: {
     /**
      * enforce linebreaks after opening and before closing array brackets
+     *
+     * _DISABLED: Unable to enforce consistent behavior with objects, therefore we prefer to leave this off so as to not enforce inconsistency_
      */
     'array-bracket-newline': ['off'],
 
@@ -14,6 +16,8 @@ module.exports = {
 
     /**
      * enforce line breaks after each array element
+     *
+     * _DISABLED: Unable to enforce consistent behavior with objects, therefore we prefer to leave this off so as to not enforce inconsistency_
      */
     'array-element-newline': ['off'],
 
