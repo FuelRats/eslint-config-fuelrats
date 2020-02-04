@@ -1,5 +1,6 @@
 {
   "name": "eslint-config-fuelrats",
+  "version": "2.0.0-canary.1",
   "description": "Monorepo for @fuelrats/eslint-config[-react]!",
   "private": true,
   "license": "MIT",
@@ -42,8 +43,7 @@
     "release-canary-base": "yarn workspace @fuelrats/eslint-config publish --non-interactive --tag canary",
     "release-canary-react": "yarn workspace @fuelrats/eslint-config-react publish --non-interactive --tag canary",
     "release-canary": "yarn release-canary-base && yarn release-canary-react",
-    "version-release": "yarn workspaces run version",
-    "version-canary": "yarn workspaces run version --preid canary"
+    "autoversion": "bash ./scripts/autoversion.sh"
   },
   "workspaces": [
     "packages/*"
