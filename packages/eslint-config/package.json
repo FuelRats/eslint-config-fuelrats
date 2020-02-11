@@ -28,7 +28,6 @@
       "url": "https://github.com/xlexi"
     }
   ],
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git",
@@ -43,6 +42,11 @@
     "ecma2018",
     "es2018"
   ],
+  "main": "index.js",
+  "scripts": {
+    "release": "yarn publish --non-interactive",
+    "release:canary": "yarn publish --tag canary --non-interactive"
+  },
   "dependencies": {
     "eslint-restricted-globals": "^0.2.0"
   },

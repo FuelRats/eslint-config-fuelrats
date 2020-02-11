@@ -28,7 +28,6 @@
       "url": "https://github.com/xlexi"
     }
   ],
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git",
@@ -44,6 +43,11 @@
     "es2018",
     "react"
   ],
+  "main": "index.js",
+  "scripts": {
+    "release": "yarn publish --non-interactive",
+    "release:canary": "yarn publish --tag canary --non-interactive"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",

@@ -29,25 +29,25 @@
       "url": "https://github.com/xlexi"
     }
   ],
-  "main": "./packages/eslint-config-react/develop.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git"
   },
   "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
-  "scripts": {
-    "eslint": "yarn workspaces run eslint .",
-    "release-base": "yarn workspace @fuelrats/eslint-config publish --non-interactive",
-    "release-react": "yarn workspace @fuelrats/eslint-config-react publish --non-interactive",
-    "release": "yarn release-base && yarn release-react",
-    "release-canary-base": "yarn workspace @fuelrats/eslint-config publish --non-interactive --tag canary",
-    "release-canary-react": "yarn workspace @fuelrats/eslint-config-react publish --non-interactive --tag canary",
-    "release-canary": "yarn release-canary-base && yarn release-canary-react",
-    "autoversion": "bash ./scripts/autoversion.sh"
-  },
   "workspaces": [
     "packages/*"
   ],
+  "main": "./packages/eslint-config-react/develop.js",
+  "scripts": {
+    "eslint": "yarn workspaces run eslint .",
+    "release:base": "yarn workspace @fuelrats/eslint-config run release",
+    "release:base:canary": "yarn workspace @fuelrats/eslint-config run release-canary",
+    "release:react": "yarn workspace @fuelrats/eslint-config-react run release",
+    "release:react:canary": "yarn workspace @fuelrats/eslint-config-react run release-canary",
+    "release": "yarn workspaces run release",
+    "release:canary": "yarn workspaces run release:canary",
+    "autoversion": "bash ./scripts/autoversion.sh"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
