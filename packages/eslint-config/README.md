@@ -26,7 +26,7 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 We recommend the [`install-peerdeps`][install-peerdeps] package for automatically adding the peer dependencies required by this config.
 
-**NOTE:** The commands below assume you are installing to devDependencies. If you want to install to your main dependencies (not recommended), remove the `-d` flag.
+**NOTE:** The commands below assume you are installing to `devDependencies`. If you want to install to your main `dependencies` (not recommended), remove the `-d` flag.
 
 #### Via `npm` v5+
 
@@ -36,12 +36,14 @@ $ npx install-peerdeps -d @fuelrats/eslint-config
 
 #### Via `yarn` 1.x
 
-Yarn v1 does not have an included remote script runner. First you must globally install `install-peerdeps`
+Yarn v1 does not have an included remote script runner. First you must globally install `install-peerdeps`:
 
 ```bash
 $ yarn global add install-peerdeps
 ```
-then run
+
+then run:
+
 ```bash
 $ install-peerdeps -d -Y @fuelrats/eslint-config
 ```
@@ -66,13 +68,17 @@ eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-plugin-jsdoc
 ### Configuration
 
 1. Add the following to your `.eslintrc` file:
+
 ```json
 "extends": "@fuelrats/eslint-config",
 ```
-If you don't use [`Babel`][babel]:
+
+or, if you don't use [`Babel`][babel]:
+
 ```json
 "extends": `@fuelrats/eslint-config/purejs`
 ```
+
 2. Setup additional environment options. This config only enables the `"es6"` environment. All other env settings are up to your project.
     * For more information on eslint envrionment settings, visit [the eslint docs][eslint-env]
 

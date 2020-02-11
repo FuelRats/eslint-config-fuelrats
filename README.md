@@ -17,8 +17,7 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 
 ## Packages
-This config has two separate packages. The first is the main config and the second is a companion package for react projects.
-
+This config has two separate packages:
 
 ### [@fuelrats/eslint-config][eslint-config-fuelrats]
 
@@ -26,7 +25,7 @@ This config has two separate packages. The first is the main config and the seco
     * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
     * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
-    * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting. If you do not use JSDoc, set `jsdoc/"require-jsdoc": ["off"]` in your `.eslintrc` file.
+    * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting.
     * Also includes a `purejs` preset which disables [`babel-eslint`][babel-eslint] and [`eslint-plugin-babel`][eslint-plugin-babel].
 
 
