@@ -9,6 +9,17 @@
 
 
 
+## Note about v2
+
+> v2 Changes a number of aspects of our code style which may lead to time consuming adjustments, and in some cases an outright refactor of your code.
+>
+> Please see PR [#3][] for a comprehensive list of changes made from `v1.2.5`
+>
+> Additionally, this config no longer extends `@fuelrats/eslint-config`. To migrate to v2, you must install both configs. See setup steps below.
+
+
+
+
 ## Motivation
 
 The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.

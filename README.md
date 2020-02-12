@@ -6,6 +6,15 @@ Standard configurations for Fuel Rats ECMAScript projects
 
 
 
+## Note about v2
+
+> v2 Changes a number of aspects of our code style which may lead to time consuming adjustments, and in some cases an outright refactor of your code.
+>
+> Please see PR [#3][] for a comprehensive list of changes made from `v1.2.5`
+>
+> If you are a react user, [`@fuelrats/eslint-config-react`][eslint-config-fuelrats-react] no longer extends [`@fuelrats/eslint-config`][eslint-config-fuelrats]. See the react package [`README.md`][eslint-config-fuelrats-react] for more information.
+
+
 ## Motivation
 
 The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.
