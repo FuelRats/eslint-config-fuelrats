@@ -46,8 +46,10 @@ module.exports = {
 
     /**
      * disallow initializing variables to undefined
+     *
+     * _DISABLED: We do not allow uninitialized variables, so this is useful._
      */
-    'no-undef-init': ['error'],
+    'no-undef-init': ['off'],
 
 
     /**
@@ -72,8 +74,8 @@ module.exports = {
      * disallow the use of variables before they are defined
      */
     'no-use-before-define': ['error', {
-      functions: true,
-      classes: true,
+      functions: false,
+      classes: false,
       variables: true,
     }],
   },

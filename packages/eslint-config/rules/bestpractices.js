@@ -448,8 +448,10 @@ module.exports = {
 
     /**
      * disallow unnecessary escape characters
+     *
+     * _DISABLED: This rule is really broken_
      */
-    'no-useless-escape': ['error'],
+    'no-useless-escape': ['off'],
 
 
     /**
@@ -526,7 +528,7 @@ module.exports = {
     /**
      * require parentheses around immediate function invocations
      */
-    'wrap-iife': ['error', 'inside', {
+    'wrap-iife': ['error', 'outside', {
       functionPrototypeMethods: false,
     }],
 

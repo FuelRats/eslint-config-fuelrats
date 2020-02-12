@@ -94,10 +94,10 @@ module.exports = {
 
     /**
      * Forbid a module from importing a module with a dependency path back to itself
+     *
+     * _DISABLED: Our environments do not have an issue with cyclic loading._
      */
-    'import/no-cycle': ['error', {
-      maxDepth: Infinity,
-    }],
+    'import/no-cycle': ['off'],
 
 
     /**

@@ -40,7 +40,7 @@ module.exports = {
      * enforce camelcase naming convention
      */
     'camelcase': ['error', {
-      properties: 'always',
+      properties: 'never',
       ignoreDestructuring: false,
       allow: [
         '^UNSAFE_', // for unsafe React lifecycle methods
@@ -294,7 +294,7 @@ module.exports = {
     /**
      * enforce a maximum number of lines per file
      */
-    'max-lines': ['error', 750],
+    'max-lines': ['error', 999],
 
 
     /**
@@ -511,8 +511,10 @@ module.exports = {
 
     /**
      * disallow all tabs
+     *
+     * _DISABLED: This even errors when the tabs are in strings, and that just aint right._
      */
-    'no-tabs': ['error'],
+    'no-tabs': ['off'],
 
 
     /**
