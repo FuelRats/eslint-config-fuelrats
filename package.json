@@ -1,0 +1,62 @@
+{
+  "name": "eslint-config-fuelrats",
+  "version": "2.0.0-canary.3",
+  "description": "Monorepo for @fuelrats/eslint-config[-react]!",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Cameron Welter",
+    "email": "clapton@fuelrats.com",
+    "url": "https://github.com/UncleClapton"
+  },
+  "bugs": {
+    "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
+  },
+  "contributors": [
+    {
+      "name": "Cameron Welter",
+      "email": "clapton@fuelrats.com",
+      "url": "https://github.com/UncleClapton"
+    },
+    {
+      "name": "Trezy",
+      "email": "trezy@fuelrats.com",
+      "url": "https://trezy.com"
+    },
+    {
+      "name": "Alex S. Glomsaas",
+      "email": "xlexious@fuelrats.com",
+      "url": "https://github.com/xlexi"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git"
+  },
+  "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "./packages/eslint-config-react/develop.js",
+  "scripts": {
+    "eslint": "yarn workspaces run eslint .",
+    "release:base": "yarn workspace @fuelrats/eslint-config run release",
+    "release:base:canary": "yarn workspace @fuelrats/eslint-config run release:canary",
+    "release:react": "yarn workspace @fuelrats/eslint-config-react run release",
+    "release:react:canary": "yarn workspace @fuelrats/eslint-config-react run release:canary",
+    "release": "yarn workspaces run release",
+    "release:canary": "yarn workspaces run release:canary",
+    "autoversion": "bash ./scripts/autoversion.sh"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsdoc": "^21.0.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "react": "^16.12.0"
+  }
+}
