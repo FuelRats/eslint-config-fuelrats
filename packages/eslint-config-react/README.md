@@ -103,7 +103,7 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 
 
-
+[#3]: https://github.com/FuelRats/eslint-config-fuelrats/pull/3
 
 [airbnb]: https://github.com/airbnb/javascript
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
