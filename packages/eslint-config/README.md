@@ -85,7 +85,7 @@ eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-plugin-jsdoc
 or, if you don't use [`Babel`][babel]:
 
 ```json
-"extends": `@fuelrats/eslint-config/purejs`
+"extends": "@fuelrats/eslint-config/purejs",
 ```
 
 2. Setup additional environment options. This config only enables the `"es6"` environment. All other env settings are up to your project.
