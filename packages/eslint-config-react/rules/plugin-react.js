@@ -123,8 +123,10 @@ module.exports = {
 
     /**
      * Prevent usage of `setState` in `componentDidMount`
+     *
+     * _DISABLED: This rule needs an exception for `async componentDidMount()` before we can use it._
      */
-    'react/no-did-mount-set-state': ['error'],
+    'react/no-did-mount-set-state': ['off'],
 
 
     /**
