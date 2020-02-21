@@ -5,11 +5,22 @@
 
 
 
+### 2.1.0
+
+#### Changes
+* Disable `react/no-did-mount-set-state` due to it's lack of exceptions for async data handling.
+* Disable `jsx-a11y/no-onchange` due to some false positives we were seeing.
+
+#### Fixed
+* Remove `react-dom` as a peer dependency.
+
+
+
 
 
 ### 2.0.0
 
-- Initial release intended for general consumption
+* Initial release intended for general consumption
 
 
 
