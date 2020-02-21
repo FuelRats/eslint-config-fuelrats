@@ -41,7 +41,9 @@ module.exports = {
     /**
      * disallow the use of undeclared variables unless mentioned in `global` comments
      */
-    'no-undef': ['error'],
+    'no-undef': ['error', {
+      typeof: true,
+    }],
 
 
     /**
