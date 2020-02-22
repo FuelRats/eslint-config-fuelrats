@@ -216,7 +216,7 @@ module.exports = {
     /**
      * Enforce usage of onBlur over onChange on select menus for accessibility.
      */
-    'jsx-a11y/no-onchange': ['error'],
+    'jsx-a11y/no-onchange': ['off'],
 
 
     /**

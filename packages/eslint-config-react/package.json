@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "2.0.0",
+  "version": "2.1.0-canary.0",
   "description": "ESLint config for fuelrats react projects",
   "license": "MIT",
   "author": {
@@ -64,7 +64,6 @@
     "eslint-plugin-jsx-a11y": ">=6.2",
     "eslint-plugin-react": ">=7.18",
     "eslint-plugin-react-hooks": ">=2.3",
-    "react": ">=16.8",
-    "react-dom": ">=16.8"
+    "react": ">=16.8"
   }
 }
