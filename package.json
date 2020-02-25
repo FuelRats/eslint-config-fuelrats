@@ -37,7 +37,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "main": "./packages/eslint-config-react/develop.js",
+  "main": "./packages/eslint-config/index.js",
   "scripts": {
     "eslint": "yarn workspaces run eslint .",
     "release:base": "yarn workspace @fuelrats/eslint-config run release",
@@ -47,6 +47,9 @@
     "release": "yarn workspaces run release",
     "release:canary": "yarn workspaces run release:canary",
     "autoversion": "bash ./scripts/autoversion.sh"
+  },
+  "dependencies": {
+    "eslint-restricted-globals": "^0.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
