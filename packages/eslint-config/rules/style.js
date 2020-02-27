@@ -504,7 +504,7 @@ module.exports = {
       },
       {
         selector: 'DebuggerStatement',
-        message: 'Manual debugger statements are not allowed, consider using the breakpoint system in youe development environment.',
+        message: 'Manual debugger statements are not allowed, consider using the breakpoint system in your development environment.',
       },
     ],
 
