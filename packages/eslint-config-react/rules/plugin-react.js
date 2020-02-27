@@ -326,7 +326,7 @@ module.exports = {
     /**
      * Enforce where React component static properties should be positioned.
      */
-    'react/static-property-placement': ['off'],
+    'react/static-property-placement': ['error', 'static public field'],
 
 
     /**
