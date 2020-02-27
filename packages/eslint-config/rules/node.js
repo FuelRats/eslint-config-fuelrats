@@ -1,4 +1,8 @@
 module.exports = {
+  /**
+   * TODO @ eslint@7: delete
+   */
+
   rules: {
     /**
      * require return statements after callbacks
