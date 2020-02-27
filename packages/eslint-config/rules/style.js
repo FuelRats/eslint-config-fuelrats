@@ -502,10 +502,6 @@ module.exports = {
         selector: 'no-restricted-syntax',
         message: 'Buddy you\'ve got problems.',
       },
-      {
-        selector: 'DebuggerStatement',
-        message: 'Manual debugger statements are not allowed, consider using the breakpoint system in your development environment.',
-      },
     ],
 
 
