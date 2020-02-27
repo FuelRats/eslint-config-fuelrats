@@ -484,19 +484,19 @@ module.exports = {
     'no-restricted-syntax': ['error',
       {
         selector: 'ForStatement',
-        message: 'Go back to C you mad man.',
+        message: 'C-Style for loops are disallowed, consider using a higher-order array function like map/filter/reduce, a for-of statement, or a while loop.',
       },
       {
         selector: 'WithStatement',
-        message: 'ಠ_ಠ With statement is deprecated, ya chump.',
+        message: 'Use of the WITH statement is deprecated in ES5 and generally discouraged due to unpredictable behaviour.',
       },
       {
         selector: 'LabeledStatement',
-        message: 'Labels are like GOTOs, they make your code less readable for little benefit.',
+        message: 'Labeled statements are considered harmful as they break the control flow of the program and makes the behaviour of code unpredictable and difficult to understand.',
       },
       {
         selector: 'BinaryExpression[operator=\'in\']',
-        message: 'In operator can cause problematic behavior. Use Obj.isOwnProperty() or Reflect.has() instead.',
+        message: 'The In operator can cause problematic behavior. Use Obj.isOwnProperty() or Reflect.has() instead.',
       },
       {
         selector: 'no-restricted-syntax',
@@ -504,7 +504,7 @@ module.exports = {
       },
       {
         selector: 'DebuggerStatement',
-        message: 'You may think you need this, but you don\'t. Set your devenv up correctly, chump.',
+        message: 'Manual debugger statements are not allowed, consider using the breakpoint system in youe development environment.',
       },
     ],
 
