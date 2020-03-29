@@ -1,8 +1,15 @@
 # @fuelrats/eslint-config Changelog
 
 
-## Unreleased
+### Unreleased
 
+#### Additions
+* Warn when a lint rule is being disabled that doesn't need to be.
+
+
+#### Changes
+* Better and more consistent restricted syntax messages.
+* Disallow explicit null checks via `no-restricted syntax` instead of abusing the combination of `eqeqeq`'s null option and `no-eq-null`
 
 
 ### 2.1.0

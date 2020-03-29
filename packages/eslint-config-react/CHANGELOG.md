@@ -3,6 +3,8 @@
 
 ## Unreleased
 
+#### Fixed
+* resolved an issue where `indent` and `react/jsx-indent` conflict.
 
 
 ### 2.1.0
