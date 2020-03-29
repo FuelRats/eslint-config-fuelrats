@@ -484,19 +484,23 @@ module.exports = {
     'no-restricted-syntax': ['error',
       {
         selector: 'ForStatement',
-        message: 'C-Style for loops are disallowed, consider using a higher-order array function like map/filter/reduce, a for-of statement, or a while loop.',
+        message: 'C-Style for loops are discouraged. Consider using a higher-order array function like map/filter/reduce, a for-of statement, or a while loop.',
       },
       {
         selector: 'WithStatement',
-        message: 'Use of the WITH statement is deprecated in ES5 and generally discouraged due to unpredictable behaviour.',
+        message: 'The `with` statement has been deprecated and is discouraged due to unpredictable behaviour.',
       },
       {
         selector: 'LabeledStatement',
-        message: 'Labeled statements are considered harmful as they break the control flow of the program and makes the behaviour of code unpredictable and difficult to understand.',
+        message: 'Labeled statements are discouraged. They break the control flow of the program which makes code difficult to understand.',
       },
       {
         selector: 'BinaryExpression[operator=\'in\']',
-        message: 'The In operator can cause problematic behavior. Use Obj.isOwnProperty() or Reflect.has() instead.',
+        message: 'The `in` operator is discouraged. It is often the cause of unpredictable behavior. Use `object.isOwnProperty(value)` or `Reflect.has(object, value)` instead.',
+      },
+      {
+        selector: 'BinaryExpression > Literal[value="null"]',
+        message: "Explicit `null` checks are discouraged. Prefer type checking against the correct type `typeof value === 'string'`, or use a fasly check `!value`.",
       },
       {
         selector: 'no-restricted-syntax',
