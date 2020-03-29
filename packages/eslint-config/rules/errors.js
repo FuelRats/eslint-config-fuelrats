@@ -61,6 +61,8 @@ module.exports = {
 
     /**
      * disallow the use of debugger
+     *
+     * The impact of debugger slipping into production code HEAVILY outweighs it's benefit.
      */
     'no-debugger': ['error'],
 
