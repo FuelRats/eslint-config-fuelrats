@@ -87,7 +87,7 @@ module.exports = {
      * Validate JSX indentation (fixable)
      */
     'react/jsx-indent': ['error', 2, {
-      checkAttributes: true,
+      checkAttributes: false,
       indentLogicalExpressions: true,
     }],
 
