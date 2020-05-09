@@ -3,8 +3,15 @@
 
 ## Unreleased
 
+#### Changes
+* set `parser` and `parserOptions` from main package so `eslint-config-react` can be used standalone.
+
+
 #### Fixed
 * resolved an issue where `indent` and `react/jsx-indent` conflict.
+
+
+
 
 
 ### 2.1.0
