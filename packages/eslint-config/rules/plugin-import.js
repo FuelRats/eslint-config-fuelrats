@@ -267,6 +267,7 @@ module.exports = {
     'import/order': ['error', {
       alphabetize: {
         order: 'asc',
+        caseInsensitive: true,
       },
       groups: [
         ['external', 'builtin'],
