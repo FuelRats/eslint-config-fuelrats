@@ -226,6 +226,12 @@ module.exports = {
 
 
     /**
+     * disallow useless backreferences in regular expressions
+     */
+    'no-useless-backreference': ['error'],
+
+
+    /**
      * disallow assignments that can lead to race conditions due to usage of await or yield
      *
      * _DISABLED: until fixed? Persistent false positives has lead the TSC to remove this rule from eslint:recommended_
