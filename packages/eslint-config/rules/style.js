@@ -484,11 +484,16 @@ module.exports = {
     'no-restricted-syntax': ['error',
       {
         selector: 'ForStatement',
-        message: 'C-Style for loops are discouraged. Consider using a higher-order array function like map/filter/reduce, a for-of statement, or a while loop.',
+        message: 'C-Style for loops are discouraged. Use array iteration (`arr.{forEach,map,reduce}`), a for-of statement, or a while loop instead.',
+      },
+      {
+        selector: 'ForInStatement',
+        // eslint-disable-next-line max-len
+        message: '`for ... in` loops iterate over the entire prototype chain, which may lead to unexpected behavior. Use array iteration (`arr.{forEach,map,reduce}`), a for-of statement, or a while loop instead.',
       },
       {
         selector: 'WithStatement',
-        message: 'The `with` statement has been deprecated and is discouraged due to unpredictable behaviour.',
+        message: 'The `with` statement is forbidden in strict mode.',
       },
       {
         selector: 'LabeledStatement',
@@ -496,15 +501,11 @@ module.exports = {
       },
       {
         selector: 'BinaryExpression[operator=\'in\']',
-        message: 'The `in` operator is discouraged. It is often the cause of unpredictable behavior. Use `object.isOwnProperty(value)` or `Reflect.has(object, value)` instead.',
+        message: 'The `in` operator is discouraged because it is often the cause of unexpected behavior. Use `obj.isOwnProperty(value)` or `Reflect.has(obj, value)` instead.',
       },
       {
         selector: 'BinaryExpression > Literal[value="null"]',
-        message: "Explicit `null` checks are discouraged. Prefer type checking against the correct type `typeof value === 'string'`, or use a fasly check `!value`.",
-      },
-      {
-        selector: 'no-restricted-syntax',
-        message: 'Buddy you\'ve got problems.',
+        message: "Explicit `null` checks are discouraged. Type check against the correct type (`typeof value === 'string'`), or use a fasly check (`!value`) instead.",
       },
     ],
 
