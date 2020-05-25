@@ -3,5 +3,6 @@
     { "directory": "./eslint-config", "changeProcessCWD": true },
     { "directory": "./eslint-config-react", "changeProcessCWD": true }
   ],
+  "editor.rulers": [180],
   "git.ignoreLimitWarning": true
 }
