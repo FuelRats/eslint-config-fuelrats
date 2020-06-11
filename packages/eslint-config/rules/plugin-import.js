@@ -270,11 +270,19 @@ module.exports = {
         order: 'asc',
         caseInsensitive: true,
       },
+      'newlines-between': 'always',
       groups: [
-        ['external', 'builtin'],
+        'builtin',
+        'external',
         'internal',
         ['parent', 'sibling', 'index'],
         'unknown',
+      ],
+      pathGroups: [
+        {
+          pattern: '~/**',
+          group: 'internal',
+        },
       ],
     }],
 
