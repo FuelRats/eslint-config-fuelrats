@@ -97,6 +97,7 @@ module.exports = {
      */
     'import/no-cycle': ['error', {
       maxDepth: Infinity,
+      ignoreExternal: true,
     }],
 
 
