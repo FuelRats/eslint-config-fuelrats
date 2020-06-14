@@ -1,26 +1,15 @@
+const importExtensions = require('../util/importExtensions')
 module.exports = {
   plugins: [
     'import',
   ],
   settings: {
     'import/resolver': {
-      node: {
-        extensions: [
-          '.js',
-          '.json',
-          '.jsx',
-          '.mjs',
-        ],
-      },
+      node: { extensions: importExtensions },
     },
-    'import/extensions': [
-      '.js',
-      '.mjs',
-      '.jsx',
-    ],
+    'import/extensions': importExtensions,
     'import/core-modules': [],
     'import/ignore': [
-      'node_modules',
       '\\.(coffee|scss|css|less|hbs|svg|json)$',
     ],
   },

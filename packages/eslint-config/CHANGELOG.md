@@ -16,7 +16,7 @@
 * add `inheritdoc` to certain `jsdoc` rule `exemptedBy` options so it's consistent with the default config
 * make `import/order` case insensitive sort.
 * Remove all node-specific rules since they are now deprecated.
-
+* Improved settings for import plugin.
 
 
 
