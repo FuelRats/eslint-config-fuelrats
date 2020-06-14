@@ -8,7 +8,7 @@
 * Enable ESLint v7 rules
   * `default-case-last`
   * `no-useless-backreference`
-
+* Recognize the path alias `~` as an `internal` import in import ordering.
 
 #### Changes
 * Better and more consistent restricted syntax messages.

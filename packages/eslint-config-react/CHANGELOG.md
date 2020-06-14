@@ -1,7 +1,7 @@
 # @fuelrats/eslint-config-react Changelog
 
 
-## Unreleased
+### Unreleased
 
 #### Changes
 * set `parser` and `parserOptions` from main package so `eslint-config-react` can be used standalone.
