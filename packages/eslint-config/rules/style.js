@@ -153,7 +153,7 @@ module.exports = {
     /**
      * disallow specified identifiers
      */
-    'id-blacklist': ['off'],
+    'id-denylist': ['off'],
 
 
     /**
