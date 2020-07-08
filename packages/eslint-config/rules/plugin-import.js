@@ -1,4 +1,5 @@
 const importExtensions = require('../util/importExtensions')
+
 module.exports = {
   plugins: [
     'import',
@@ -85,7 +86,7 @@ module.exports = {
      * Forbid a module from importing a module with a dependency path back to itself
      */
     'import/no-cycle': ['error', {
-      maxDepth: Infinity,
+      maxDepth: Number.MAX_SAFE_INTEGER,
       ignoreExternal: true,
     }],
 
@@ -268,7 +269,7 @@ module.exports = {
         [
           'parent',
           'sibling',
-          'index'
+          'index',
         ],
         'unknown',
       ],
