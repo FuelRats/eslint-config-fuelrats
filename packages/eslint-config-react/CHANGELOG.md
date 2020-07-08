@@ -3,6 +3,10 @@
 
 ### Unreleased
 
+#### Additions
+* Enable `jsx-a11y/autocomplete-valid`
+
+
 #### Changes
 * set `parser` and `parserOptions` from main package so `eslint-config-react` can be used standalone.
 

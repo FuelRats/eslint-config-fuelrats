@@ -8,7 +8,10 @@
 * Enable ESLint v7 rules
   * `default-case-last`
   * `no-useless-backreference`
+  * `no-promise-executor-return`
+  * `no-unreachable-loop`
 * Recognize the path alias `~` as an `internal` import in import ordering.
+
 
 #### Changes
 * Better and more consistent restricted syntax messages.
@@ -17,7 +20,10 @@
 * make `import/order` case insensitive sort.
 * Remove all node-specific rules since they are now deprecated.
 * Improved settings for import plugin.
-
+* Use `id-denylist` over `id-blacklist`
+  * Even though this rule is off we'd rather not have deprecated rule names :D
+* Ensure our config is JSON serializable by replacing `Infinity` with `Number.MAX_SAFE_INTEGER`
+* Enable `ignoreGlobals` for `camelcase` rule
 
 
 ### 2.1.0
