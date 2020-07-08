@@ -170,6 +170,12 @@ module.exports = {
 
 
     /**
+     * disallow returning values from Promise executor functions
+     */
+    'no-promise-executor-return': ['error'],
+
+
+    /**
      * disallow calling some Object.prototype methods directly on objects
      */
     'no-prototype-builtins': ['error'],
@@ -209,6 +215,12 @@ module.exports = {
      * disallow unreachable code after return, throw, continue, and break statements
      */
     'no-unreachable': ['error'],
+
+
+    /**
+     * disallow loops with a body that allows only one iteration
+     */
+    'no-unreachable-loop': ['error'],
 
 
     /**
