@@ -61,7 +61,7 @@
   },
   "peerDependencies": {
     "babel-eslint": "^10",
-    "eslint": "^7.4",
+    "eslint": "^7.5",
     "eslint-plugin-jsx-a11y": "^6.3",
     "eslint-plugin-react": "^7.20",
     "eslint-plugin-react-hooks": "^4.0.1",
