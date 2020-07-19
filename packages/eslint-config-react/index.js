@@ -13,10 +13,13 @@ module.exports = {
     './rules/plugin-react-hooks',
     './rules/plugin-jsx-a11y',
   ].map(require.resolve),
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
   settings: {
     react: {

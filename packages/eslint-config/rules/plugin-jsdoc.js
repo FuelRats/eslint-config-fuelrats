@@ -185,7 +185,7 @@ module.exports = {
      * Requires that all function parameters are documented.
      */
     'jsdoc/require-param': ['warn', {
-      exemptedBy: ['endpoint'],
+      exemptedBy: ['endpoint', 'inheritdoc'],
     }],
 
 
@@ -235,7 +235,7 @@ module.exports = {
      * Requires returns are documented.
      */
     'jsdoc/require-returns': ['warn', {
-      exemptedBy: ['endpoint'],
+      exemptedBy: ['endpoint', 'inheritdoc'],
     }],
 
 

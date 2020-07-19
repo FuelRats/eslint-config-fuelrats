@@ -1,7 +1,20 @@
 # @fuelrats/eslint-config-react Changelog
 
 
-## Unreleased
+### Unreleased
+
+#### Additions
+* Enable `jsx-a11y/autocomplete-valid`
+
+
+#### Changes
+* set `parser` and `parserOptions` from main package so `eslint-config-react` can be used standalone.
+
+
+#### Fixed
+* resolved an issue where `indent` and `react/jsx-indent` conflict.
+
+
 
 
 

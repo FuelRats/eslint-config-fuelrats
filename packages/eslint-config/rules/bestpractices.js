@@ -61,6 +61,12 @@ module.exports = {
 
 
     /**
+     * enforce default clauses in switch statements to be last
+     */
+    'default-case-last': ['error'],
+
+
+    /**
      * enforce default parameters to be last
      */
     'default-param-last': ['off'],
@@ -82,7 +88,7 @@ module.exports = {
      * require the use of === and !==
      */
     'eqeqeq': ['error', 'always', {
-      null: 'never',
+      null: 'always',
     }],
 
 

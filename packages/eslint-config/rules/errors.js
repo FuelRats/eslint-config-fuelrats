@@ -61,6 +61,8 @@ module.exports = {
 
     /**
      * disallow the use of debugger
+     *
+     * The impact of debugger slipping into production code HEAVILY outweighs it's benefit.
      */
     'no-debugger': ['error'],
 
@@ -168,6 +170,12 @@ module.exports = {
 
 
     /**
+     * disallow returning values from Promise executor functions
+     */
+    'no-promise-executor-return': ['error'],
+
+
+    /**
      * disallow calling some Object.prototype methods directly on objects
      */
     'no-prototype-builtins': ['error'],
@@ -210,6 +218,12 @@ module.exports = {
 
 
     /**
+     * disallow loops with a body that allows only one iteration
+     */
+    'no-unreachable-loop': ['error'],
+
+
+    /**
      * disallow control flow statements in finally blocks
      */
     'no-unsafe-finally': ['error'],
@@ -221,6 +235,12 @@ module.exports = {
     'no-unsafe-negation': ['error', {
       enforceForOrderingRelations: true,
     }],
+
+
+    /**
+     * disallow useless backreferences in regular expressions
+     */
+    'no-useless-backreference': ['error'],
 
 
     /**

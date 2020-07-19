@@ -41,6 +41,7 @@ module.exports = {
      */
     'camelcase': ['error', {
       properties: 'never',
+      ignoreGlobals: true,
       ignoreDestructuring: false,
       allow: [
         '^UNSAFE_', // for unsafe React lifecycle methods
@@ -153,7 +154,7 @@ module.exports = {
     /**
      * disallow specified identifiers
      */
-    'id-blacklist': ['off'],
+    'id-denylist': ['off'],
 
 
     /**
@@ -484,23 +485,28 @@ module.exports = {
     'no-restricted-syntax': ['error',
       {
         selector: 'ForStatement',
-        message: 'C-Style for loops are disallowed, consider using a higher-order array function like map/filter/reduce, a for-of statement, or a while loop.',
+        message: 'C-Style for loops are discouraged. Use array iteration (`arr.{forEach,map,reduce}`), a for-of statement, or a while loop instead.',
+      },
+      {
+        selector: 'ForInStatement',
+        // eslint-disable-next-line max-len
+        message: '`for ... in` loops iterate over the entire prototype chain, which may lead to unexpected behavior. Use array iteration (`arr.{forEach,map,reduce}`), a for-of statement, or a while loop instead.',
       },
       {
         selector: 'WithStatement',
-        message: 'Use of the WITH statement is deprecated in ES5 and generally discouraged due to unpredictable behaviour.',
+        message: 'The `with` statement is forbidden in strict mode.',
       },
       {
         selector: 'LabeledStatement',
-        message: 'Labeled statements are considered harmful as they break the control flow of the program and makes the behaviour of code unpredictable and difficult to understand.',
+        message: 'Labeled statements are discouraged. They break the control flow of the program which makes code difficult to understand.',
       },
       {
         selector: 'BinaryExpression[operator=\'in\']',
-        message: 'The In operator can cause problematic behavior. Use Obj.isOwnProperty() or Reflect.has() instead.',
+        message: 'The `in` operator is discouraged because it is often the cause of unexpected behavior. Use `obj.isOwnProperty(value)` or `Reflect.has(obj, value)` instead.',
       },
       {
-        selector: 'no-restricted-syntax',
-        message: 'Buddy you\'ve got problems.',
+        selector: 'BinaryExpression > Literal[value="null"]',
+        message: "Explicit `null` checks are discouraged. Type check against the correct type (`typeof value === 'string'`), or use a fasly check (`!value`) instead.",
       },
     ],
 
