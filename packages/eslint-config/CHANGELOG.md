@@ -3,6 +3,12 @@
 
 ### Unreleased
 
+
+
+
+
+### 2.2.0
+
 #### Additions
 * Warn when a lint rule is being disabled that doesn't need to be.
 * Enable ESLint v7 rules
@@ -27,6 +33,9 @@
 * update `no-param-reassign` ignored Properties
   * `draftState` can now be shortened to `draft`
   * `event` has been added to allowed property names
+
+
+
 
 
 ### 2.1.0
