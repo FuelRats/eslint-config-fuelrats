@@ -3,13 +3,23 @@
 
 ### Unreleased
 
+
+
+
+
+### 2.2.0
+
 #### Additions
 * Enable `jsx-a11y/autocomplete-valid`
 
 
 #### Changes
 * set `parser` and `parserOptions` from main package so `eslint-config-react` can be used standalone.
-
+* Recognize all hooks that follow the pattern `^use.+Callback$` as hooks with dependencies.
+* Enable `skipUndeclared` option for `react/prop-types`. This makes documenting props only required if `propTypes` is declared on the component.
+* Disable `require-default-props`.
+  * There are some limitations with this rule (forwardRefs) which make it problematic at times.
+  * defaultProps is being phased out in favor of destructured default values in function components making this rule have lesser value than before.
 
 #### Fixed
 * resolved an issue where `indent` and `react/jsx-indent` conflict.

@@ -24,6 +24,9 @@
   * Even though this rule is off we'd rather not have deprecated rule names :D
 * Ensure our config is JSON serializable by replacing `Infinity` with `Number.MAX_SAFE_INTEGER`
 * Enable `ignoreGlobals` for `camelcase` rule
+* update `no-param-reassign` ignored Properties
+  * `draftState` can now be shortened to `draft`
+  * `event` has been added to allowed property names
 
 
 ### 2.1.0
