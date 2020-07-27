@@ -336,14 +336,15 @@ module.exports = {
         '^desc(riptor)?', // for ESNext decorators
         '^req(uest)?', // for Express requests
         '^res(ponse)?', // for Express responses
+        '^draft(State)?', // for immer producers
       ],
       ignorePropertyModificationsFor: [
         'Component', // for React HOCs
         'connection', // alternative name for Koa ctx
         'ctx', // for Koa routing
-        'draftState', // for immer producers
         'target', // for ESNext decorators
         'client', // for Websocket servers
+        'event', // for general events objects.
       ],
     }],
 
