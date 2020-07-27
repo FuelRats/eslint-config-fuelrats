@@ -263,7 +263,7 @@ module.exports = {
     'react/prop-types': ['error', {
       ignore: [],
       customValidators: [],
-      skipUndeclared: false,
+      skipUndeclared: true,
     }],
 
 
