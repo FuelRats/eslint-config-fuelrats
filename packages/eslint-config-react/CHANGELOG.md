@@ -20,6 +20,7 @@
 * Disable `require-default-props`.
   * There are some limitations with this rule (forwardRefs) which make it problematic at times.
   * defaultProps is being phased out in favor of destructured default values in function components making this rule have lesser value than before.
+* Replace `babel-eslint` with `@babel/eslint-parser`.
 
 #### Fixed
 * resolved an issue where `indent` and `react/jsx-indent` conflict.

@@ -33,7 +33,7 @@
 * update `no-param-reassign` ignored Properties
   * `draftState` can now be shortened to `draft`
   * `event` has been added to allowed property names
-
+* Replace `babel-eslint` and `eslint-plugin-babel` with `@babel/eslint-parser` and `@babel/eslint-plugin` respectively.
 
 
 
