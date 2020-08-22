@@ -8,5 +8,5 @@ module.exports = {
     './purejs',
     './rules/plugin-babel',
   ].map(require.resolve),
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
 }

@@ -30,12 +30,12 @@ This config has two separate packages:
 
 ### [@fuelrats/eslint-config][eslint-config-fuelrats]
 
-* Base ESLint ruleset with [`babel-eslint`][babel-eslint] as the primary parser. Generally intended for node.js backend projects.
+* Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
     * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
+    * Includes [`@babel/eslint-plugin`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
-    * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
     * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting.
-    * Also includes a `purejs` preset which disables [`babel-eslint`][babel-eslint] and [`eslint-plugin-babel`][eslint-plugin-babel].
+    * Also includes a `purejs` preset which disables [`@babel/eslint-parser`][babel-eslint-parser] and [`@babel/eslint-plugin`][eslint-plugin-babel].
 
 
 ### [@fuelrats/eslint-config-react][eslint-config-fuelrats-react]
@@ -83,10 +83,10 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 [airbnb]: https://github.com/airbnb/javascript
 [babel]: https://babeljs.io/
-[babel-eslint]: https://www.npmjs.com/package/babel-eslint
+[babel-eslint-parser]: https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser
+[babel-eslint-plugin]: https://github.com/babel/babel/tree/main/eslint/babel-eslint-plugin
 [eslint-config-fuelrats]: packages/eslint-config
 [eslint-config-fuelrats-react]: packages/eslint-config-react
-[eslint-plugin-babel]: https://www.npmjs.com/package/eslint-plugin-babel
 [eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
 [eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y

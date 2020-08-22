@@ -13,7 +13,7 @@ module.exports = {
     './rules/plugin-react-hooks',
     './rules/plugin-jsx-a11y',
   ].map(require.resolve),
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

@@ -52,14 +52,15 @@
     "eslint-restricted-globals": "^0.2.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.5.0",
-    "eslint-plugin-babel": "^5.3.1",
+    "@babel/core": "^7.11.4",
+    "@babel/eslint-parser": "^7.11.4",
+    "@babel/eslint-plugin": "^7.11.3",
+    "eslint": "^7.7.0",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^30.0.3",
+    "eslint-plugin-jsdoc": "^30.2.4",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.4",
-    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
     "react": "^16.13.1"
   }
 }

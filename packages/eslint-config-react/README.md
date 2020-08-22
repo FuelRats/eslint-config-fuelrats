@@ -71,7 +71,7 @@ $ yarn dlx install-peerdeps -d -Y @fuelrats/eslint-config && yarn dlx install-pe
 Refer to your manager docs, or just manually install everything (borrriiiiing). Below is a list of package names you can apply to the manager of your choice.
 
 ```bash
-eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @fuelrats/eslint-config @fuelrats/eslint-config-react
+eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @fuelrats/eslint-config @fuelrats/eslint-config-react
 ```
 
 
