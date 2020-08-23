@@ -6,7 +6,7 @@
 module.exports = {
   extends: [
     './purejs',
-    './rules/plugin-babel',
+    './plugins/babel',
   ].map(require.resolve),
   parser: '@babel/eslint-parser',
 }

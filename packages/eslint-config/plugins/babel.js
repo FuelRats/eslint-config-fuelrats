@@ -1,6 +1,6 @@
 // Ruleset Imports
-const bestPractices = require('./bestpractices')
-const style = require('./style')
+const bestPractices = require('../core/bestpractices')
+const style = require('../core/style')
 
 
 /**

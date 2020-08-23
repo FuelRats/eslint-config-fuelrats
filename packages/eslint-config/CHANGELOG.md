@@ -34,7 +34,7 @@
   * `draftState` can now be shortened to `draft`
   * `event` has been added to allowed property names
 * Replace `babel-eslint` and `eslint-plugin-babel` with `@babel/eslint-parser` and `@babel/eslint-plugin` respectively.
-
+* Restructure ruleset directories so there's distinction between what is core to the config and what is considered "optional" or "addons"
 
 
 
