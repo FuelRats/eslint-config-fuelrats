@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "2.2.0",
+  "version": "2.2.0-rc.2",
   "description": "ESLint config for fuelrats react projects",
   "license": "MIT",
   "author": {
@@ -34,7 +34,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git",
-    "directory": "eslint-config-react"
+    "directory": "packages/eslint-config-react"
   },
   "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
   "keywords": [
