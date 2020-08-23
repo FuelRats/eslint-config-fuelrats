@@ -34,6 +34,20 @@ ruleTester.run("no-mixed-access-class-members", rule, {
         "class A { #foo = 'hello'; baz = 'biz'; bar () { this.baz = 'baz' } }",
         "class A { static #foo = 'hello'; static baz = 'biz'; bar () { A.#foo = 'baz' } }",
         "class A { static #foo = 'hello'; static baz = 'biz'; bar () { A.baz = 'baz' } }",
+        `class A {
+            #foo = 'hello';
+            bInst = new (
+                class B {
+                    #foo2 = 'hello world';
+                    bar2 () {
+                        return this.foo
+                    }
+                }
+            )();
+            bar () {
+                return this.#foo
+            }
+        }`
     ],
 
     invalid: [
@@ -41,9 +55,57 @@ ruleTester.run("no-mixed-access-class-members", rule, {
             code: "class A { #foo = 'hello'; bar () { return this.foo } }",
             errors: [noMixedError('foo', "class A { #foo = 'hello'; bar () { return this.#foo } }")]
         },
+
         {
             code: "class A { static #foo = 'hello'; bar () { return A.foo } }",
             errors: [noMixedError('foo', "class A { static #foo = 'hello'; bar () { return A.#foo } }")]
+        },
+
+        {
+            code: `class A {
+                #foo = 'hello';
+                bInst = new (
+                    class B {
+                        #foo2 = 'hello world';
+                        bar2 () {
+                            return this.foo2
+                        }
+                    }
+                )();
+                bar () {
+                    return this.foo
+                }
+            }`,
+            errors: [
+            noMixedError('foo2', `class A {
+                #foo = 'hello';
+                bInst = new (
+                    class B {
+                        #foo2 = 'hello world';
+                        bar2 () {
+                            return this.#foo2
+                        }
+                    }
+                )();
+                bar () {
+                    return this.foo
+                }
+            }`),
+            noMixedError('foo', `class A {
+                #foo = 'hello';
+                bInst = new (
+                    class B {
+                        #foo2 = 'hello world';
+                        bar2 () {
+                            return this.foo2
+                        }
+                    }
+                )();
+                bar () {
+                    return this.#foo
+                }
+            }`)
+            ]
         }
 
     ]
