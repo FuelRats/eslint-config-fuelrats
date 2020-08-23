@@ -28,11 +28,12 @@ There is an optional plugin ruleset within the config package. Add it to your `e
 
 ```json
 {
-    "extends: [
+    "extends": [
         "@fuelrats/eslint-config",
         "@fuelrats/eslint-config/plugins/fuelrats"
     ]
 }
+```
 
 
 ### Without `@fuelrats/eslint-config`
