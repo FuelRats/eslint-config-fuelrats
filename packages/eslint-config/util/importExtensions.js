@@ -1,6 +1,7 @@
 module.exports = [
   '.js',
-  '.json',
   '.jsx',
   '.mjs',
+  '.cjs',
+  '.json',
 ]
