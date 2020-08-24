@@ -1,8 +1,3 @@
-/***************************************************************************\
-  All the credit and love to AirBnB for an amazing config project structure
-  https://github.com/airbnb/javascript
-\***************************************************************************/
-
 module.exports = {
   env: {
     es6: true,
