@@ -14,17 +14,6 @@ module.exports = {
       '\\.(coffee|scss|css|less|hbs|svg|json)$',
     ],
   },
-  overrides: [
-    {
-      // external dependencies should be parsed with espree over any other parser.
-      files: ['node_modules/**/*'],
-      settings: {
-        'import/parsers': {
-          espree: importExtensions,
-        },
-      },
-    },
-  ],
   rules: {
     /***************************************************************************\
       Static Analysis
