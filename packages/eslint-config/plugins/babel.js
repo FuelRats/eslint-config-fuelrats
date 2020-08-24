@@ -8,6 +8,11 @@ const style = require('../core/style')
  * As such, it does things a bit differently. :)
  */
 module.exports = {
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    // workaround for https://github.com/babel/babel/issues/11975
+    requireConfigFile: false,
+  },
   plugins: [
     '@babel',
   ],
