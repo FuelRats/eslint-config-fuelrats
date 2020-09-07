@@ -15,7 +15,7 @@
 
 #### Changes
 * set `parser` and `parserOptions` from main package so `eslint-config-react` can be used standalone.
-* Recognize all hooks that follow the pattern `^use.+Callback$` as hooks with dependencies.
+* Recognize all hooks that follow the pattern `^use.+(Callback|Effect)$` as hooks with dependencies.
 * Enable `skipUndeclared` option for `react/prop-types`. This makes documenting props only required if `propTypes` is declared on the component.
 * Disable `require-default-props`.
   * There are some limitations with this rule (forwardRefs) which make it problematic at times.
