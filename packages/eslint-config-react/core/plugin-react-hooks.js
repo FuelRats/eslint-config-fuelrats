@@ -13,7 +13,7 @@ module.exports = {
      * Checks effect dependencies
      */
     'react-hooks/exhaustive-deps': ['warn', {
-      additionalHooks: '^use.+Callback$',
+      additionalHooks: '^use.+(Callback|Effect)$',
     }],
   },
 }
