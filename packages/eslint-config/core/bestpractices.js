@@ -279,6 +279,7 @@ module.exports = {
         1000, // for time math
       ],
       enforceConst: true,
+      ignoreDefaultValues: true,
     }],
 
 
