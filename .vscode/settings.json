@@ -3,5 +3,13 @@
     { "directory": "./eslint-config", "changeProcessCWD": true },
     { "directory": "./eslint-config-react", "changeProcessCWD": true }
   ],
-  "git.ignoreLimitWarning": true
+  "editor.rulers": [180],
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "cond",
+    "ponse",
+    "riptor",
+    "uest",
+    "umulator"
+  ]
 }

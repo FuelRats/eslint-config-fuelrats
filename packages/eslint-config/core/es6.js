@@ -72,6 +72,12 @@ module.exports = {
 
 
     /**
+     * disallow specified names in exports
+     */
+    'no-restricted-exports': ['off'],
+
+
+    /**
      * disallow specified modules when loaded by import
      *
      * _DISABLED: To be determined by project_

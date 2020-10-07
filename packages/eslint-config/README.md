@@ -1,11 +1,11 @@
 # [@fuelrats/eslint-config][eslint-config-fuelrats]
 
-* Base ESLint ruleset with `babel-eslint` as the primary parser. Generally intended for node.js backend projects.
+* Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
     * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
+    * Includes [`@babel/eslint-plugin`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
-    * Includes [`eslint-plugin-babel`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
-    * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting. If you do not use JSDoc, add `"jsdoc/require-jsdoc": ["off"]` to your rules in your `.eslintrc` file.
-    * Also includes a `purejs` preset which disables `babel-eslint` and `eslint-plugin-babel`.
+    * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting.
+    * Also includes a `purejs` preset which disables [`@babel/eslint-parser`][babel-eslint-parser] and [`@babel/eslint-plugin`][eslint-plugin-babel].
 
 
 
@@ -70,7 +70,7 @@ $ yarn dlx install-peerdeps -d -Y @fuelrats/eslint-config
 Refer to your manager docs, or just manually install everything (borrriiiiing). Below is a list of package names you can apply to the manager of your choice.
 
 ```bash
-eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-plugin-jsdoc @fuelrats/eslint-config
+eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc @fuelrats/eslint-config
 ```
 
 
@@ -106,9 +106,10 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 [airbnb]: https://github.com/airbnb/javascript
 [babel]: https://babeljs.io/
+[babel-eslint-parser]: https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser
+[babel-eslint-plugin]: https://github.com/babel/babel/tree/main/eslint/babel-eslint-plugin
 [eslint-env]: https://eslint.org/docs/user-guide/configuring#specifying-environments
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
-[eslint-plugin-babel]: https://www.npmjs.com/package/eslint-plugin-babel
 [eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
 [eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
 [install-peerdeps]: https://www.npmjs.com/package/install-peerdeps

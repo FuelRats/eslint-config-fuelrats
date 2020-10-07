@@ -1,12 +1,15 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "ESLint config for fuelrats react projects",
   "license": "MIT",
   "author": {
     "name": "Cameron Welter",
     "email": "clapton@fuelrats.com",
     "url": "https://github.com/UncleClapton"
+  },
+  "engines": {
+    "node": "^10.13.0 || ^12.13.0 || >=14.0.0"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -31,7 +34,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git",
-    "directory": "eslint-config-react"
+    "directory": "packages/eslint-config-react"
   },
   "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
   "keywords": [
@@ -39,8 +42,8 @@
     "eslintconfig",
     "fuelrats",
     "javascript",
-    "ecma2018",
-    "es2018",
+    "ecma2020",
+    "es2020",
     "react"
   ],
   "main": "index.js",
@@ -49,21 +52,23 @@
     "release:canary": "yarn publish --tag canary --non-interactive"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-jsdoc": "^21.0.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "react": "^16.12.0"
+    "@babel/eslint-parser": "^7.11.5",
+    "@babel/eslint-plugin": "^7.11.5",
+    "eslint": "^7.10.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.6.3",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "react": "^16.13.1"
   },
   "peerDependencies": {
-    "eslint": ">=6.7",
-    "eslint-plugin-jsx-a11y": ">=6.2",
-    "eslint-plugin-react": ">=7.18",
-    "eslint-plugin-react-hooks": ">=2.3",
-    "react": ">=16.8"
+    "@babel/core": "^7.11",
+    "@babel/eslint-parser": "^7.11",
+    "eslint": "^7.8",
+    "eslint-plugin-jsx-a11y": "^6.3",
+    "eslint-plugin-react": "^7.20",
+    "eslint-plugin-react-hooks": "^4.0.1",
+    "react": "^16.8"
   }
 }

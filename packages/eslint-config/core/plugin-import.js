@@ -1,26 +1,16 @@
+const importExtensions = require('../util/importExtensions')
+
 module.exports = {
   plugins: [
     'import',
   ],
   settings: {
     'import/resolver': {
-      node: {
-        extensions: [
-          '.js',
-          '.json',
-          '.jsx',
-          '.mjs',
-        ],
-      },
+      node: { extensions: importExtensions },
     },
-    'import/extensions': [
-      '.js',
-      '.mjs',
-      '.jsx',
-    ],
+    'import/extensions': importExtensions,
     'import/core-modules': [],
     'import/ignore': [
-      'node_modules',
       '\\.(coffee|scss|css|less|hbs|svg|json)$',
     ],
   },
@@ -96,7 +86,8 @@ module.exports = {
      * Forbid a module from importing a module with a dependency path back to itself
      */
     'import/no-cycle': ['error', {
-      maxDepth: Infinity,
+      maxDepth: Number.MAX_SAFE_INTEGER,
+      ignoreExternal: true,
     }],
 
 
@@ -267,12 +258,26 @@ module.exports = {
     'import/order': ['error', {
       alphabetize: {
         order: 'asc',
+        caseInsensitive: true,
       },
       groups: [
-        ['external', 'builtin'],
+        [
+          'builtin',
+          'external',
+        ],
         'internal',
-        ['parent', 'sibling', 'index'],
+        [
+          'parent',
+          'sibling',
+          'index',
+        ],
         'unknown',
+      ],
+      pathGroups: [
+        {
+          pattern: '~/**',
+          group: 'internal',
+        },
       ],
     }],
 

@@ -68,6 +68,12 @@ module.exports = {
 
 
     /**
+     * Enforce that autocomplete attributes are used correctly.
+     */
+    'jsx-a11y/autocomplete-valid': ['error'],
+
+
+    /**
      * Enforce a clickable non-interactive element has at least one keyboard event listener.
      */
     'jsx-a11y/click-events-have-key-events': ['error'],
