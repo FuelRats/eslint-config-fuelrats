@@ -42,14 +42,14 @@
     "eslintconfig",
     "fuelrats",
     "javascript",
-    "ecma2018",
-    "es2018",
+    "ecma2020",
+    "es2020",
     "react"
   ],
   "main": "index.js",
   "scripts": {
     "release": "yarn publish --non-interactive",
-    "release:canary": "yarn publish --tag rc --non-interactive"
+    "release:canary": "yarn publish --tag canary --non-interactive"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.11.4",

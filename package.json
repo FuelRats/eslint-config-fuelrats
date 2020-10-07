@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fuelrats",
-  "version": "2.2.0-rc.3",
+  "version": "2.2.0",
   "description": "Monorepo for @fuelrats/eslint-config[-react]!",
   "private": true,
   "license": "MIT",

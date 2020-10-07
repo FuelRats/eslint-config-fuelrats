@@ -9,7 +9,7 @@
     "url": "https://github.com/UncleClapton"
   },
   "engines": {
-    "node": "^12.13.0 || >=14.0.0"
+    "node": "^10.13.0 || ^12.13.0 || >=14.0.0"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -46,7 +46,7 @@
   "main": "lib/index.js",
   "scripts": {
     "release": "yarn publish --non-interactive",
-    "release:canary": "yarn publish --tag rc --non-interactive",
+    "release:canary": "yarn publish --tag canary --non-interactive",
     "test": "mocha tests --recursive"
   },
   "dependencies": {
