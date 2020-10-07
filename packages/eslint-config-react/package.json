@@ -52,20 +52,20 @@
     "release:canary": "yarn publish --tag canary --non-interactive"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.11.4",
-    "@babel/eslint-plugin": "^7.11.3",
-    "eslint": "^7.7.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^30.2.4",
+    "@babel/eslint-parser": "^7.11.5",
+    "@babel/eslint-plugin": "^7.11.5",
+    "eslint": "^7.10.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.6.3",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "react": "^16.13.1"
   },
   "peerDependencies": {
     "@babel/core": "^7.11",
     "@babel/eslint-parser": "^7.11",
-    "eslint": "^7.5",
+    "eslint": "^7.8",
     "eslint-plugin-jsx-a11y": "^6.3",
     "eslint-plugin-react": "^7.20",
     "eslint-plugin-react-hooks": "^4.0.1",
