@@ -263,7 +263,7 @@ module.exports = {
     'react/prop-types': ['error', {
       ignore: [],
       customValidators: [],
-      skipUndeclared: false,
+      skipUndeclared: true,
     }],
 
 
@@ -276,10 +276,7 @@ module.exports = {
     /**
      * Enforce a defaultProps definition for every prop that is not a required prop
      */
-    'react/require-default-props': ['error', {
-      forbidDefaultForRequired: true,
-      ignoreFunctionalComponents: true,
-    }],
+    'react/require-default-props': ['off'],
 
 
     /**

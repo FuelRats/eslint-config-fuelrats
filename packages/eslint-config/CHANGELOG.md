@@ -3,6 +3,12 @@
 
 ### Unreleased
 
+
+
+
+
+### 2.2.0
+
 #### Additions
 * Warn when a lint rule is being disabled that doesn't need to be.
 * Enable ESLint v7 rules
@@ -24,6 +30,13 @@
   * Even though this rule is off we'd rather not have deprecated rule names :D
 * Ensure our config is JSON serializable by replacing `Infinity` with `Number.MAX_SAFE_INTEGER`
 * Enable `ignoreGlobals` for `camelcase` rule
+* update `no-param-reassign` ignored Properties
+  * `draftState` can now be shortened to `draft`
+  * `event` has been added to allowed property names
+* Replace `babel-eslint` and `eslint-plugin-babel` with `@babel/eslint-parser` and `@babel/eslint-plugin` respectively.
+* Restructure ruleset directories so there's distinction between what is core to the config and what is considered "optional" or "addons"
+* Enable `ignoreDefaultValues` for `no-magic-numbers` rule
+* Exempt doc blocks with `@yeilds` from `jsdoc/require-returns`
 
 
 ### 2.1.0

@@ -235,7 +235,7 @@ module.exports = {
      * Requires returns are documented.
      */
     'jsdoc/require-returns': ['warn', {
-      exemptedBy: ['endpoint', 'inheritdoc'],
+      exemptedBy: ['endpoint', 'inheritdoc', 'yields'],
     }],
 
 

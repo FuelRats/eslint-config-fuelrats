@@ -1,7 +1,7 @@
 {
-  "name": "@fuelrats/eslint-config",
+  "name": "@fuelrats/eslint-plugin",
   "version": "2.2.0",
-  "description": "ESLint config for fuelrats projects",
+  "description": "Companion rules to @fuelrats/eslint-config",
   "license": "MIT",
   "author": {
     "name": "Cameron Welter",
@@ -34,42 +34,35 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FuelRats/eslint-config-fuelrats.git",
-    "directory": "packages/eslint-config"
+    "directory": "packages/eslint-plugin"
   },
   "homepage": "https://github.com/FuelRats/eslint-config-fuelrats",
   "keywords": [
     "eslint",
-    "eslintconfig",
-    "fuelrats",
-    "javascript",
-    "ecma2020",
-    "es2020"
+    "eslintplugin",
+    "eslint-plugin",
+    "fuelrats"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "release": "yarn publish --non-interactive",
-    "release:canary": "yarn publish --tag canary --non-interactive"
+    "release:canary": "yarn publish --tag canary --non-interactive",
+    "test": "mocha tests --recursive"
   },
   "dependencies": {
-    "eslint-restricted-globals": "^0.2.0"
+    "requireindex": "~1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/eslint-parser": "^7.11.5",
-    "@babel/eslint-plugin": "^7.11.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-private-methods": "^7.10.4",
+    "@babel/plugin-proposal-private-property-in-object": "^7.10.4",
     "eslint": "^7.10.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^30.6.3",
-    "eslint-plugin-react": "^7.21.3",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "react": "^16.13.1"
+    "mocha": "^7.2.0"
   },
   "peerDependencies": {
-    "@babel/core": "^7.11",
-    "@babel/eslint-parser": "^7.11",
-    "@babel/eslint-plugin": "^7.11",
-    "eslint": "^7.8",
-    "eslint-plugin-import": "^2.21",
-    "eslint-plugin-jsdoc": "^28 || ^29 || ^30"
+    "@babel/eslint-parser": ">=7.11",
+    "eslint": "^7.5"
   }
 }

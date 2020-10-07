@@ -4,5 +4,12 @@
     { "directory": "./eslint-config-react", "changeProcessCWD": true }
   ],
   "editor.rulers": [180],
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "cond",
+    "ponse",
+    "riptor",
+    "uest",
+    "umulator"
+  ]
 }

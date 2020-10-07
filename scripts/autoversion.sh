@@ -28,6 +28,9 @@ if ! [[ $ARGLIST =~ --((pre)?(major|minor|patch)|prerelease) ]]; then
   fi
 fi
 
-yarn workspaces run version $ARGLIST --no-git-tag-version --no-commit-hooks
+for dir in `find ./packages -mindepth 1 -maxdepth 1 -type d`
+do
+  yarn version $ARGLIST --cwd=$dir --no-git-tag-version --no-commit-hooks
+done
 git add -A
-yarn version $ARGLIST
+# yarn version $ARGLIST
