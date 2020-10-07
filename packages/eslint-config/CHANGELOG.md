@@ -35,7 +35,8 @@
   * `event` has been added to allowed property names
 * Replace `babel-eslint` and `eslint-plugin-babel` with `@babel/eslint-parser` and `@babel/eslint-plugin` respectively.
 * Restructure ruleset directories so there's distinction between what is core to the config and what is considered "optional" or "addons"
-
+* Enable `ignoreDefaultValues` for `no-magic-numbers` rule
+* Exempt doc blocks with `@yeilds` from `jsdoc/require-returns`
 
 
 ### 2.1.0
