@@ -68,7 +68,7 @@
     "eslint": "^7.14",
     "eslint-plugin-jsx-a11y": "^6.3",
     "eslint-plugin-react": "^7.20",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-hooks": "^4.0.1",
     "react": "^16.8 || ^17"
   }
 }
