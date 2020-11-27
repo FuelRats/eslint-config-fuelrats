@@ -7,6 +7,17 @@
 
 
 
+### 2.3.0
+
+#### Changes
+* Remove deprecated rule `jsx-a11y/accessible-emoji`. ([See discussion](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/627))
+* Add React 17 as compatible version.
+* Update minimum ESLint version to `v7.14`.
+
+
+
+
+
 ### 2.2.0
 
 #### Additions
