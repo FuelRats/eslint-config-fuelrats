@@ -7,6 +7,18 @@
 
 
 
+### 2.3.0
+
+#### Additions
+* Enable new `no-nonoctal-decimal-escape` rule
+
+#### Changes
+* Update minimum ESLint version to `v7.14`
+
+
+
+
+
 ### 2.2.0
 
 #### Additions
