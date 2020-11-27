@@ -316,6 +316,12 @@ module.exports = {
 
 
     /**
+     * disallow `\8` and `\9` escape sequences in string literals
+     */
+    'no-nonoctal-decimal-escape': ['error'],
+
+
+    /**
      * disallow octal literals
      */
     'no-octal': ['error'],
