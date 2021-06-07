@@ -53,13 +53,13 @@
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/eslint-parser": "^7.12.1",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-proposal-private-methods": "^7.12.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.12.1",
-    "eslint": "^7.14.0",
-    "mocha": "^8.2.1"
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.14.4",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-private-methods": "^7.13.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.0",
+    "eslint": "^7.28.0",
+    "mocha": "^8.4.0"
   },
   "peerDependencies": {
     "@babel/eslint-parser": "^7.11",
