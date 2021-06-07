@@ -219,7 +219,9 @@ module.exports = {
     /**
      * disallow shorthand type conversions
      */
-    'no-implicit-coercion': ['error'],
+    'no-implicit-coercion': ['error', {
+      disallowTemplateShorthand: true,
+    }],
 
 
     /**
@@ -411,7 +413,9 @@ module.exports = {
     /**
      * disallow comma operators
      */
-    'no-sequences': ['error'],
+    'no-sequences': ['error', {
+      allowInParentheses: false,
+    }],
 
 
     /**
@@ -433,6 +437,7 @@ module.exports = {
       allowShortCircuit: false,
       allowTaggedTemplates: false,
       allowTernary: false,
+      enforceForJSX: true,
     }],
 
 

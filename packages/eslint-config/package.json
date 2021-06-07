@@ -68,7 +68,7 @@
     "@babel/core": "^7.11",
     "@babel/eslint-parser": "^7.11",
     "@babel/eslint-plugin": "^7.11",
-    "eslint": "^7.14",
+    "eslint": "^7.24",
     "eslint-plugin-import": "^2.21",
     "eslint-plugin-jsdoc": "^28 || ^29 || ^30"
   }

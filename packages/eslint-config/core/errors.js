@@ -238,6 +238,14 @@ module.exports = {
 
 
     /**
+     * disallow use of optional chaining in contexts where the `undefined` value is not allowed
+     */
+    'no-unsafe-optional-chaining': ['error', {
+      disallowArithmeticOperators: true,
+    }],
+
+
+    /**
      * disallow useless backreferences in regular expressions
      */
     'no-useless-backreference': ['error'],
