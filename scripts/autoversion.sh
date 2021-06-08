@@ -33,4 +33,4 @@ do
   yarn version $ARGLIST --cwd=$dir --no-git-tag-version --no-commit-hooks
 done
 git add -A
-# yarn version $ARGLIST
+yarn version $ARGLIST --no-git-tag-version
