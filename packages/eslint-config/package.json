@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config",
-  "version": "2.3.0",
+  "version": "2.4.0-canary.1",
   "description": "ESLint config for FuelRats projects",
   "license": "MIT",
   "author": {
@@ -47,8 +47,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "release": "yarn publish --non-interactive",
-    "release:canary": "yarn publish --tag canary --non-interactive"
+    "release": "yarn npm publish",
+    "release:canary": "yarn npm publish --tag=canary"
   },
   "dependencies": {
     "eslint-restricted-globals": "^0.2.0"
@@ -71,5 +71,6 @@
     "eslint": "^7.24",
     "eslint-plugin-import": "^2.23",
     "eslint-plugin-jsdoc": "^35"
-  }
+  },
+  "stableVersion": "2.3.0"
 }
