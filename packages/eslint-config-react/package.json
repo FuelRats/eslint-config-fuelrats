@@ -1,7 +1,7 @@
 {
   "name": "@fuelrats/eslint-config-react",
   "version": "2.3.0",
-  "description": "ESLint config for fuelrats react projects",
+  "description": "ESLint config for FuelRats React projects",
   "license": "MIT",
   "author": {
     "name": "Cameron Welter",
@@ -9,7 +9,7 @@
     "url": "https://github.com/UncleClapton"
   },
   "engines": {
-    "node": "^10.13.0 || ^12.13.0 || >=14.0.0"
+    "node": "^12.13.0 || ^14.16.0 || >=16.0.0"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -65,9 +65,9 @@
   "peerDependencies": {
     "@babel/core": "^7.11",
     "@babel/eslint-parser": "^7.11",
-    "eslint": "^7.14",
+    "eslint": "^7.24",
     "eslint-plugin-jsx-a11y": "^6.3",
-    "eslint-plugin-react": "^7.20",
+    "eslint-plugin-react": "^7.23",
     "eslint-plugin-react-hooks": "^4.0.1",
     "react": "^16.8 || ^17"
   }
