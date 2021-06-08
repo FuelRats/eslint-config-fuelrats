@@ -57,7 +57,7 @@ module.exports = {
      * Restrict file extensions that may contain JSX
      */
     'react/jsx-filename-extension': ['error', {
-      extensions: ['.js'],
+      extensions: ['.jsx', '.js'],
     }],
 
 
@@ -103,6 +103,7 @@ module.exports = {
      */
     'react/jsx-key': ['error', {
       checkFragmentShorthand: true,
+      checkKeyMustBeforeSpread: true,
     }],
 
 
@@ -124,6 +125,12 @@ module.exports = {
 
 
     /**
+     * Require or prevent a new line after jsx elements and expressions.
+     */
+    'react/jsx-newline': ['off'],
+
+
+    /**
      * Prevent usage of `.bind()` and arrow functions in JSX props
      */
     'react/jsx-no-bind': ['error', {
@@ -139,6 +146,12 @@ module.exports = {
      * Prevent comments from being inserted as text nodes
      */
     'react/jsx-no-comment-textnodes': ['error'],
+
+
+    /**
+     * Prevent non-stable values (i.e. object identities) from being used as a value for `Context.Provider`.
+     */
+    'react/jsx-no-constructed-context-values': ['error'],
 
 
     /**
@@ -166,6 +179,7 @@ module.exports = {
      */
     'react/jsx-no-target-blank': ['error', {
       enforceDynamicLinks: 'always',
+      warnOnSpreadAttributes: true,
     }],
 
 

@@ -211,10 +211,14 @@ module.exports = {
 
     /**
      * Prevent usage of UNSAFE_ methods
-     *
-     * ENABLE: React@v17.0.0: ['Error']
      */
-    'react/no-unsafe': ['off'],
+    'react/no-unsafe': ['error'],
+
+
+    /**
+     * Prevent creating unstable components inside components
+     */
+    'react/no-unstable-nested-components': ['error'],
 
 
     /**
