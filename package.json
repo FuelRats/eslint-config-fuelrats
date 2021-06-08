@@ -39,13 +39,9 @@
   ],
   "main": "./packages/eslint-config/index.js",
   "scripts": {
-    "eslint": "yarn workspaces run eslint .",
-    "release:base": "yarn workspace @fuelrats/eslint-config run release",
-    "release:base:canary": "yarn workspace @fuelrats/eslint-config run release:canary",
-    "release:react": "yarn workspace @fuelrats/eslint-config-react run release",
-    "release:react:canary": "yarn workspace @fuelrats/eslint-config-react run release:canary",
-    "release": "yarn workspaces run release",
-    "release:canary": "yarn workspaces run release:canary",
+    "eslint": "yarn workspaces foreach run eslint .",
+    "release": "yarn workspaces foreach run release",
+    "release:canary": "yarn workspaces foreach run release:canary",
     "autoversion": "bash ./scripts/autoversion.sh"
   },
   "dependencies": {
