@@ -106,9 +106,9 @@ module.exports = {
 
 
     /**
-     * Forbid modules without any export, and exports not imported by any modules.
+     * Prevent importing packages through relative paths
      */
-    'import/no-unused-modules': ['off'],
+    'import/no-relative-packages': ['off'],
 
 
 
@@ -178,6 +178,12 @@ module.exports = {
     'import/no-mutable-exports': ['error'],
 
 
+    /**
+     * Forbid modules without any export, and exports not imported by any modules.
+     */
+    'import/no-unused-modules': ['off'],
+
+
 
 
 
@@ -207,6 +213,12 @@ module.exports = {
      * No Node.js builtin modules.
      */
     'import/no-nodejs-modules': ['off'],
+
+
+    /**
+     * Forbid imports with CommonJS exports
+     */
+    'import/no-import-module-exports': ['error'],
 
 
 
@@ -279,6 +291,7 @@ module.exports = {
           group: 'internal',
         },
       ],
+      warnOnUnassignedImports: true,
     }],
 
 
