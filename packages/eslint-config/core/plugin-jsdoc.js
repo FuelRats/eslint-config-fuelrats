@@ -28,9 +28,17 @@ module.exports = {
 
 
     /**
+     * Reports invalid alignment of JSDoc block lines.
+     */
+    'jsdoc/check-line-alignment': ['warn', 'never'],
+
+
+    /**
      * Ensures that parameter names in JSDoc match those in the function declaration.
      */
-    'jsdoc/check-param-names': ['warn'],
+    'jsdoc/check-param-names': ['warn', {
+      disableExtraPropertyReporting: true,
+    }],
 
 
     /**
@@ -88,6 +96,12 @@ module.exports = {
 
 
     /**
+     * Controls how and whether jsdoc blocks can be expressed as single or multiple line blocks.
+     */
+    'jsdoc/multiline-blocks': ['warn'],
+
+
+    /**
      * Enforces a consistent padding of the block description.
      */
     'jsdoc/newline-after-description': ['off'],
@@ -96,13 +110,33 @@ module.exports = {
     /**
      * Checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.
      */
-    'jsdoc/no-bad-blocks': ['error'],
+    'jsdoc/no-bad-blocks': ['error', {
+      preventAllMultiAsteriskBlocks: true,
+    }],
 
 
     /**
      * Reports defaults being used on the relevant portion of `@param` or `@default`.
      */
     'jsdoc/no-defaults': ['off'],
+
+
+    /**
+     * Reports when certain comment structures are always expected.
+     */
+    'jsdoc/no-missing-syntax': ['off'],
+
+
+    /**
+     * Prevents use of multiple asterisks at the beginning of lines.
+     */
+    'jsdoc/no-multi-asterisks': ['warn'],
+
+
+    /**
+     * Reports when certain comment structures are present.
+     */
+    'jsdoc/no-restricted-syntax': ['off'],
 
 
     /**
@@ -115,6 +149,12 @@ module.exports = {
      * Checks that types in jsdoc comments are defined. This can be used to check unimported types.
      */
     'jsdoc/no-undefined-types': ['warn'],
+
+
+    /**
+     * Requires that each JSDoc line starts with an `*`.
+     */
+    'jsdoc/require-asterisk-prefix': ['warn', 'always'],
 
 
     /**
@@ -237,6 +277,30 @@ module.exports = {
     'jsdoc/require-returns': ['warn', {
       exemptedBy: ['endpoint', 'inheritdoc', 'yields'],
     }],
+
+
+    /**
+     * Requires that throw statements are documented.
+     */
+    'jsdoc/require-throws': ['off'],
+
+
+    /**
+     * Ensures that if a `@yields` is present that a `yield` (or `yield` with a value) is present in the function body.
+     */
+    'jsdoc/require-yields-check': ['warn'],
+
+
+    /**
+     * Requires that yields are documented.
+     */
+    'jsdoc/require-yields': ['warn'],
+
+
+    /**
+     * Enforces lines (or no lines) between tags.
+     */
+    'jsdoc/tag-lines': ['warn', 'never'],
 
 
     /**
