@@ -179,7 +179,6 @@ module.exports = {
      */
     'react/jsx-no-target-blank': ['error', {
       enforceDynamicLinks: 'always',
-      warnOnSpreadAttributes: true,
     }],
 
 

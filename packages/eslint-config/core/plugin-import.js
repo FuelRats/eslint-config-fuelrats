@@ -291,7 +291,6 @@ module.exports = {
           group: 'internal',
         },
       ],
-      warnOnUnassignedImports: true,
     }],
 
 
