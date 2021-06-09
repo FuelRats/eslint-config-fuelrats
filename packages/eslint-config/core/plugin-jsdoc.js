@@ -110,9 +110,7 @@ module.exports = {
     /**
      * Checks for multi-line-style comments which fail to meet the criteria of a jsdoc block.
      */
-    'jsdoc/no-bad-blocks': ['error', {
-      preventAllMultiAsteriskBlocks: true,
-    }],
+    'jsdoc/no-bad-blocks': ['error'],
 
 
     /**

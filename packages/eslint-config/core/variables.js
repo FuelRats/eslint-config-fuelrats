@@ -29,9 +29,7 @@ module.exports = {
     /**
      * disallow variable declarations from shadowing variables declared in the outer scope
      */
-    'no-shadow': ['error', {
-      builtinGlobals: true,
-    }],
+    'no-shadow': ['error'],
 
 
     /**
