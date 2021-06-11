@@ -1,4 +1,4 @@
-const restrictedGlobals = require('eslint-restricted-globals')
+const confusingGlobals = require('../util/confusingGlobals')
 
 module.exports = {
   rules: {
@@ -23,7 +23,16 @@ module.exports = {
     /**
      * disallow specified global variables
      */
-    'no-restricted-globals': ['error', 'isFinite', 'isNaN'].concat(restrictedGlobals),
+    'no-restricted-globals': ['error',
+      {
+        name: 'isFinite',
+        message: 'Global `isFinite` is a flawed implementation. Use `Number.isFinite()` instead.',
+      },
+      {
+        name: 'isNaN',
+        message: 'Global `isNaN` is a flawed implementation. Use `Number.isNaN()` instead.',
+      },
+    ].concat(confusingGlobals),
 
 
     /**
