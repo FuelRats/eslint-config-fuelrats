@@ -274,7 +274,7 @@ module.exports = {
     /**
      * Prevent missing `React` when using JSX
      */
-    'react/react-in-jsx-scope': ['error'],
+    'react/react-in-jsx-scope': ['off'],
 
 
     /**

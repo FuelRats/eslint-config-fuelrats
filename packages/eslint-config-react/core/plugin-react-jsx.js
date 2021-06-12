@@ -265,7 +265,7 @@ module.exports = {
     /**
      * Prevent React to be incorrectly marked as unused
      */
-    'react/jsx-uses-react': ['error'],
+    'react/jsx-uses-react': ['off'],
 
 
     /**
