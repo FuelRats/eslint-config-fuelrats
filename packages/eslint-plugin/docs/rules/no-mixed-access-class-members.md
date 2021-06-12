@@ -61,7 +61,7 @@ class Foobar {
 
 ## When Not To Use It
 
-If you do not use private class members then you can safely disable this rule.
+If you do not use private class members, or do not consider private and public names to be substantially similar, then you may safely disable this rule.
 
 ## Further Reading
 
@@ -69,3 +69,7 @@ This rule is made for use with the following stage 3 proposals (via `babel`):
 * [Private methods](https://github.com/tc39/proposal-private-methods)
 * [Class fields](https://github.com/tc39/proposal-class-fields)
 * [Static class features](https://github.com/tc39/proposal-static-class-features)
+
+## Resources
+
+* [Rule Source](https://github.com/FuelRats/eslint-config-fuelrats/blob/master/packages/eslint-plugin/lib/rules/no-mixed-access-class-members.js)
