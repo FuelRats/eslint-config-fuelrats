@@ -1,24 +1,29 @@
 /**
- * @fileoverview Special rules made for our configs
+ * @file Special rules made for our configs
  * @author Cameron Welter
  */
-"use strict";
+'use strict'
 
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // Requirements
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
-var requireIndex = require("requireindex");
+const requireIndex = require('requireindex')
 
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // Plugin Definition
-//------------------------------------------------------------------------------
-
+// ------------------------------------------------------------------------------
 
 // import all rules in lib/rules
 module.exports = {
-  rules: requireIndex(__dirname + "/rules"),
-  rulesConfig: {
-    'no-mixed-access-class-members': 'error',
+  rules: requireIndex(`${__dirname}/rules`),
+  configs: {
+    recommended: {
+      plugins: ['@fuelrats'],
+      rules: {
+        '@fuelrats/no-mixed-access-class-members': 2,
+        '@fuelrats/default-export-matches-module-name': 1,
+      },
+    },
   },
 }
