@@ -1,11 +1,12 @@
-const { RuleTester } = require("eslint");
+// eslint-disable-next-line import/no-extraneous-dependencies
+const { RuleTester } = require('eslint')
 
 RuleTester.setDefaultConfig({
   parser: require.resolve('@babel/eslint-parser'),
   parserOptions: {
-    sourceType: "module",
+    sourceType: 'module',
     ecmaVersion: 2020,
   },
-});
+})
 
-module.exports = RuleTester;
+module.exports = RuleTester
