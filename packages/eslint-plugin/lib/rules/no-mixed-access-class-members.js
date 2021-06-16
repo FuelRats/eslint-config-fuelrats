@@ -8,7 +8,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const getRuleDocUrl = require('./util/getRuleDocUrl')
+const getRuleDocUrl = require('../util/getRuleDocUrl')
 
 // ------------------------------------------------------------------------------
 // Rule Definition

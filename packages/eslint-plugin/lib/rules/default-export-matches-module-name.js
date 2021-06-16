@@ -8,10 +8,10 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const equalsIgnoreCase = require('./util/equalsIgnoreCase')
-const getDefaultExport = require('./util/getDefaultExport')
-const getModuleName = require('./util/getModuleName')
-const getRuleDocUrl = require('./util/getRuleDocUrl')
+const equalsIgnoreCase = require('../util/equalsIgnoreCase')
+const getDefaultExport = require('../util/getDefaultExport')
+const getModuleName = require('../util/getModuleName')
+const getRuleDocUrl = require('../util/getRuleDocUrl')
 
 
 
