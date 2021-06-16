@@ -24,36 +24,30 @@ And thats it! See Usage below on how to activate this plugin.
 
 ### With `@fuelrats/eslint-config`
 
-There is an optional plugin ruleset within the config package. Add it to your `extends` array to activate it:
+As of `v2.4.0` the additional rules provided by this plugin are default in The FuelRats eslint ruleset.
+
+### Without `@fuelrats/eslint-config`
+
+Either extend the recommended config:
 
 ```json
 {
     "extends": [
-        "@fuelrats/eslint-config",
-        "@fuelrats/eslint-config/plugins/fuelrats"
-    ]
+        "plugin:@fuelrats/recommended",
+    ],
 }
 ```
 
-
-### Without `@fuelrats/eslint-config`
-
-Add `@fuelrats` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Or, add `@fuelrats` to the plugins section of your `.eslintrc` configuration file, Then configure the rules you wish to use under the rules section:
 
 ```json
 {
     "plugins": [
         "@fuelrats"
     ]
-}
-```
-
-Then configure the rules you want to use under the rules section.
-
-```json
-{
     "rules": {
-        "@fuelrats/no-mixed-access-class-members": "error"
+        "@fuelrats/default-export-matches-module-name": ["warn", { "caseInsensitive": false }],
+        "@fuelrats/no-mixed-access-class-members": ["error"]
     }
 }
 ```
@@ -64,7 +58,9 @@ Then configure the rules you want to use under the rules section.
 🔧 = Auto-fixable with "--fix"
 💭 = provides suggestions to fix the issue
 ```
-- [`@fuelrats/no-mixed-access-class-members`]: Disallow public class members to share names with private members  (✅ | 💭)
+- [`@fuelrats/default-export-matches-module-name`][]: Enforces default exports are consistently named the same as their module (file) name. (✅)
+- [`@fuelrats/no-mixed-access-class-members`][]: Disallow public class members to share names with private members.  (✅ | 💭)
 
 
+[`@fuelrats/default-export-matches-module-name`]: docs/rules/default-export-matches-module-name.md
 [`@fuelrats/no-mixed-access-class-members`]: docs/rules/no-mixed-access-class-members.md

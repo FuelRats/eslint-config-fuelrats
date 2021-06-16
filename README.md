@@ -6,15 +6,6 @@ Standard configurations for Fuel Rats ECMAScript projects
 
 
 
-## Note about v2
-
-> v2 Changes a number of aspects of our code style which may lead to time consuming adjustments, and in some cases an outright refactor of your code.
->
-> Please see PR [#3][] for a comprehensive list of changes made from `v1.2.5`
->
-> If you are a react user, [`@fuelrats/eslint-config-react`][eslint-config-fuelrats-react] no longer extends [`@fuelrats/eslint-config`][eslint-config-fuelrats]. See the react package [`README.md`][eslint-config-fuelrats-react] for more information.
-
-
 ## Motivation
 
 The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.
@@ -33,6 +24,7 @@ This config has two separate packages:
 * Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
     * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
     * Includes [`@babel/eslint-plugin`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
+    * Includes [`@fuelrats/eslint-plugin`][eslint-plugin-fuelrats] to provide additional custom rules.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
     * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting.
     * Also includes a `purejs` preset which disables [`@babel/eslint-parser`][babel-eslint-parser] and [`@babel/eslint-plugin`][eslint-plugin-babel].
@@ -79,14 +71,16 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 [Send some love their way 😍🎉🎊][airbnb]
 
 
-[#3]: https://github.com/FuelRats/eslint-config-fuelrats/pull/3
+
+
 
 [airbnb]: https://github.com/airbnb/javascript
 [babel]: https://babeljs.io/
-[babel-eslint-parser]: https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser
-[babel-eslint-plugin]: https://github.com/babel/babel/tree/main/eslint/babel-eslint-plugin
+[babel-eslint-parser]: https://www.npmjs.com/package/@babel/eslint-parser
+[babel-eslint-plugin]: https://www.npmjs.com/package/@babel/eslint-plugin
 [eslint-config-fuelrats]: packages/eslint-config
 [eslint-config-fuelrats-react]: packages/eslint-config-react
+[eslint-plugin-fuelrats]: packages/eslint-plugin
 [eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
 [eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y

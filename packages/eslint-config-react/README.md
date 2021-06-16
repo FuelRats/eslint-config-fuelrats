@@ -9,17 +9,6 @@
 
 
 
-## Note about v2
-
-> v2 Changes a number of aspects of our code style which may lead to time consuming adjustments, and in some cases an outright refactor of your code.
->
-> Please see PR [#3][] for a comprehensive list of changes made from `v1.2.5`
->
-> Additionally, this config no longer extends `@fuelrats/eslint-config`. To migrate to v2, you must install both configs. See setup steps below.
-
-
-
-
 ## Motivation
 
 The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.
@@ -46,8 +35,10 @@ $ npx install-peerdeps -d @fuelrats/eslint-config && npx -d install-peerdeps @fu
 
 Yarn v1 does not have an included remote script runner. First you must globally install `install-peerdeps`:
 
+**NOTE:** The Yarn team no longer recommends the use of `yarn global`, and is completely removed in Yarn 2.x.
+
 ```bash
-$ yarn global add install-peerdeps
+$ npm i -g install-peerdeps
 ```
 
 then run:
@@ -69,7 +60,7 @@ $ yarn dlx install-peerdeps -d -Y @fuelrats/eslint-config && yarn dlx install-pe
 Refer to your manager docs, or just manually install everything (borrriiiiing). Below is a list of package names you can apply to the manager of your choice.
 
 ```bash
-eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @fuelrats/eslint-config @fuelrats/eslint-config-react
+eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @fuelrats/eslint-plugin @fuelrats/eslint-config @fuelrats/eslint-config-react
 ```
 
 
@@ -91,29 +82,12 @@ eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-impor
     * More information can be found [here][eslint-plugin-react-config]
 
 
-### Next.js Users
-
-Vercel has been working on an experimental eslint plugin to warn against anti-patterns within the Next.js framework. Our configuration for this plugin is already available. To activate it:
-
-1. Install `@next/eslint-plugin-next` via your package manager
-2. Extend the config file in your `.eslintrc`
-```json
-"extends": [
-    "@fuelrats/eslint-config",
-    "@fuelrats/eslint-config-react",
-    "@fuelrats/eslint-config-react/plugins/next",
-]
-```
-
-
 ## Credits
 Our code style and this config set was inspired by and derived from the AirBnB javascript style guide.
 
 [Send some love their way 😍🎉🎊][airbnb]
 
 
-
-[#3]: https://github.com/FuelRats/eslint-config-fuelrats/pull/3
 
 [airbnb]: https://github.com/airbnb/javascript
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
