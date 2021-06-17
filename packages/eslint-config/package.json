@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config",
-  "version": "2.4.0-canary.7",
+  "version": "2.4.0-canary.8",
   "description": "ESLint config for FuelRats projects",
   "license": "MIT",
   "author": {
@@ -69,7 +69,7 @@
     "@babel/core": "^7.11",
     "@babel/eslint-parser": "^7.11",
     "@babel/eslint-plugin": "^7.11",
-    "@fuelrats/eslint-plugin": "^2.4.0-canary.7",
+    "@fuelrats/eslint-plugin": "^2.4.0-canary.8",
     "eslint": "^7.24",
     "eslint-plugin-import": "^2.23",
     "eslint-plugin-jsdoc": "^35"

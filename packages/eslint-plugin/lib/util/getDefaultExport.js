@@ -3,7 +3,8 @@ const getNodeIdentifier = require('./getNodeIdentifier')
 
 /**
  * @typedef {object} ExportData
- * @property {boolean} external boolean represening if the default export is from an external module
+ * @property {boolean?} expression boolean representing if the default export is an expression
+ * @property {boolean?} external boolean represening if the default export is from an external module
  * @property {object} node Node to highlight on report
  * @property {string} name Name of the default export
  */
@@ -31,6 +32,13 @@ function getIdentifierExportData (identNode) {
   }
 }
 
+function getExpressionExportData (node) {
+  return {
+    expression: true,
+    node,
+  }
+}
+
 /**
  * Extracts data about the default export of a Module.
  * @param {object} programNode ASTNode of type `Program`
@@ -39,7 +47,10 @@ function getIdentifierExportData (identNode) {
 function getDefaultExport (programNode) {
   for (const bodyNode of programNode.body) {
     if (bodyNode.type === 'ExportDefaultDeclaration') {
-      // export default Foo
+      if (bodyNode.declaration.type.toLowerCase().includes('expression')) {
+        return getExpressionExportData(bodyNode.declaration)
+      }
+
       return getIdentifierExportData(getNodeIdentifier(bodyNode.declaration))
     }
 

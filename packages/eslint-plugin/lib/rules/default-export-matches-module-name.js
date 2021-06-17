@@ -69,10 +69,16 @@ module.exports = {
       Program: (programNode) => {
         const moduleName = getModuleName(context.getFilename())
         const {
-          external,
+          expression: isExpression,
+          external: isExternal,
           name: exportName,
           node: exportIdentNode,
         } = getDefaultExport(programNode) ?? {}
+
+        if (isExpression) {
+          // Fix this later, provide a report which encourages static export declarations
+          return
+        }
 
         if (exportIdentNode) {
           let doReport = moduleName !== exportName
@@ -86,7 +92,7 @@ module.exports = {
               exportIdentNode,
               exportName,
               moduleName,
-              external,
+              isExternal,
             )
           }
         }
