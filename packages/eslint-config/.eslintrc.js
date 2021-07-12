@@ -7,7 +7,7 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: './index.js',
+  extends: require.resolve('./index.js'),
   rules: {
     'no-magic-numbers': ['off'], // since defining a bunch of consts for lint rules is cumbersome
     'quote-props': ['error', 'consistent-as-needed'], // since the majority of rules are in quotes with little outliers;
