@@ -152,15 +152,15 @@ module.exports = {
         'spec/**', // mocha, rspec-like pattern
         '**/__tests__/**', // jest pattern
         '**/__mocks__/**', // jest pattern
-        'test.{js,jsx}', // repos with a single test file
-        'test-*.{js,jsx}', // repos with multiple top-level test files
-        '**/*{.,_}{test,spec}.{js,jsx}', // tests where the extension or filename suffix denotes that it is a test
+        'test.{js,jsx,ts,tsx}', // repos with a single test file
+        'test-*.{js,jsx,ts,tsx}', // repos with multiple top-level test files
+        '**/*{.,_}{test,spec}.{js,jsx,ts,tsx}', // tests where the extension or filename suffix denotes that it is a test
         '**/.eslintrc.{js,cjs,mjs}', // eslint config file
         '**/.babelrc.{js,cjs,mjs}', // babel config file
         '**/jest.config.{js,cjs,mjs}', // jest config
         '**/vue.config.{js,cjs,mjs}', // vue-cli config
         '**/next.config.{js,cjs,mjs}', // Next config
-        '**/postcss.confg.{js,cjs,mjs}',
+        '**/postcss.confg.{js,cjs,mjs}', // Postcss config
         '**/webpack.config.{js,cjs,mjs}', // webpack config
         '**/webpack.config.*.{js,cjs,mjs}', // webpack config
         '**/rollup.config.{js,cjs,mjs}', // rollup config
@@ -265,6 +265,8 @@ module.exports = {
       js: 'never',
       mjs: 'never',
       jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
     }],
 
 
