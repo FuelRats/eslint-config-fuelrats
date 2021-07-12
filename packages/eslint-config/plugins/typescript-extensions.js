@@ -14,7 +14,7 @@ const { rules: variablesRules } = require('../core/variables')
  * This config disables the base rule and enables the plugin rule with the base rule's config.
  * TODO: check each rule for extended configuration, and reconfigure as-needed
  */
-const typescriptExtensions = {
+module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
@@ -265,5 +265,3 @@ const typescriptExtensions = {
     '@typescript-eslint/space-infix-ops': styleRules['space-infix-ops'],
   },
 }
-
-module.exports = typescriptExtensions
