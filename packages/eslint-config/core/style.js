@@ -43,9 +43,6 @@ module.exports = {
       properties: 'never',
       ignoreGlobals: true,
       ignoreDestructuring: false,
-      allow: [
-        '^UNSAFE_', // for unsafe React lifecycle methods
-      ],
     }],
 
 
