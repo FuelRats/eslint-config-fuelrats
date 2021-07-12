@@ -481,7 +481,6 @@ __metadata:
   dependencies:
     "@babel/eslint-parser": ^7.14.5
     "@babel/eslint-plugin": ^7.14.5
-    "@fuelrats/eslint-plugin": "file:../eslint-plugin"
     eslint: ^7.28.0
     eslint-plugin-import: ^2.23.4
     eslint-plugin-jsdoc: ^35.1.3
@@ -507,7 +506,6 @@ __metadata:
     "@babel/core": ^7.14.5
     "@babel/eslint-parser": ^7.14.5
     "@babel/eslint-plugin": ^7.14.5
-    "@fuelrats/eslint-plugin": "file:../eslint-plugin"
     confusing-browser-globals: ^1.0.10
     eslint: ^7.28.0
     eslint-plugin-import: ^2.23.4
@@ -519,46 +517,21 @@ __metadata:
     "@babel/core": ^7.11
     "@babel/eslint-parser": ^7.11
     "@babel/eslint-plugin": ^7.11
-    "@fuelrats/eslint-plugin": ^2.4.0-canary.8
     eslint: ^7.24
     eslint-plugin-import: ^2.23
     eslint-plugin-jsdoc: ^35
   languageName: unknown
   linkType: soft
 
-"@fuelrats/eslint-plugin@file:../eslint-plugin::locator=%40fuelrats%2Feslint-config%40workspace%3Apackages%2Feslint-config":
-  version: 2.4.0-canary.7
-  resolution: "@fuelrats/eslint-plugin@file:../eslint-plugin#../eslint-plugin::hash=c5d954&locator=%40fuelrats%2Feslint-config%40workspace%3Apackages%2Feslint-config"
-  dependencies:
-    requireindex: ~1.2.0
-  peerDependencies:
-    "@babel/eslint-parser": ^7.11
-    eslint: ^7.5
-  checksum: a1d9b81d2deb923e31ea20da42baf6f057c4e110e15f26af392625deb71bda6a021473382429eff1a22a98f026714e82f862c174e36000174a77fa2c8723e04d
-  languageName: node
-  linkType: hard
-
-"@fuelrats/eslint-plugin@file:../eslint-plugin::locator=%40fuelrats%2Feslint-config-react%40workspace%3Apackages%2Feslint-config-react":
-  version: 2.4.0-canary.7
-  resolution: "@fuelrats/eslint-plugin@file:../eslint-plugin#../eslint-plugin::hash=c5d954&locator=%40fuelrats%2Feslint-config-react%40workspace%3Apackages%2Feslint-config-react"
-  dependencies:
-    requireindex: ~1.2.0
-  peerDependencies:
-    "@babel/eslint-parser": ^7.11
-    eslint: ^7.5
-  checksum: a1d9b81d2deb923e31ea20da42baf6f057c4e110e15f26af392625deb71bda6a021473382429eff1a22a98f026714e82f862c174e36000174a77fa2c8723e04d
-  languageName: node
-  linkType: hard
-
 "@fuelrats/eslint-plugin@file:packages/eslint-plugin::locator=eslint-config-fuelrats%40workspace%3A.":
-  version: 2.4.0-canary.7
-  resolution: "@fuelrats/eslint-plugin@file:packages/eslint-plugin#packages/eslint-plugin::hash=c5d954&locator=eslint-config-fuelrats%40workspace%3A."
+  version: 2.4.0-canary.8
+  resolution: "@fuelrats/eslint-plugin@file:packages/eslint-plugin#packages/eslint-plugin::hash=db6f50&locator=eslint-config-fuelrats%40workspace%3A."
   dependencies:
     requireindex: ~1.2.0
   peerDependencies:
     "@babel/eslint-parser": ^7.11
     eslint: ^7.5
-  checksum: a1d9b81d2deb923e31ea20da42baf6f057c4e110e15f26af392625deb71bda6a021473382429eff1a22a98f026714e82f862c174e36000174a77fa2c8723e04d
+  checksum: 10fbd93d7e0ea14a4bc7aea6f26b4db77914c0a8f4a3c4b0cade1f49431104dc4280d6320872e082cd96802723410f04999cc3eab50aef263209928b26528fc6
   languageName: node
   linkType: hard
 
