@@ -69,10 +69,12 @@ eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-impor
 1. Add the following to your `.eslintrc` file:
 
 ```json
-"extends": [
-    "@fuelrats/eslint-config",
-    "@fuelrats/eslint-config-react"
-]
+{
+  "extends": [
+      "@fuelrats/eslint-config",
+      "@fuelrats/eslint-config-react"
+  ]
+}
 ```
 
 2. Setup additional environment options. This config only enables the `"es6"` (via `eslint-config`) and `"browser"` environments. All other env settings are up to your project.
@@ -80,6 +82,40 @@ eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-impor
 3. We recommend also setting your react settings per the `eslint-plugin-react` configuration docs.
     * This config defaults the react pragma to `"React"` and the react version to `"detect"`, but more configuration may be neccessary for your project.
     * More information can be found [here][eslint-plugin-react-config]
+
+
+
+
+## With TypeScript
+
+A typescript config preset is now in the works! Many rules are not yet configured and some may change significantly before it's considered stable,
+however it is available in `v2.4.0+`.
+
+To start:
+
+1. Install the normal `typescript-eslint` dependencies:
+
+```bash
+$ yarn add -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+or
+```bash
+$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+2. Then update your `.eslintrc` file with:
+
+```json
+{
+  "extends": [
+      "@fuelrats/eslint-config/typescript",
+      "@fuelrats/eslint-config-react/typescript"
+  ]
+}
+```
+
+
+
 
 
 ## Credits

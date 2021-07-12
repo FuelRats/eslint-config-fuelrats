@@ -65,7 +65,7 @@ $ yarn dlx install-peerdeps -d -Y @fuelrats/eslint-config
 Refer to your manager docs, or just manually install everything (borrriiiiing). Below is a list of package names you can apply to the manager of your choice.
 
 ```bash
-eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc @fuelrats/eslint-plugin @fuelrats/eslint-config
+eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc @fuelrats/eslint-config
 ```
 
 
@@ -74,19 +74,50 @@ eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-impor
 1. Add the following to your `.eslintrc` file:
 
 ```json
-"extends": "@fuelrats/eslint-config",
+{
+  "extends": "@fuelrats/eslint-config"
+}
 ```
 
 or, if you don't use [`Babel`][babel]:
 
 ```json
-"extends": "@fuelrats/eslint-config/purejs",
+{
+  "extends": "@fuelrats/eslint-config/purejs"
+}
 ```
 
 2. Setup additional environment options. This config only enables the `"es6"` environment. All other env settings are up to your project.
     * For more information on eslint envrionment settings, visit [the eslint docs][eslint-env]
 
 
+
+
+
+## With TypeScript
+
+A typescript config preset is now in the works! Many rules are not yet configured and some may change significantly before it's considered stable,
+however it is available in `v2.4.0+`.
+
+To start:
+
+1. Install the normal `typescript-eslint` dependencies
+
+```bash
+$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+or
+```bash
+$ yarn add -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+2. Then update your `.eslintrc` file with:
+
+```json
+{
+  "extends": "@fuelrats/eslint-config/typescript"
+}
+```
 
 
 
@@ -97,7 +128,7 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 
 
-[#3]: https://github.com/FuelRats/eslint-config-fuelrats/pull/3
+
 
 [airbnb]: https://github.com/airbnb/javascript
 [babel]: https://babeljs.io/
