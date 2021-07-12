@@ -57,7 +57,7 @@ module.exports = {
      * Restrict file extensions that may contain JSX
      */
     'react/jsx-filename-extension': ['error', {
-      extensions: ['.jsx', '.js'],
+      extensions: ['.js', '.cjs', '.mjs', '.ts', '.jsx', '.tsx'],
     }],
 
 
