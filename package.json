@@ -39,9 +39,7 @@
   ],
   "main": "./packages/eslint-config/index.js",
   "scripts": {
-    "eslint": "yarn workspaces foreach run eslint .",
-    "release": "yarn workspaces foreach run release",
-    "release:canary": "yarn workspaces foreach run release:canary"
+    "eslint": "yarn workspaces foreach run eslint ."
   },
   "dependencies": {
     "confusing-browser-globals": "^1.0.10"
