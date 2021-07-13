@@ -17,34 +17,30 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 
 ## Packages
-This config has two separate packages:
+
+This is a monorepo for all eslint-related packages. Check them out below!
+
 
 ### [@fuelrats/eslint-config][eslint-config-fuelrats]
 
-* Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
-    * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
-    * Includes [`@babel/eslint-plugin`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
-    * Includes [`@fuelrats/eslint-plugin`][eslint-plugin-fuelrats] to provide additional custom rules.
-    * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
-    * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting.
-    * Also includes a `purejs` preset which disables [`@babel/eslint-parser`][babel-eslint-parser] and [`@babel/eslint-plugin`][eslint-plugin-babel].
+Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
 
 
 ### [@fuelrats/eslint-config-react][eslint-config-fuelrats-react]
 
-* Companion config to [`@fuelrats/eslint-config`][eslint-config-fuelrats]. Built specifically for our react projects.
-    * Adds [`eslint-plugin-react`][eslint-plugin-react] for react and better JSX linting.
-    * Adds [`eslint-plugin-react-hooks`][eslint-plugin-react-hooks] for react "rules of hooks" enforcement.
-    * Adds [`eslint-plugin-jsx-a11y`][eslint-plugin-jsx-a11y] for enforcing website accessibility best practices.
+Companion config to [`@fuelrats/eslint-config`][eslint-config-fuelrats]. Built specifically for our react projects.
 
 
+### [@fuelrats/eslint-plugin][eslint-plugin-fuelrats]
+
+Optional plugin to provide custom lint rules for our projects to follow.
 
 
 
 ## Installation
 * For regular javascript or node.js projects, go to [`@fuelrats/eslint-config`][eslint-config-fuelrats].
 * For React projects, go to [`@fuelrats/eslint-config-react`][eslint-config-fuelrats-react].
-
+* For projects which utilize typescript, see the best corresponding package above
 
 
 
@@ -56,12 +52,14 @@ This monorepo uses yarn workspaces to manage dependencies and versioning. When d
 
 1. Clone the Repository
 ```bash
-$ git clone https://github.com/FuelRats/eslint-config-fuelrats.git && cd eslint-config-fuelrats
+$ gh repo clone fuelrats/eslint-config-fuelrats && cd eslint-config-fuelrats
 ```
+
 2. Let yarn install everything for you
 ```bash
 $ yarn install
 ```
+
 3. Done! 🎉
 
 
@@ -81,8 +79,3 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 [eslint-config-fuelrats]: packages/eslint-config
 [eslint-config-fuelrats-react]: packages/eslint-config-react
 [eslint-plugin-fuelrats]: packages/eslint-plugin
-[eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
-[eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
-[eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
-[eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
-[eslint-plugin-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks

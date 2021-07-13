@@ -1,13 +1,12 @@
 # [@fuelrats/eslint-config][eslint-config-fuelrats]
 
 * Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
-    * Assumes an ECMAScript 2020 environment with [`Babel 7`][babel] as the primary transpiler.
-    * Includes [`@babel/eslint-plugin`][eslint-plugin-babel] for providing core rule compatibility for common babel plugins.
-    * Includes [`@fuelrats/eslint-plugin`][eslint-plugin-fuelrats] to provide additional custom rules.
+    * Assumes an ECMAScript 2020 environment with module syntax and [`@babel/core`][babel] as the primary transpiler.
+    * Includes [`@babel/eslint-plugin`][babel-eslint-plugin] for providing core rule compatibility for common babel plugins.
     * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
     * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting.
-    * Also includes a `purejs` preset which disables [`@babel/eslint-parser`][babel-eslint-parser] and [`@babel/eslint-plugin`][eslint-plugin-babel].
-
+    * Also includes a `purejs` preset which does not enable [`@babel/eslint-parser`][babel-eslint-parser] and [`@babel/eslint-plugin`][babel-eslint-plugin].
+    * Also includes a `typescript` preset which replaces [`@babel/eslint-parser`][babel-eslint-parser] for [`@typescript-eslint/parser`][typescript-eslint].
 
 
 
@@ -22,54 +21,36 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 
 
-## Setup
 
-### Installation
+## Installation
 
-We recommend the [`install-peerdeps`][install-peerdeps] package for automatically adding the peer dependencies required by this config.
-
-**NOTE:** The commands below assume you are installing to `devDependencies`. If you want to install to your main `dependencies` (not recommended), remove the `-d` flag.
-
-#### Via `npm` v5+
+Add `@fuelrats/eslint-config` and it's depdendencies to your project.
 
 ```bash
-$ npx install-peerdeps -d @fuelrats/eslint-config
+yarn add -D eslint \
+            @babel/core \
+            @babel/eslint-parser \
+            @babel/eslint-plugin \
+            eslint-plugin-import \
+            eslint-plugin-jsdoc \
+            @fuelrats/eslint-config
 ```
 
-#### Via `yarn` 1.x
-
-Yarn v1 does not have an included remote script runner. First you must globally install `install-peerdeps`:
-
-**NOTE:** The Yarn team no longer recommends the use of `yarn global`, and is completely removed in Yarn 2.x.
+or
 
 ```bash
-$ npm i -g install-peerdeps
+npm i -D eslint \
+         @babel/core \
+         @babel/eslint-parser \
+         @babel/eslint-plugin \
+         eslint-plugin-import \
+         eslint-plugin-jsdoc \
+         @fuelrats/eslint-config
 ```
 
-then run:
+Then configure eslint accordingly!
 
-```bash
-$ install-peerdeps -d -Y @fuelrats/eslint-config
-```
-
-
-#### Via `yarn` 2 😎
-
-```bash
-$ yarn dlx install-peerdeps -d -Y @fuelrats/eslint-config
-```
-
-
-#### Other Package managers
-
-Refer to your manager docs, or just manually install everything (borrriiiiing). Below is a list of package names you can apply to the manager of your choice.
-
-```bash
-eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc @fuelrats/eslint-config
-```
-
-
-### Configuration
+## Configuration
 
 1. Add the following to your `.eslintrc` file:
 
@@ -79,7 +60,13 @@ eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-impor
 }
 ```
 
-or, if you don't use [`Babel`][babel]:
+2. Setup additional environment options. This config only enables the `"es2020"` environment. All other env settings are up to your project.
+    * For more information on eslint envrionment settings, visit [the ESLint docs][eslint-env]
+
+
+
+### Without Babel
+Babel parser is the default for this config, however not it's not required. a `purejs` preset is also available.
 
 ```json
 {
@@ -87,31 +74,50 @@ or, if you don't use [`Babel`][babel]:
 }
 ```
 
-2. Setup additional environment options. This config only enables the `"es6"` environment. All other env settings are up to your project.
-    * For more information on eslint envrionment settings, visit [the eslint docs][eslint-env]
+Using this preset, you may safely remove `@babel/core`, `@babel/eslint-parser` and `@babel/eslint-plugin` from your dependencies.
 
 
 
 
 
-## With TypeScript
+## Installation for TypeScript
 
-A typescript config preset is now in the works! Many rules are not yet configured and some may change significantly before it's considered stable,
-however it is available in `v2.4.0+`.
+A [`TypeScript`][typescript] config preset is now in the works! Currently configured rules may change significantly before it's considered stable,
+however it is available in `v2.4.0` and later.
 
-To start:
+**⚠️WARNING⚠️**
 
-1. Install the normal `typescript-eslint` dependencies
+This config is a work in progress, and may not reflect our final TypeScript project code style.
+
+### Install
+
+Install the [`typescript-eslint`][typescript-eslint] dependencies with `@fuelrats/eslint-config` instead of the usual [`@babel/eslint-parser`][babel-eslint-parser] dependencies.
 
 ```bash
-$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+yarn add -D eslint \
+            typescript \
+            @typescript-eslint/parser \
+            @typescript-eslint/eslint-plugin \
+            eslint-plugin-import \
+            eslint-plugin-jsdoc \
+            @fuelrats/eslint-config
 ```
+
 or
+
 ```bash
-$ yarn add -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm i -D eslint \
+         typescript \
+         @typescript-eslint/parser \
+         @typescript-eslint/eslint-plugin \
+         eslint-plugin-import \
+         eslint-plugin-jsdoc \
+         @fuelrats/eslint-config
 ```
 
-2. Then update your `.eslintrc` file with:
+### Configure
+
+Then add the following to your `.eslintrc` file:
 
 ```json
 {
@@ -119,10 +125,12 @@ $ yarn add -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plu
 }
 ```
 
+As with the default Babel config, environment variables will still need to be defined. For a full list of supported environment settings, visit [the ESLint docs][eslint-env]
+
 
 
 ## Credits
-Our code style and this config set was inspired by and derived from the AirBnB javascript style guide.
+Our code style, and this config set, was inspired by and derived from the AirBnB JavaScript style guide.
 
 [Send some love their way 😍🎉🎊][airbnb]
 
@@ -132,11 +140,12 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 [airbnb]: https://github.com/airbnb/javascript
 [babel]: https://babeljs.io/
+[typescript]: https://www.typescriptlang.org
+[typescript-eslint]: https://typescript-eslint.io
 [babel-eslint-parser]: https://www.npmjs.com/package/@babel/eslint-parser
 [babel-eslint-plugin]: https://www.npmjs.com/package/@babel/eslint-plugin
-[eslint-plugin-fuelrats]: ../eslint-plugin
-[eslint-env]: https://eslint.org/docs/user-guide/configuring#specifying-environments
+[eslint-env]: https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
+[eslint-plugin-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-plugin
 [eslint-plugin-import]: https://www.npmjs.com/package/eslint-plugin-import
 [eslint-plugin-jsdoc]: https://www.npmjs.com/package/eslint-plugin-jsdoc
-[install-peerdeps]: https://www.npmjs.com/package/install-peerdeps

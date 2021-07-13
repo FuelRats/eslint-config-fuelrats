@@ -8,7 +8,7 @@ We'll assume you already have ESLint installed. If not, [go get started!](https:
 
 You should also setup babel as most of these rules only work with `@babel/eslint-parser`. If you haven't, [go here.](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser)
 
-If you are using `@fuelrats/eslint-config`, all of this setup should be done already.
+If you are using [`@fuelrats/eslint-config`][eslint-config-fuelrats], the preceeding steps will be done already.
 
 Now, lets install the plugin
 
@@ -18,15 +18,9 @@ $ npm install --save-dev @fuelrats/eslint-plugin
 $ yarn add --dev @fuelrats/eslint-plugin
 ```
 
-And thats it! See Usage below on how to activate this plugin.
+And thats it! To activate the plugin, see [Usage](#usage) below.
 
 ## Usage
-
-### With `@fuelrats/eslint-config`
-
-As of `v2.4.0` the additional rules provided by this plugin are default in The FuelRats eslint ruleset.
-
-### Without `@fuelrats/eslint-config`
 
 Either extend the recommended config:
 
@@ -64,3 +58,11 @@ Or, add `@fuelrats` to the plugins section of your `.eslintrc` configuration fil
 
 [`@fuelrats/default-export-matches-module-name`]: docs/rules/default-export-matches-module-name.md
 [`@fuelrats/no-mixed-access-class-members`]: docs/rules/no-mixed-access-class-members.md
+
+
+
+
+
+
+[eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
+[eslint-plugin-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-plugin

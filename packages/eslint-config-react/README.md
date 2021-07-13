@@ -4,7 +4,7 @@
     * Adds [`eslint-plugin-react`][eslint-plugin-react] for react and better JSX linting.
     * Adds [`eslint-plugin-react-hooks`][eslint-plugin-react-hooks] for react "rules of hooks" enforcement.
     * Adds [`eslint-plugin-jsx-a11y`][eslint-plugin-jsx-a11y] for enforcing website accessibility best practices.
-
+    * Also includes an optional [TypeScript][typescript] preset to be used alongside the base configuration's `typescript` preset.
 
 
 
@@ -21,48 +21,37 @@ The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time the
 
 ## Installation
 
-We recommend the [`install-peerdeps`][install-peerdeps] package for automatically adding the peer dependencies required by this config.
-
-**NOTE:** The commands below assume you are installing to `devDependencies`. If you want to install to your main `dependencies` (not recommended), remove the `-d` flag.
-
-### Via `npm` v5+
+Add `@fuelrats/eslint-config`, `@fuelrats/eslint-config-react`, and their depdendencies to your project.
 
 ```bash
-$ npx install-peerdeps -d @fuelrats/eslint-config && npx -d install-peerdeps @fuelrats/eslint-config-react
+yarn add -D eslint \
+            @babel/core \
+            @babel/eslint-parser \
+            @babel/eslint-plugin \
+            eslint-plugin-import \
+            eslint-plugin-jsdoc \
+            eslint-plugin-jsx-a11y \
+            eslint-plugin-react \
+            eslint-plugin-react-hooks \
+            @fuelrats/eslint-config \
+            @fuelrats/eslint-config-react
 ```
 
-### Via `yarn` 1.x
-
-Yarn v1 does not have an included remote script runner. First you must globally install `install-peerdeps`:
-
-**NOTE:** The Yarn team no longer recommends the use of `yarn global`, and is completely removed in Yarn 2.x.
+or
 
 ```bash
-$ npm i -g install-peerdeps
+npm i -D eslint \
+         @babel/core \
+         @babel/eslint-parser \
+         @babel/eslint-plugin \
+         eslint-plugin-import \
+         eslint-plugin-jsdoc \
+         eslint-plugin-jsx-a11y \
+         eslint-plugin-react \
+         eslint-plugin-react-hooks \
+         @fuelrats/eslint-config \
+         @fuelrats/eslint-config-react
 ```
-
-then run:
-
-```bash
-$ install-peerdeps -d -Y @fuelrats/eslint-config && install-peerdeps -d -Y @fuelrats/eslint-config-react
-```
-
-
-### Via `yarn` 2 😎
-
-```bash
-$ yarn dlx install-peerdeps -d -Y @fuelrats/eslint-config && yarn dlx install-peerdeps -d -Y @fuelrats/eslint-config-react
-```
-
-
-### Other Package managers
-
-Refer to your manager docs, or just manually install everything (borrriiiiing). Below is a list of package names you can apply to the manager of your choice.
-
-```bash
-eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @fuelrats/eslint-plugin @fuelrats/eslint-config @fuelrats/eslint-config-react
-```
-
 
 ## Configuration
 
@@ -77,7 +66,7 @@ eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-impor
 }
 ```
 
-2. Setup additional environment options. This config only enables the `"es6"` (via `eslint-config`) and `"browser"` environments. All other env settings are up to your project.
+2. Setup additional environment options. This config only enables the `"es2020"` and `"browser"` environments. All other env settings are up to your project.
     * For more information on eslint envrionment settings, visit [the eslint docs][eslint-env]
 3. We recommend also setting your react settings per the `eslint-plugin-react` configuration docs.
     * This config defaults the react pragma to `"React"` and the react version to `"detect"`, but more configuration may be neccessary for your project.
@@ -86,24 +75,52 @@ eslint @babel/core @babel/eslint-parser @babel/eslint-plugin eslint-plugin-impor
 
 
 
-## With TypeScript
+## Install With TypeScript
 
-A typescript config preset is now in the works! Many rules are not yet configured and some may change significantly before it's considered stable,
-however it is available in `v2.4.0+`.
+A [`TypeScript`][typescript] config preset is now in the works! Currently configured rules may change significantly before it's considered stable,
+however it is available in `v2.4.0` and later.
 
-To start:
+**⚠️WARNING⚠️**
 
-1. Install the normal `typescript-eslint` dependencies:
+This config is a work in progress, and may not reflect our final TypeScript project code style.
+
+### Install
+
+Install the [`typescript-eslint`][typescript-eslint] dependencies with `@fuelrats/eslint-config-react` instead of the usual [`@babel/eslint-parser`][babel-eslint-parser] dependencies.
 
 ```bash
-$ yarn add -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+yarn add -D eslint \
+            typescript \
+            @typescript-eslint/parser \
+            @typescript-eslint/eslint-plugin \
+            eslint-plugin-import \
+            eslint-plugin-jsdoc \
+            eslint-plugin-jsx-a11y \
+            eslint-plugin-react \
+            eslint-plugin-react-hooks \
+            @fuelrats/eslint-config \
+            @fuelrats/eslint-config-react
 ```
+
 or
+
 ```bash
-$ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm i -D eslint \
+         typescript \
+         @typescript-eslint/parser \
+         @typescript-eslint/eslint-plugin \
+         eslint-plugin-import \
+         eslint-plugin-jsdoc \
+         eslint-plugin-jsx-a11y \
+         eslint-plugin-react \
+         eslint-plugin-react-hooks \
+         @fuelrats/eslint-config \
+         @fuelrats/eslint-config-react
 ```
 
-2. Then update your `.eslintrc` file with:
+### Configure
+
+Then add the following to your `.eslintrc` file:
 
 ```json
 {
@@ -114,6 +131,7 @@ $ npm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 }
 ```
 
+As with the default config, environment variables and further React options may need to be configured. See Steps 2 and 3 of [Configuration](#configuration) above.
 
 
 
@@ -126,10 +144,13 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 
 
 [airbnb]: https://github.com/airbnb/javascript
+[typescript]: https://www.typescriptlang.org
+[typescript-eslint]: https://typescript-eslint.io
+[babel-eslint-parser]: https://www.npmjs.com/package/@babel/eslint-parser
+[babel-eslint-plugin]: https://www.npmjs.com/package/@babel/eslint-plugin
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
 [eslint-config-fuelrats-react]: https://www.npmjs.com/package/@fuelrats/eslint-config-react
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
 [eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
 [eslint-plugin-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks
 [eslint-plugin-react-config]: https://github.com/yannickcr/eslint-plugin-react#configuration
-[install-peerdeps]: https://www.npmjs.com/package/install-peerdeps
