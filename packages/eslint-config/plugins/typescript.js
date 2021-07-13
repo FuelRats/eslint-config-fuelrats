@@ -1,3 +1,4 @@
+/* eslint-disable id-length */
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
@@ -83,43 +84,75 @@ module.exports = {
 
 
     /**
-     * Require explicit accessibility modifiers on class properties and methods
-     *
-     * TODO: Configure Rule
-     */
-    '@typescript-eslint/explicit-member-accessibility': ['off'],
-
-
-    /**
-     * Require explicit return and argument types on exported functions' and classes' public class methods
-     *
-     * TODO: Configure Rule
-     */
-    '@typescript-eslint/explicit-module-boundary-types': ['off'],
-
-
-    /**
      * Require a specific member delimiter style for interfaces and type literals
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/member-delimiter-style': ['off'],
+    '@typescript-eslint/member-delimiter-style': ['error', {
+      multiline: {
+        delimiter: 'none',
+        requireLast: true,
+      },
+      singleline: {
+        delimiter: 'semi',
+        requireLast: false,
+      },
+      multilineDetection: 'brackets',
+    }],
 
 
     /**
      * Require a consistent member declaration order
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/member-ordering': ['off'],
+    '@typescript-eslint/member-ordering': ['error', {
+      default: [
+        // Index signature
+        'signature',
+
+        // Fields
+        'public-static-field',
+        'protected-static-field',
+        'private-static-field',
+        'static-field',
+
+        'public-field',
+        'protected-field',
+        'private-field',
+
+        'public-abstract-field',
+        'protected-abstract-field',
+        'private-abstract-field',
+        'abstract-field',
+
+        'field',
+
+        // Constructors
+        'public-constructor',
+        'protected-constructor',
+        'private-constructor',
+        'constructor',
+
+        // Methods
+        'public-static-method',
+        'protected-static-method',
+        'private-static-method',
+
+        'public-method',
+        'protected-method',
+        'private-method',
+
+        'public-abstract-method',
+        'protected-abstract-method',
+        'private-abstract-method',
+        'abstract-method',
+
+        'method',
+      ],
+    }],
 
 
     /**
      * Enforces using a particular method signature syntax.
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/method-signature-style': ['off'],
+    '@typescript-eslint/method-signature-style': ['error', 'property'],
 
 
     /**
@@ -158,106 +191,87 @@ module.exports = {
 
     /**
      * Requires that .toString() is only called on objects which provide useful information when stringified
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-base-to-string': ['off'],
+    '@typescript-eslint/no-base-to-string': ['error'],
 
 
     /**
      * Disallow non-null assertion in locations that may be confusing
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-confusing-non-null-assertion': ['off'],
+    '@typescript-eslint/no-confusing-non-null-assertion': ['error'],
 
 
     /**
      * Requires expressions of type void to appear in statement position
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-confusing-void-expression': ['off'],
+    '@typescript-eslint/no-confusing-void-expression': ['error', {
+      ignoreArrowShorthand: true,
+    }],
 
 
     /**
      * Disallow the delete operator with computed key expressions
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-dynamic-delete': ['off'],
+    '@typescript-eslint/no-dynamic-delete': ['error'],
 
 
     /**
      * Disallow the declaration of empty interfaces
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-empty-interface': ['off'],
+    '@typescript-eslint/no-empty-interface': ['error'],
 
 
     /**
      * Disallow usage of the any type
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/no-explicit-any': ['off'],
 
 
     /**
      * Disallow extra non-null assertion
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-extra-non-null-assertion': ['off'],
+    '@typescript-eslint/no-extra-non-null-assertion': ['error'],
 
 
     /**
      * Forbids the use of classes as namespaces
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/no-extraneous-class': ['off'],
 
 
     /**
      * Requires Promise-like values to be handled appropriately
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-floating-promises': ['off'],
+    '@typescript-eslint/no-floating-promises': ['error', {
+      ignoreVoid: true,
+      ignoreIIFE: true,
+    }],
 
 
     /**
      * Disallow iterating over an array with a for-in loop
      *
-     * TODO: Configure Rule
+     * DISABLED: existing no-restricted-syntax rule prohibits for-in with better feedback.
      */
     '@typescript-eslint/no-for-in-array': ['off'],
 
 
     /**
      * Disallow usage of the implicit any type in catch clauses
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-implicit-any-catch': ['off'],
+    '@typescript-eslint/no-implicit-any-catch': ['error'],
 
 
     /**
      * Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-inferrable-types': ['off'],
+    '@typescript-eslint/no-inferrable-types': ['error'],
 
 
     /**
      * Disallows usage of void type outside of generic or return types
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-invalid-void-type': ['off'],
+    '@typescript-eslint/no-invalid-void-type': ['error'],
 
 
     /**
@@ -270,18 +284,14 @@ module.exports = {
 
     /**
      * Avoid using promises in places not designed to handle them
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-misused-promises': ['off'],
+    '@typescript-eslint/no-misused-promises': ['error'],
 
 
     /**
      * Disallow the use of custom TypeScript modules and namespaces
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-namespace': ['off'],
+    '@typescript-eslint/no-namespace': ['error'],
 
 
     /**
@@ -289,7 +299,7 @@ module.exports = {
      *
      * TODO: Configure Rule
      */
-    '@typescript-eslint/no-non-null-asserted-optional-chain': ['off'],
+    '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
 
 
     /**
@@ -662,6 +672,30 @@ module.exports = {
          * Require explicit return types on functions and class methods
          */
         '@typescript-eslint/explicit-function-return-type': ['error'],
+
+        /**
+         * Require explicit accessibility modifiers on class properties and methods
+         */
+        '@typescript-eslint/explicit-member-accessibility': ['error', {
+          accessibility: 'explicit',
+          overrides: {
+            accessors: 'explicit',
+            constructors: 'no-public',
+            methods: 'explicit',
+            properties: 'explicit',
+            parameterProperties: 'no-public',
+          },
+        }],
+
+        /**
+         * Require explicit return and argument types on exported functions' and classes' public class methods
+         */
+        '@typescript-eslint/explicit-module-boundary-types': ['error', {
+          allowArgumentsExplicitlyTypedAsAny: true,
+          allowDirectConstAssertionInArrowFunctions: false,
+          allowHigherOrderFunctions: true,
+          allowTypedFunctionExpressions: true,
+        }],
       },
     },
   ],
