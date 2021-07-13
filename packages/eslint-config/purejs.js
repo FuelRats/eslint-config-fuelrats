@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    es6: true,
+    es2020: true,
   },
   extends: [
     './core/bestpractices',
@@ -12,7 +12,6 @@ module.exports = {
     './core/plugin-jsdoc',
   ].map(require.resolve),
   parserOptions: {
-    ecmaVersion: 2021,
     sourceType: 'module',
   },
   reportUnusedDisableDirectives: true,
