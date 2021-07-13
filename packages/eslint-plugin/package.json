@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-plugin",
-  "version": "2.4.0-canary.9",
+  "version": "2.4.0-canary.10",
   "description": "Companion rules to @fuelrats/eslint-config",
   "license": "MIT",
   "author": {
@@ -63,7 +63,6 @@
     "mocha": "^8.4.0"
   },
   "peerDependencies": {
-    "@babel/eslint-parser": "^7.11",
     "eslint": "^7.5"
   },
   "stableVersion": "2.3.0"

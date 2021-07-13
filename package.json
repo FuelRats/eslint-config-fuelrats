@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fuelrats",
-  "version": "2.4.0-canary.9",
+  "version": "2.4.0-canary.10",
   "description": "Monorepo for @fuelrats/eslint-config[-react]!",
   "private": true,
   "license": "MIT",
@@ -41,8 +41,7 @@
   "scripts": {
     "eslint": "yarn workspaces foreach run eslint .",
     "release": "yarn workspaces foreach run release",
-    "release:canary": "yarn workspaces foreach run release:canary",
-    "autoversion": "bash ./scripts/autoversion.sh"
+    "release:canary": "yarn workspaces foreach run release:canary"
   },
   "dependencies": {
     "confusing-browser-globals": "^1.0.10"
