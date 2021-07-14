@@ -14,7 +14,9 @@ module.exports = {
     /**
      * Requires using either T[] or Array<T> for arrays
      */
-    '@typescript-eslint/array-type': ['error', 'array'],
+    '@typescript-eslint/array-type': ['error', {
+      default: 'array',
+    }],
 
 
     /**
