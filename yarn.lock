@@ -626,12 +626,12 @@ __metadata:
 
 "@fuelrats/eslint-plugin@file:packages/eslint-plugin::locator=eslint-config-fuelrats%40workspace%3A.":
   version: 2.4.0-canary.10
-  resolution: "@fuelrats/eslint-plugin@file:packages/eslint-plugin#packages/eslint-plugin::hash=1d70f1&locator=eslint-config-fuelrats%40workspace%3A."
+  resolution: "@fuelrats/eslint-plugin@file:packages/eslint-plugin#packages/eslint-plugin::hash=fa8cd3&locator=eslint-config-fuelrats%40workspace%3A."
   dependencies:
     requireindex: ~1.2.0
   peerDependencies:
     eslint: ^7.5
-  checksum: 69f42d14eb4bce24c45dd74e036a16e1249510fe773a8eedea008ee28e4c9de2c6e6800f9c0eade2fd664cd7b9744e7df85dcd343fcd57854e4d378d9ab86008
+  checksum: a8e8fb6130a8cf265523ad210fe38b04a6c1f40ba38c7af5e439129fe5d5d0c2351abc487c4c78c8f93d69627dbcf3ca9bc651de9a838e48dbdf0ea9eae53ed9
   languageName: node
   linkType: hard
 
