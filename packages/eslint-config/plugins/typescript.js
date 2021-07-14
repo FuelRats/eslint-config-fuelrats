@@ -276,10 +276,8 @@ module.exports = {
 
     /**
      * Enforce valid definition of new and constructor
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-misused-new': ['off'],
+    '@typescript-eslint/no-misused-new': ['error'],
 
 
     /**
@@ -296,370 +294,294 @@ module.exports = {
 
     /**
      * Disallows using a non-null assertion after an optional chain expression
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
 
 
     /**
      * Disallows non-null assertions using the ! postfix operator
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-non-null-assertion': ['off'],
+    '@typescript-eslint/no-non-null-assertion': ['error'],
 
 
     /**
      * Disallow the use of parameter properties in class constructors
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/no-parameter-properties': ['off'],
 
 
     /**
-     * Disallows invocation of require()
-     *
-     * TODO: Configure Rule
-     */
-    '@typescript-eslint/no-require-imports': ['off'],
-
-
-    /**
      * Disallow aliasing this
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-this-alias': ['off'],
+    '@typescript-eslint/no-this-alias': ['error', {
+      allowDestructuring: true,
+    }],
 
 
     /**
      * Disallow the use of type aliases
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-type-alias': ['off'],
+    '@typescript-eslint/no-type-alias': ['error', {
+      allowAliases: 'in-unions-and-intersections',
+      allowCallbacks: 'always',
+      allowConditionalTypes: 'never',
+      allowConstructors: 'never',
+      allowLiterals: 'in-unions-and-intersections',
+      allowMappedTypes: 'in-unions-and-intersections',
+      allowTupleTypes: 'always',
+    }],
 
 
     /**
      * Flags unnecessary equality comparisons against boolean literals
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['off'],
 
 
     /**
      * Prevents conditionals where the type is always truthy or always falsy
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unnecessary-condition': ['off'],
+    '@typescript-eslint/no-unnecessary-condition': ['error'],
 
 
     /**
      * Warns when a namespace qualifier is unnecessary
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unnecessary-qualifier': ['off'],
+    '@typescript-eslint/no-unnecessary-qualifier': ['error'],
 
 
     /**
      * Enforces that type arguments will not be used if not required
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unnecessary-type-arguments': ['off'],
+    '@typescript-eslint/no-unnecessary-type-arguments': ['error'],
 
 
     /**
      * Warns if a type assertion does not change the type of an expression
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unnecessary-type-assertion': ['off'],
+    '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
 
 
     /**
      * Disallows unnecessary constraints on generic types
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unnecessary-type-constraint': ['off'],
+    '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
 
 
     /**
      * Disallows calling an function with an any type value
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unsafe-argument': ['off'],
+    '@typescript-eslint/no-unsafe-argument': ['error'],
 
 
     /**
      * Disallows assigning any to variables and properties
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unsafe-assignment': ['off'],
+    '@typescript-eslint/no-unsafe-assignment': ['error'],
 
 
     /**
      * Disallows calling an any type value
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unsafe-call': ['off'],
+    '@typescript-eslint/no-unsafe-call': ['error'],
 
 
     /**
      * Disallows member access on any typed variables
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unsafe-member-access': ['off'],
+    '@typescript-eslint/no-unsafe-member-access': ['error'],
 
 
     /**
      * Disallows returning any from a function
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/no-unsafe-return': ['off'],
+    '@typescript-eslint/no-unsafe-return': ['error'],
 
 
     /**
      * Disallows the use of require statements except in import statements
      *
-     * TODO: Configure Rule
+     * DISABLED: handled by other import style rules.
      */
     '@typescript-eslint/no-var-requires': ['off'],
 
 
     /**
      * Prefers a non-null assertion over explicit type cast when possible
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/non-nullable-type-assertion-style': ['off'],
 
 
     /**
      * Prefer usage of as const over literal type
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-as-const': ['off'],
+    '@typescript-eslint/prefer-as-const': ['error'],
 
 
     /**
      * Prefer initializing each enums member value
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-enum-initializers': ['off'],
+    '@typescript-eslint/prefer-enum-initializers': ['error'],
 
 
     /**
      * Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated
      *
-     * TODO: Configure Rule
+     * DISABLED: Handled by no-restricted-syntax with better reasoning.
      */
     '@typescript-eslint/prefer-for-of': ['off'],
 
 
     /**
      * Use function types instead of interfaces with call signatures
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-function-type': ['off'],
+    '@typescript-eslint/prefer-function-type': ['error'],
 
 
     /**
      * Enforce includes method over indexOf method
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-includes': ['off'],
+    '@typescript-eslint/prefer-includes': ['error'],
 
 
     /**
      * Require that all enum members be literal values to prevent unintended enum member name shadow issues
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-literal-enum-member': ['off'],
+    '@typescript-eslint/prefer-literal-enum-member': ['error'],
 
 
     /**
      * Require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/prefer-namespace-keyword': ['off'],
 
 
     /**
      * Enforce the usage of the nullish coalescing operator instead of logical chaining
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-nullish-coalescing': ['off'],
+    '@typescript-eslint/prefer-nullish-coalescing': ['error'],
 
 
     /**
      * Prefer using concise optional chain expressions instead of chained logical ands
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-optional-chain': ['off'],
+    '@typescript-eslint/prefer-optional-chain': ['error'],
 
 
     /**
      * Requires that private members are marked as readonly if they're never modified outside of the constructor
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-readonly': ['off'],
+    '@typescript-eslint/prefer-readonly': ['error'],
 
 
     /**
      * Requires that function parameters are typed as readonly to prevent accidental mutation of inputs
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/prefer-readonly-parameter-types': ['off'],
 
 
     /**
      * Prefer using type parameter when calling Array#reduce instead of casting
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-reduce-type-parameter': ['off'],
+    '@typescript-eslint/prefer-reduce-type-parameter': ['error'],
 
 
     /**
      * Enforce that RegExp#exec is used instead of String#match if no global flag is provided
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-regexp-exec': ['off'],
+    '@typescript-eslint/prefer-regexp-exec': ['error'],
 
 
     /**
      * Enforce the use of String#startsWith and String#endsWith instead of other equivalent methods of checking substrings
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-string-starts-ends-with': ['off'],
+    '@typescript-eslint/prefer-string-starts-ends-with': ['error'],
 
 
     /**
      * Recommends using @ts-expect-error over @ts-ignore
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/prefer-ts-expect-error': ['off'],
+    '@typescript-eslint/prefer-ts-expect-error': ['error'],
 
 
     /**
      * Requires any function or method that returns a Promise to be marked async
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/promise-function-async': ['off'],
+    '@typescript-eslint/promise-function-async': ['error'],
 
 
     /**
      * Requires Array#sort calls to always provide a compareFunction
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/require-array-sort-compare': ['off'],
+    '@typescript-eslint/require-array-sort-compare': ['error', {
+      ignoreStringArrays: true,
+    }],
 
 
     /**
      * When adding two variables, operands must both be of type number or of type string
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/restrict-plus-operands': ['off'],
+    '@typescript-eslint/restrict-plus-operands': ['error'],
 
 
     /**
      * Enforce template literal expressions to be of string type
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/restrict-template-expressions': ['off'],
 
 
     /**
      * Enforces that members of a type union/intersection are sorted alphabetically
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/sort-type-union-intersection-members': ['off'],
+    '@typescript-eslint/sort-type-union-intersection-members': ['error'],
 
 
     /**
      * Restricts the types allowed in boolean expressions
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/strict-boolean-expressions': ['off'],
+    '@typescript-eslint/strict-boolean-expressions': ['error', {
+      allowString: false,
+      allowNumber: false,
+      allowNullableObject: false,
+    }],
 
 
     /**
      * Exhaustiveness checking in switch with union type
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/switch-exhaustiveness-check': ['off'],
+    '@typescript-eslint/switch-exhaustiveness-check': ['error'],
 
 
     /**
      * Sets preference level for triple slash directives versus ES6-style import declarations
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/triple-slash-reference': ['off'],
 
 
     /**
      * Require consistent spacing around type annotations
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/type-annotation-spacing': ['off'],
+    '@typescript-eslint/type-annotation-spacing': ['error'],
 
 
     /**
      * Requires type annotations to exist
-     *
-     * TODO: Configure Rule
      */
     '@typescript-eslint/typedef': ['off'],
 
 
     /**
      * Enforces unbound methods are called with their expected scope
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/unbound-method': ['off'],
+    '@typescript-eslint/unbound-method': ['error', {
+      ignoreStatic: true,
+    }],
 
 
     /**
      * Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter
-     *
-     * TODO: Configure Rule
      */
-    '@typescript-eslint/unified-signatures': ['off'],
+    '@typescript-eslint/unified-signatures': ['error'],
   },
   overrides: [
     {
@@ -696,6 +618,11 @@ module.exports = {
           allowHigherOrderFunctions: true,
           allowTypedFunctionExpressions: true,
         }],
+
+        /**
+         * Disallows invocation of require()
+         */
+        '@typescript-eslint/no-require-imports': ['error'],
       },
     },
   ],
