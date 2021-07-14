@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "2.4.0-canary.11",
+  "version": "2.4.0-canary.12",
   "description": "ESLint config for FuelRats React projects",
   "license": "MIT",
   "author": {
