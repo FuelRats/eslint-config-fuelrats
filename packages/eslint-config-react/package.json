@@ -47,10 +47,6 @@
     "react"
   ],
   "main": "index.js",
-  "scripts": {
-    "release": "yarn npm publish",
-    "release:canary": "yarn npm publish --tag=canary"
-  },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
     "@babel/eslint-plugin": "^7.14.5",

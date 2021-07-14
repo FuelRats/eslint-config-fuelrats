@@ -45,8 +45,6 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "release": "yarn npm publish",
-    "release:canary": "yarn npm publish --tag=canary",
     "test": "mocha tests --recursive"
   },
   "dependencies": {

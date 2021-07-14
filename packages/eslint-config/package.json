@@ -46,10 +46,6 @@
     "es2020"
   ],
   "main": "index.js",
-  "scripts": {
-    "release": "yarn npm publish",
-    "release:canary": "yarn npm publish --tag=canary"
-  },
   "dependencies": {
     "confusing-browser-globals": "^1.0.10"
   },
