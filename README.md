@@ -62,6 +62,11 @@ $ yarn install
 
 3. Done! 🎉
 
+### Publishing and Versioning
+
+**FOR TECHRATS**
+
+To publish and version the monorepo packages, Read [this](docs/publishing_and_versions.md).
 
 ## Credits
 Our code style and this config set was inspired by and derived from the AirBnB javascript style guide.
