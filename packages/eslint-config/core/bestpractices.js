@@ -482,7 +482,9 @@ module.exports = {
     /**
      * disallow void operators
      */
-    'no-void': ['error'],
+    'no-void': ['error', {
+      allowAsStatement: true,
+    }],
 
 
     /**
