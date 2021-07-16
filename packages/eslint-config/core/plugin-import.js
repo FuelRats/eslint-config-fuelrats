@@ -9,7 +9,6 @@ module.exports = {
       node: { extensions: importExtensions },
     },
     'import/extensions': importExtensions,
-    'import/core-modules': [],
     'import/ignore': [
       '\\.(coffee|scss|css|less|hbs|svg|json)$',
     ],
