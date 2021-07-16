@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fuelrats",
-  "version": "2.4.0-canary.12",
+  "version": "2.4.0-canary.14",
   "description": "Monorepo for @fuelrats/eslint-config[-react]!",
   "private": true,
   "license": "MIT",
