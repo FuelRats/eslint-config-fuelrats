@@ -78,10 +78,12 @@ module.exports = {
 
     /**
      * Enforces consistent usage of type imports
+     *
+     * DISABLED: `import type` can be used to get around no-extraneous-dependencies
      */
-    '@typescript-eslint/consistent-type-imports': ['error', {
+    '@typescript-eslint/consistent-type-imports': ['off', {
       prefer: 'no-type-imports',
-      objectLiteralTypeAssertions: true,
+      disallowTypeAnnotations: true,
     }],
 
 
@@ -168,25 +170,25 @@ module.exports = {
     '@typescript-eslint/naming-convention': ['error',
       {
         selector: 'default',
-        format: ['strictCamelCase'],
+        format: ['camelCase'],
         trailingUnderscore: 'forbid',
       },
       {
         selector: 'variable',
         modifiers: ['global'],
-        format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
         selector: 'variable',
-        format: ['strictCamelCase', 'StrictPascalCase'],
+        format: ['camelCase', 'PascalCase'],
       },
       {
         selector: 'function',
-        format: ['strictCamelCase', 'StrictPascalCase'],
+        format: ['camelCase', 'PascalCase'],
       },
       {
         selector: 'typeLike',
-        format: ['StrictPascalCase'],
+        format: ['PascalCase'],
       },
     ],
 
@@ -324,12 +326,12 @@ module.exports = {
      * Disallow the use of type aliases
      */
     '@typescript-eslint/no-type-alias': ['error', {
-      allowAliases: 'in-unions-and-intersections',
+      allowAliases: 'always',
       allowCallbacks: 'always',
       allowConditionalTypes: 'never',
       allowConstructors: 'never',
       allowLiterals: 'in-unions-and-intersections',
-      allowMappedTypes: 'in-unions-and-intersections',
+      allowMappedTypes: 'always',
       allowTupleTypes: 'always',
     }],
 
@@ -379,7 +381,7 @@ module.exports = {
     /**
      * Disallows assigning any to variables and properties
      */
-    '@typescript-eslint/no-unsafe-assignment': ['error'],
+    '@typescript-eslint/no-unsafe-assignment': ['off'],
 
 
     /**
@@ -391,13 +393,13 @@ module.exports = {
     /**
      * Disallows member access on any typed variables
      */
-    '@typescript-eslint/no-unsafe-member-access': ['error'],
+    '@typescript-eslint/no-unsafe-member-access': ['off'],
 
 
     /**
      * Disallows returning any from a function
      */
-    '@typescript-eslint/no-unsafe-return': ['error'],
+    '@typescript-eslint/no-unsafe-return': ['off'],
 
 
     /**
