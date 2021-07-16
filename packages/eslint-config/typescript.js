@@ -1,3 +1,5 @@
+const importExtensionsTs = require('./util/importExtensionsTypescript')
+
 module.exports = {
   extends: [
     './purejs',
@@ -5,6 +7,10 @@ module.exports = {
     './plugins/typescript-extensions',
   ].map(require.resolve),
   settings: {
+    'import/resolver': {
+      node: { extensions: importExtensionsTs },
+    },
+    'import/extensions': importExtensionsTs,
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
     },
@@ -31,6 +37,9 @@ module.exports = {
         'valid-typeof': 'off',
         'import/named': 'off',
         'import/no-unresolved': 'off',
+        'jsdoc/require-param': 'off',
+        'jsdoc/require-returns': 'off',
+        'jsdoc/require-yields': 'off',
       },
     },
   ],
