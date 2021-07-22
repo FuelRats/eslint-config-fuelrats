@@ -486,12 +486,12 @@ module.exports = {
     'no-restricted-syntax': ['error',
       {
         selector: 'ForStatement',
-        message: 'C-Style for loops are discouraged. Use array iteration (`arr.{forEach,map,reduce}`), a for-of statement, or a while loop instead.',
+        message: 'C-Style for loops are discouraged. Use array iteration (`arr.{forEach,map,reduce}`), a for-of loop, or a while loop instead.',
       },
       {
         selector: 'ForInStatement',
         // eslint-disable-next-line max-len
-        message: '`for ... in` loops iterate over the entire prototype chain, which may lead to unexpected behavior. Use array iteration (`arr.{forEach,map,reduce}`), a for-of statement, or a while loop instead.',
+        message: '`for...in` loops iterate over the entire prototype chain, which may lead to unexpected behavior. Use array iteration (`arr.{forEach,map,reduce}`), a for...of loop, or a while loop instead.',
       },
       {
         selector: 'WithStatement',
@@ -504,10 +504,6 @@ module.exports = {
       {
         selector: 'BinaryExpression[operator=\'in\']',
         message: 'The `in` operator is discouraged because it is often the cause of unexpected behavior. Use `obj.isOwnProperty(value)` or `Reflect.has(obj, value)` instead.',
-      },
-      {
-        selector: 'BinaryExpression > Literal[value="null"]',
-        message: "Explicit `null` checks are discouraged. Type check against the correct type (`typeof value === 'string'`), or use a fasly check (`!value`) instead.",
       },
     ],
 
