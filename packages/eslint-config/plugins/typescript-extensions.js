@@ -64,6 +64,8 @@ module.exports = {
 
     /**
      * Enforce consistent indentation
+     *
+     * NOTICE: This rule is on for completeness sake, however it's REALLY broken.
      */
     'indent': ['off'],
     '@typescript-eslint/indent': styleRules['indent'],
