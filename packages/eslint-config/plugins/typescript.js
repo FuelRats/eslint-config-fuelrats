@@ -543,11 +543,7 @@ module.exports = {
     /**
      * Restricts the types allowed in boolean expressions
      */
-    '@typescript-eslint/strict-boolean-expressions': ['error', {
-      allowString: false,
-      allowNumber: false,
-      allowNullableObject: false,
-    }],
+    '@typescript-eslint/strict-boolean-expressions': ['off'],
 
 
     /**

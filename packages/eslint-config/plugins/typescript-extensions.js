@@ -164,7 +164,12 @@ module.exports = {
      * Disallow magic numbers
      */
     'no-magic-numbers': ['off'],
-    '@typescript-eslint/no-magic-numbers': bestPracticeRules['no-magic-numbers'],
+    '@typescript-eslint/no-magic-numbers': [bestPracticeRules['no-magic-numbers'][0], {
+      ...bestPracticeRules['no-magic-numbers'][1],
+      ignoreEnums: true,
+      ignoreNumericLiteralTypes: true,
+      ignoreReadonlyClassProperties: true,
+    }],
 
 
     /**
