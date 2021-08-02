@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-plugin",
-  "version": "2.4.0-canary.14",
+  "version": "2.4.0-canary.16",
   "description": "Companion rules to @fuelrats/eslint-config",
   "license": "MIT",
   "author": {

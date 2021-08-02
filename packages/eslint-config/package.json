@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config",
-  "version": "2.4.0-canary.14",
+  "version": "2.4.0-canary.16",
   "description": "ESLint config for FuelRats projects",
   "license": "MIT",
   "author": {
@@ -9,7 +9,7 @@
     "url": "https://github.com/UncleClapton"
   },
   "engines": {
-    "node": "^12.13.0 || ^14.16.0 || >=16.0.0"
+    "node": "^12.20.0 || ^14.16.0 || >=16.0.0"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -50,14 +50,14 @@
     "confusing-browser-globals": "^1.0.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.14.8",
     "@babel/eslint-parser": "^7.14.7",
     "@babel/eslint-plugin": "^7.14.5",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "@typescript-eslint/parser": "^4.28.3",
-    "eslint": "^7.28.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.31.0",
     "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsdoc": "^35.1.3",
+    "eslint-plugin-jsdoc": "^36.0.6",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "react": "^17.0.2",
@@ -71,7 +71,7 @@
     "@typescript-eslint/parser": "^4.28",
     "eslint": "^7.24",
     "eslint-plugin-import": "^2.23",
-    "eslint-plugin-jsdoc": "^35",
+    "eslint-plugin-jsdoc": "^36",
     "typescript": "^4"
   },
   "peerDependenciesMeta": {
