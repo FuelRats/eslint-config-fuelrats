@@ -328,7 +328,7 @@ module.exports = {
     '@typescript-eslint/no-type-alias': ['error', {
       allowAliases: 'always',
       allowCallbacks: 'always',
-      allowConditionalTypes: 'never',
+      allowConditionalTypes: 'always',
       allowConstructors: 'never',
       allowLiterals: 'in-unions-and-intersections',
       allowMappedTypes: 'always',
