@@ -741,12 +741,13 @@ module.exports = {
     'spaced-comment': ['error', 'always', {
       line: {
         exceptions: [],
-        markers: [],
+        markers: [
+          '/', // for d.ts triple-slash directives
+        ],
       },
       block: {
         markers: [],
         exceptions: [
-          '**************************************************************************\\', // For section header comments
           '*', // for JSDoc Blocks
         ],
         balanced: true,
