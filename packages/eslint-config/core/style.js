@@ -1,3 +1,5 @@
+const { propertyMaxPerLine } = require('../util/constants')
+
 module.exports = {
   rules: {
     /**
@@ -149,7 +151,7 @@ module.exports = {
     /**
      * enforce consistent line breaks inside function parentheses
      */
-    'function-paren-newline': ['error', 'consistent'],
+    'function-paren-newline': ['error', 'multiline-arguments'],
 
 
     /**
@@ -318,7 +320,7 @@ module.exports = {
      *
      * tip: use objects to pass parameters instead
      */
-    'max-params': ['error', 5],
+    'max-params': ['error', propertyMaxPerLine],
 
 
     /**
@@ -412,7 +414,10 @@ module.exports = {
 
 
     /**
-     * disallow mixed binary operators
+     * Disallow mixed binary operators
+     *
+     * Our justification for the current config is that logical and mathmatical expressions should be explicit in their intent.
+     * By explicitly chunking out expressions, even when unnecessary, the code becomes easier to reason about and you're less prone to logic errors.
      */
     'no-mixed-operators': ['error', {
       groups: [
@@ -425,10 +430,11 @@ module.exports = {
         ['**', '-'],
         ['**', '*'],
         ['**', '/'],
-        ['&', '|', '^', '~', '<<', '>>', '>>>'],
-        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-        ['&&', '||'],
-        ['in', 'instanceof'],
+        ['/', '*'],
+        ['&', '|', '^', '~', '<<', '>>', '>>>', '??'],
+        ['==', '!=', '===', '!==', '>', '>=', '<', '<=', '??'],
+        ['&&', '||', '??', '?:'],
+        ['in', 'instanceof', '??'],
       ],
       allowSamePrecedence: false,
     }],
@@ -450,7 +456,7 @@ module.exports = {
      * disallow multiple empty lines
      */
     'no-multiple-empty-lines': ['error', {
-      max: 5,
+      max: propertyMaxPerLine,
       maxBOF: 0,
       maxEOF: 1,
     }],
@@ -564,22 +570,22 @@ module.exports = {
      */
     'object-curly-newline': ['error', {
       ExportDeclaration: {
-        minProperties: 5,
+        minProperties: propertyMaxPerLine,
         multiline: true,
         consistent: true,
       },
       ImportDeclaration: {
-        minProperties: 5,
+        minProperties: propertyMaxPerLine,
         multiline: true,
         consistent: true,
       },
       ObjectExpression: {
-        minProperties: 5,
+        minProperties: propertyMaxPerLine,
         multiline: true,
         consistent: true,
       },
       ObjectPattern: {
-        minProperties: 5,
+        minProperties: propertyMaxPerLine,
         multiline: true,
         consistent: true,
       },
@@ -746,9 +752,10 @@ module.exports = {
         ],
       },
       block: {
-        markers: [],
-        exceptions: [
+        exceptions: [],
+        markers: [
           '*', // for JSDoc Blocks
+          '**', // for special JSDoc rule exception.
         ],
         balanced: true,
       },

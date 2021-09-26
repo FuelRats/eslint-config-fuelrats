@@ -1,3 +1,5 @@
+const { propertyMaxPerLine } = require('@fuelrats/eslint-config/util/constants')
+
 module.exports = {
   plugins: [
     'react',
@@ -120,8 +122,8 @@ module.exports = {
      */
     'react/jsx-max-props-per-line': ['error', {
       maximum: {
-        single: 5,
-        multi: 1
+        single: propertyMaxPerLine,
+        multi: 1,
       },
     }],
 
