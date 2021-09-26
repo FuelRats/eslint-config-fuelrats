@@ -100,7 +100,9 @@ module.exports = {
     /**
      * Prevent passing children as props
      */
-    'react/no-children-prop': ['error'],
+    'react/no-children-prop': ['error', {
+      allowFunctions: false
+    }],
 
 
     /**
@@ -158,6 +160,11 @@ module.exports = {
      */
     'react/no-multi-comp': ['off'],
 
+
+    /**
+     * Enforce that namespaces are not used in React elements
+     */
+    'react/no-namespace': ['error'],
 
     /**
      * Prevent usage of `shouldComponentUpdate` when extending `React.PureComponent`
@@ -246,6 +253,13 @@ module.exports = {
      * Enforce ES5 or ES6 class for React Components
      */
     'react/prefer-es6-class': ['error', 'always'],
+
+
+    /**
+     * Prefer exact proptype definitions
+     */
+    'react/prefer-exact-props': ['off'],
+
 
     /**
      * Enforce that props are read-only

@@ -119,8 +119,10 @@ module.exports = {
      * Limit maximum of props on a single line in JSX (fixable)
      */
     'react/jsx-max-props-per-line': ['error', {
-      maximum: 1,
-      when: 'multiline',
+      maximum: {
+        single: 5,
+        multi: 1
+      },
     }],
 
 
@@ -178,7 +180,11 @@ module.exports = {
      * Prevent usage of unsafe `target='_blank'`
      */
     'react/jsx-no-target-blank': ['error', {
+      allowReferrer: false,
       enforceDynamicLinks: 'always',
+      warnOnSpreadAttributes: false,
+      links: true,
+      forms: true,
     }],
 
 
@@ -214,6 +220,8 @@ module.exports = {
      */
     'react/jsx-pascal-case': ['error', {
       allowAllCaps: false,
+      allowLeadingUnderscore: false,
+      allowNamespace: true,
       ignore: [],
     }],
 
