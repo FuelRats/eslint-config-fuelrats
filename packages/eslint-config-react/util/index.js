@@ -1,43 +1,13 @@
 // IMPORTANT: All changes to this file should be reflected on `eslint-config/util/index.js` as well!
 const rules = require('../rules')
 const {
-  __getRule,
-  __mergeRule,
+  RuleConfig,
+  concatOpt,
+  __concatRule,
   __extendRule,
   __setLevel,
 } = require('@fuelrats/eslint-config/util/helpers')
 
-
-/**
- * Retrieves the rule config with the given name from the combined rules list.
- * @param {string|RuleConfig} rule
- * @returns {RuleConfig}
- */
- function getRule (rule) {
-  return __getRule(rules, rule)
-}
-
-/**
- * Merges two rule configs together, deep merging objects as-encountered
- * Error level cannot be changed using this function. To change severity, wrap in `warn()`
- * @param {string|RuleConfig} rule
- * @param {...any} newArgs
- * @returns {RuleConfig}
- */
-function mergeRule (rule, ...newArgs) {
-  return __mergeRule(rules, rule, newArgs)
-}
-
-/**
- * Extends an existing rule with the new arguments provided.
- * This rule is mainly for rules like `no-restricted-globals` with an arbitrary list of config items
- * @param {string|RuleConfig} rule
- * @param {...any} newArgs
- * @returns {RuleConfig}
- */
-function extendRule (rule, ...newArgs) {
-  return __extendRule(rules, rule, newArgs)
-}
 
 /**
  * Provides a modified rule config with an error level of 'error'. Accepts a rule name or rule config array.
@@ -58,11 +28,38 @@ function warn (rule) {
 }
 
 
+/**
+ * Extends the provided rule through concatenation, adding the provided arguments to the rule array.
+ * This rule is mainly for rules like `no-restricted-globals` with an arbitrary list of config items
+ * @param {string|RuleConfig} rule
+ * @param {...any} newArgs
+ * @returns {RuleConfig}
+ */
+function concatRule (rule, ...newArgs) {
+  return __concatRule(rules, rule, newArgs)
+}
+
+/**
+ * Retrieves the provided rule and merges it's config with the provided config.
+ *
+ * Error level is ignored in this merge, and newArgs should begin with the first rule option.
+ *
+ * To change error level, wrap with {@link warn} or {@link error}.
+ *
+ * @param {string|RuleConfig} rule
+ * @param {...any} newArgs
+ * @returns {RuleConfig}
+ */
+function extendRule (rule, ...newArgs) {
+  return __extendRule(rules, rule, newArgs)
+}
+
+
 const util = {
+  concatOpt,
+  concatRule,
   error,
   extendRule,
-  getRule,
-  mergeRule,
   warn,
 }
 
