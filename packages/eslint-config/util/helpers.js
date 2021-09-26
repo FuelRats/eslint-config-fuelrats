@@ -16,20 +16,48 @@ function throwError (message) {
 
 /**
  * @param {any} value
- * @returns {value is Record<string, any>}
+ * @returns {value is object}
  */
 function isObject (value) {
   return typeof value === 'object' && value !== null && !isArray(value)
 }
 
 /**
- * @param {Record<string, any>} source
- * @param {Record<string, any>} target
- * @returns {Record<string, any>}
+ * @param {any} value
+ * @returns {boolean}
+ */
+function isNullish (value) {
+  return value === null || typeof value === 'undefined'
+}
+
+/**
+ * @param {any[]} tValue
+ * @returns {any[]}
+ */
+function concatOpt (tValue) {
+  return (sValue) => {
+    if (isArray(sValue)) {
+      return sValue.concat(tValue)
+    }
+    return tValue
+  }
+}
+
+/**
+ * @param {object} source
+ * @param {object} target
+ * @returns {object}
  */
 function mergeProps (source, target) {
   Object.entries(target).forEach(([key, tVal]) => {
-    source[key] = deepMerge(source[key], tVal)
+    const mergeResult = deepMerge(source[key], tVal)
+    if (typeof mergeResult !== undefined) {
+      if (mergeResult === null) {
+        delete source[key]
+      } else {
+        source[key] = mergeResult
+      }
+    }
   })
 
   return source
@@ -41,8 +69,12 @@ function mergeProps (source, target) {
  * @returns {any}
  */
 function deepMerge (source, target) {
-  if (typeof target === 'undefined') {
-    return source
+  if (isNullish(target) === true) {
+    return target // let the parent function decide what to do with non-values
+  }
+
+  if (typeof target === 'function') {
+    return target(source)
   }
 
   if (isObject(source) && isObject(target)) {
@@ -51,7 +83,6 @@ function deepMerge (source, target) {
 
   return target
 }
-
 
 /**
  * @param {object} rules
@@ -74,16 +105,8 @@ function __getRule (rules, rule) {
  * @param {any[]} newArgs
  * @returns {RuleConfig}
  */
-function __mergeRule (rules, rule, newArgs = []) {
-  const [rLevel, ...ruleArgs] = __getRule(rules, rule)
-
-  const newRule = [rLevel, ...ruleArgs]
-
-  newArgs.forEach((arg, idx) => {
-    newRule[idx + 1] = deepMerge(ruleArgs[idx], arg)
-  })
-
-  return newRule
+function __concatRule (rules, rule, newArgs = []) {
+  return __getRule(rules, rule).concat(newArgs)
 }
 
 /**
@@ -93,7 +116,20 @@ function __mergeRule (rules, rule, newArgs = []) {
  * @returns {RuleConfig}
  */
 function __extendRule (rules, rule, newArgs = []) {
-  return __getRule(rules, rule).concat(newArgs)
+  rule = __getRule(rules, rule)
+
+  if (newArgs.length) {
+    const [, ...ruleArgs] = __getRule(rules, rule)
+
+    newArgs.forEach((arg, idx) => {
+      const mergeResult = deepMerge(ruleArgs[idx], arg)
+      if (isNullish(mergeResult) === false) {
+        rule[idx + 1] = mergeResult
+      }
+    })
+  }
+
+  return rule
 }
 
 /**
@@ -109,13 +145,15 @@ function __setLevel (rules, level, rule) {
   return rule
 }
 
+
 module.exports = {
-  throwError,
+  __concatRule,
+  __extendRule,
+  __getRule,
+  __setLevel,
+  concatOpt,
+  deepMerge,
   isObject,
   mergeProps,
-  deepMerge,
-  __getRule,
-  __mergeRule,
-  __extendRule,
-  __setLevel,
+  throwError,
 }
