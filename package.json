@@ -39,7 +39,8 @@
   ],
   "main": "./packages/eslint-config/index.js",
   "scripts": {
-    "eslint": "yarn workspaces foreach run eslint ."
+    "eslint": "yarn workspaces foreach run eslint .",
+    "utoc": "doctoc $(grep --include=\\*.md --exclude-dir=node_modules -Rwl . -e 'START doctoc')"
   },
   "dependencies": {
     "confusing-browser-globals": "^1.0.10"
@@ -49,6 +50,7 @@
     "@babel/eslint-parser": "^7.15.7",
     "@babel/eslint-plugin": "^7.14.5",
     "@fuelrats/eslint-plugin": "portal:packages/eslint-plugin",
+    "doctoc": "^2.0.1",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsdoc": "36.1.0",
