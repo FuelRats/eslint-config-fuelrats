@@ -1,12 +1,13 @@
 // IMPORTANT: All changes to this file should be reflected on `eslint-config/util/index.js` as well!
-const rules = require('../rules')
 const {
   RuleConfig,
   concatOpt,
+  disable,
   __concatRule,
   __extendRule,
   __setLevel,
 } = require('@fuelrats/eslint-config/util/helpers')
+const rules = require('../rules')
 
 
 /**
@@ -58,6 +59,7 @@ function extendRule (rule, ...newArgs) {
 const util = {
   concatOpt,
   concatRule,
+  disable,
   error,
   extendRule,
   warn,

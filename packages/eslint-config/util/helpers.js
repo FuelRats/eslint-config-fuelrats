@@ -44,6 +44,17 @@ function concatOpt (tValue) {
 }
 
 /**
+ * @param {...any} rules
+ * @returns {object}
+ */
+function disable (...rules) {
+  return rules.reduce((acc, rule) => {
+    acc[rule] = ['off']
+    return acc
+  }, {})
+}
+
+/**
  * @param {object} source
  * @param {object} target
  * @returns {object}
@@ -153,6 +164,7 @@ module.exports = {
   __setLevel,
   concatOpt,
   deepMerge,
+  disable,
   isObject,
   mergeProps,
   throwError,

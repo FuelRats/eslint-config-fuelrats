@@ -98,7 +98,9 @@ module.exports = {
     /**
      * Controls how and whether jsdoc blocks can be expressed as single or multiple line blocks.
      */
-    'jsdoc/multiline-blocks': ['warn'],
+    'jsdoc/multiline-blocks': ['warn', {
+      noSingleLineBlocks: true,
+    }],
 
 
     /**

@@ -3,6 +3,7 @@ const rules = require('../rules')
 const {
   RuleConfig,
   concatOpt,
+  disable,
   __concatRule,
   __extendRule,
   __setLevel,
@@ -58,6 +59,7 @@ function extendRule (rule, ...newArgs) {
 const util = {
   concatOpt,
   concatRule,
+  disable,
   error,
   extendRule,
   warn,
