@@ -14,10 +14,6 @@ module.exports = {
     ],
   },
   rules: {
-    /***************************************************************************\
-      Static Analysis
-    \***************************************************************************/
-
     /**
      * Ensure imports point to a file/module that can be resolved.
      */
@@ -110,13 +106,6 @@ module.exports = {
     'import/no-relative-packages': ['off'],
 
 
-
-
-
-    /***************************************************************************\
-      Helpful warnings
-    \***************************************************************************/
-
     /**
      * Report any invalid exports, i.e. re-export of the same name
      */
@@ -185,13 +174,6 @@ module.exports = {
     'import/no-unused-modules': ['off'],
 
 
-
-
-
-    /***************************************************************************\
-      Module systems
-    \***************************************************************************/
-
     /**
      * Report potentially ambiguous parse goal (script vs. module)
      */
@@ -221,13 +203,6 @@ module.exports = {
      */
     'import/no-import-module-exports': ['error'],
 
-
-
-
-
-    /***************************************************************************\
-      Style Guide
-    \***************************************************************************/
 
     /**
      * Ensure all imports appear before other statements
@@ -336,7 +311,6 @@ module.exports = {
      * Forbid default exports
      */
     'import/no-default-export': ['off'],
-
 
 
     /**
