@@ -262,8 +262,10 @@ module.exports = {
 
     /**
      * Disallow usage of the implicit any type in catch clauses
+     *
+     * DISABLED: Since 4.4 catch variables can be implicity typed as unknown, making this a moot rule.
      */
-    '@typescript-eslint/no-implicit-any-catch': ['error'],
+    '@typescript-eslint/no-implicit-any-catch': ['off'],
 
 
     /**
