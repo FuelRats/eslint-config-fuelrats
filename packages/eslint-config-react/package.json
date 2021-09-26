@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "2.4.0-canary.18",
+  "version": "2.4.0-canary.19",
   "description": "ESLint config for FuelRats React projects",
   "license": "MIT",
   "author": {
@@ -64,7 +64,7 @@
   "peerDependencies": {
     "@babel/core": "^7.11",
     "@babel/eslint-parser": "^7.11",
-    "@fuelrats/eslint-config": "^2.4.0-canary.18",
+    "@fuelrats/eslint-config": "^2.4.0-canary.19",
     "@typescript-eslint/parser": "^4.28",
     "eslint": "^7.24",
     "eslint-plugin-jsx-a11y": "^6.3",
