@@ -236,6 +236,7 @@ module.exports = {
     'import/extensions': ['error', 'ignorePackages', {
       js: 'never',
       mjs: 'never',
+      cjs: 'never',
       jsx: 'never',
       ts: 'never',
       tsx: 'never',
@@ -340,4 +341,15 @@ module.exports = {
      */
     'import/dynamic-import-chunkname': ['off'],
   },
+  overrides: [
+    {
+      files: ['*.mjs'],
+      rules: {
+        /**
+         * mjs files must import using file extensions, except for packages.
+         */
+        'import/extensions': ['error', 'ignorePackages'],
+      },
+    },
+  ],
 }
