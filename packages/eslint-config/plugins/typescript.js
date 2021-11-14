@@ -326,16 +326,10 @@ module.exports = {
 
     /**
      * Disallow the use of type aliases
+     *
+     * DISABLED: alises can be useful.
      */
-    '@typescript-eslint/no-type-alias': ['error', {
-      allowAliases: 'always',
-      allowCallbacks: 'always',
-      allowConditionalTypes: 'always',
-      allowConstructors: 'never',
-      allowLiterals: 'in-unions-and-intersections',
-      allowMappedTypes: 'always',
-      allowTupleTypes: 'always',
-    }],
+    '@typescript-eslint/no-type-alias': ['off'],
 
 
     /**
