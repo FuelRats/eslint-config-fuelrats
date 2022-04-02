@@ -66,7 +66,7 @@ module.exports = {
      */
     '@typescript-eslint/consistent-type-assertions': ['error', {
       assertionStyle: 'as',
-      objectLiteralTypeAssertions: 'never',
+      objectLiteralTypeAssertions: 'allow',
     }],
 
 
@@ -589,7 +589,7 @@ module.exports = {
         /**
          * Require explicit return types on functions and class methods
          */
-        '@typescript-eslint/explicit-function-return-type': ['error'],
+        '@typescript-eslint/explicit-function-return-type': ['off'],
 
         /**
          * Require explicit accessibility modifiers on class properties and methods
@@ -608,12 +608,7 @@ module.exports = {
         /**
          * Require explicit return and argument types on exported functions' and classes' public class methods
          */
-        '@typescript-eslint/explicit-module-boundary-types': ['error', {
-          allowArgumentsExplicitlyTypedAsAny: true,
-          allowDirectConstAssertionInArrowFunctions: false,
-          allowHigherOrderFunctions: true,
-          allowTypedFunctionExpressions: true,
-        }],
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
 
         /**
          * Disallows invocation of require()
