@@ -47,6 +47,9 @@ function concatRule (rule, ...newArgs) {
  *
  * To change error level, wrap with {@link warn} or {@link error}.
  *
+ * use `undefined` to inherit the current setting, `null` to remove the setting entirely.
+ * Arrays are not merged, only replaced. to merge an array, use the {@link concatOpt} helper
+ *
  * @param {string|RuleConfig} rule
  * @param {...any} newArgs
  * @returns {RuleConfig}

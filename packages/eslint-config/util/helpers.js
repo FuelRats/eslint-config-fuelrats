@@ -62,7 +62,7 @@ function disable (...rules) {
 function mergeProps (source, target) {
   Object.entries(target).forEach(([key, tVal]) => {
     const mergeResult = deepMerge(source[key], tVal)
-    if (typeof mergeResult !== undefined) {
+    if (typeof mergeResult !== 'undefined') {
       if (mergeResult === null) {
         delete source[key]
       } else {
@@ -127,20 +127,20 @@ function __concatRule (rules, rule, newArgs = []) {
  * @returns {RuleConfig}
  */
 function __extendRule (rules, rule, newArgs = []) {
-  rule = __getRule(rules, rule)
+  const newRule = [...__getRule(rules, rule)]
 
   if (newArgs.length) {
-    const [, ...ruleArgs] = __getRule(rules, rule)
+    const [, ...ruleArgs] = newRule
 
     newArgs.forEach((arg, idx) => {
       const mergeResult = deepMerge(ruleArgs[idx], arg)
       if (isNullish(mergeResult) === false) {
-        rule[idx + 1] = mergeResult
+        newRule[idx + 1] = mergeResult
       }
     })
   }
 
-  return rule
+  return newRule
 }
 
 /**
