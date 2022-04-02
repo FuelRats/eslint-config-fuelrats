@@ -3,7 +3,6 @@
 Code editor completion and auto-import engines rely on the name of the default export of a module.
 To ensure auto-import behaves as expected, default exports should be named the same as, or similar to, their module names.
 
-
 ## Rule Details
 
 Examples of **incorrect** code for this rule:
@@ -50,10 +49,10 @@ import Foo from './Foo'
 export default Foo
 ```
 
-
 ## Options
 
 This rule has an object option, with one option:
+
 * `"caseInsensitive": true` export and module names are compared via case insensitive matching
 
 ### caseInsensitive
@@ -63,6 +62,7 @@ This rule internally uses a `===` comparison to match the export identifier to t
 Set `"caseInsensitive"` to `true` if you want this rule to ignore letter casing differences.
 
 Examples of **correct** code for this rule with `"caseInsensitive"` option set to `true`:
+
 ```js
 // src/Foo.js
 
@@ -70,7 +70,6 @@ Examples of **correct** code for this rule with `"caseInsensitive"` option set t
 
 export default function foo() {}
 ```
-
 
 ## When Not To Use It
 

@@ -1,5 +1,5 @@
 /**
- * @file disallow public class members to share names with private members
+ * @file disallow public class members from sharing names with private members
  * @author Cameron Welter
  */
 'use strict'
@@ -18,7 +18,7 @@ module.exports = {
   meta: {
     type: 'problem',
     docs: {
-      description: 'disallow public class members to share names with private members',
+      description: 'disallow public class members from sharing names with private members',
       category: 'Best Practices',
       recommended: false,
       url: getRuleDocUrl('no-mixed-access-class-members'),
