@@ -234,12 +234,13 @@ module.exports = {
      * Ensure consistent use of file extension within the import path
      */
     'import/extensions': ['error', 'ignorePackages', {
-      js: 'never',
-      mjs: 'never',
-      cjs: 'never',
-      jsx: 'never',
-      ts: 'never',
-      tsx: 'never',
+      '': 'never', // Workaround for directory imports
+      'js': 'never',
+      'mjs': 'never',
+      'cjs': 'never',
+      'jsx': 'never',
+      'ts': 'never',
+      'tsx': 'never',
     }],
 
 
