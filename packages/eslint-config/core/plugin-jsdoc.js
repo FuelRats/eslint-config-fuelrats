@@ -18,7 +18,7 @@ module.exports = {
     /**
      * Ensures that (JavaScript) examples within JSDoc adhere to ESLint rules.
      */
-    'jsdoc/check-examples': ['warn'],
+    'jsdoc/check-examples': ['off'],
 
 
     /**
@@ -130,7 +130,9 @@ module.exports = {
     /**
      * Prevents use of multiple asterisks at the beginning of lines.
      */
-    'jsdoc/no-multi-asterisks': ['warn'],
+    'jsdoc/no-multi-asterisks': ['warn', {
+      allowWhitespace: true,
+    }],
 
 
     /**
@@ -200,6 +202,7 @@ module.exports = {
         ArrowFunctionExpression: false,
         FunctionExpression: false,
       },
+      minLineCount: 4,
     }],
 
 
@@ -298,9 +301,16 @@ module.exports = {
 
 
     /**
-     * Enforces lines (or no lines) between tags.
+     * Sorts tags by a specified sequence according to tag name.
      */
-    'jsdoc/tag-lines': ['warn', 'never'],
+    'jsdoc/sort-tags': ['warn'],
+
+
+    /**
+     * Enforces lines (or no lines) between tags.
+     *
+     */
+    'jsdoc/tag-lines': ['warn', 'never', { dropEndLines: true }],
 
 
     /**
@@ -308,4 +318,4 @@ module.exports = {
      */
     'jsdoc/valid-types': ['off'],
   },
-}
+};

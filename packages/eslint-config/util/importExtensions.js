@@ -4,4 +4,4 @@ module.exports = [
   '.mjs',
   '.cjs',
   '.json',
-]
+];

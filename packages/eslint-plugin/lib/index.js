@@ -2,13 +2,13 @@
  * @file Special rules made for our configs
  * @author Cameron Welter
  */
-'use strict'
+'use strict';
 
 // ------------------------------------------------------------------------------
 // Requirements
 // ------------------------------------------------------------------------------
 
-const requireIndex = require('requireindex')
+const requireIndex = require('requireindex');
 
 // ------------------------------------------------------------------------------
 // Plugin Definition
@@ -26,4 +26,4 @@ module.exports = {
       },
     },
   },
-}
+};

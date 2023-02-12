@@ -2,14 +2,14 @@
  * @file disallow public class members to share names with private members
  * @author Cameron Welter
  */
-'use strict'
+'use strict';
 
 // ------------------------------------------------------------------------------
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../lib/rules/no-mixed-access-class-members')
-const RuleTester = require('../../../util/RuleTester')
+const rule = require('../../../lib/rules/no-mixed-access-class-members');
+const RuleTester = require('../../../util/RuleTester');
 
 const noMixedError = (name, output) => {
   return {
@@ -19,15 +19,15 @@ const noMixedError = (name, output) => {
       data: { name },
       output,
     }],
-  }
-}
+  };
+};
 
 
 // ------------------------------------------------------------------------------
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester()
+const ruleTester = new RuleTester();
 ruleTester.run('no-mixed-access-class-members', rule, {
   valid: [
     "class A { #foo = 'hello'; bar () { return this.#foo } }",
@@ -112,4 +112,4 @@ ruleTester.run('no-mixed-access-class-members', rule, {
       ],
     },
   ],
-})
+});

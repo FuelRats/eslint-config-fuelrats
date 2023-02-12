@@ -3,4 +3,4 @@ module.exports = {
     '../eslint-config/index.js',
     './index.js',
   ].map(require.resolve),
-}
+};

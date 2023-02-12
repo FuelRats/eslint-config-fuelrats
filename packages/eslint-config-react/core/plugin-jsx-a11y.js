@@ -241,6 +241,12 @@ module.exports = {
 
 
     /**
+     * Enforces using semantic DOM elements over the ARIA `role` property.
+     */
+    'jsx-a11y/prefer-tag-over-role': ['error'],
+
+
+    /**
      * Enforce that elements with ARIA roles must have all required attributes for that role.
      */
     'jsx-a11y/role-has-required-aria-props': ['error'],
@@ -263,4 +269,4 @@ module.exports = {
      */
     'jsx-a11y/tabindex-no-positive': ['error'],
   },
-}
+};

@@ -5,4 +5,4 @@ module.exports = {
     '@babel/proposal-private-property-in-object',
     '@babel/proposal-export-default-from',
   ],
-}
+};

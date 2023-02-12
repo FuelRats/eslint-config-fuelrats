@@ -1,23 +1,16 @@
 # [@fuelrats/eslint-config-react][eslint-config-fuelrats-react]
 
 * Companion config to [`@fuelrats/eslint-config`][eslint-config-fuelrats]. Built specifically for our react projects.
-    * Adds [`eslint-plugin-react`][eslint-plugin-react] for react and better JSX linting.
-    * Adds [`eslint-plugin-react-hooks`][eslint-plugin-react-hooks] for react "rules of hooks" enforcement.
-    * Adds [`eslint-plugin-jsx-a11y`][eslint-plugin-jsx-a11y] for enforcing website accessibility best practices.
-    * Also includes an optional [TypeScript][typescript] preset to be used alongside the base configuration's `typescript` preset.
-
-
-
+  * Adds [`eslint-plugin-react`][eslint-plugin-react] for react and better JSX linting.
+  * Adds [`eslint-plugin-react-hooks`][eslint-plugin-react-hooks] for react "rules of hooks" enforcement.
+  * Adds [`eslint-plugin-jsx-a11y`][eslint-plugin-jsx-a11y] for enforcing website accessibility best practices.
+  * Also includes an optional [TypeScript][typescript] preset to be used alongside the base configuration's `typescript` preset.
 
 ## Motivation
 
 The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.
 
 `@fuelrats/eslint-config` and `@fuelrats/eslint-config-react` aims to help unify style and standards across all major FuelRats projects.
-
-
-
-
 
 ## Installation
 
@@ -28,6 +21,7 @@ yarn add -D eslint \
             @babel/core \
             @babel/eslint-parser \
             @babel/eslint-plugin \
+            eslint-plugin-eslint-comments \
             eslint-plugin-import \
             eslint-plugin-jsdoc \
             eslint-plugin-jsx-a11y \
@@ -44,6 +38,7 @@ npm i -D eslint \
          @babel/core \
          @babel/eslint-parser \
          @babel/eslint-plugin \
+         eslint-plugin-eslint-comments \
          eslint-plugin-import \
          eslint-plugin-jsdoc \
          eslint-plugin-jsx-a11y \
@@ -72,9 +67,6 @@ npm i -D eslint \
     * This config defaults the react pragma to `"React"` and the react version to `"detect"`, but more configuration may be neccessary for your project.
     * More information can be found [here][eslint-plugin-react-config]
 
-
-
-
 ## Install With TypeScript
 
 A [`TypeScript`][typescript] config preset is now in the works! Currently configured rules may change significantly before it's considered stable,
@@ -93,6 +85,7 @@ yarn add -D eslint \
             typescript \
             @typescript-eslint/parser \
             @typescript-eslint/eslint-plugin \
+            eslint-plugin-eslint-comments \
             eslint-plugin-import \
             eslint-plugin-jsdoc \
             eslint-plugin-jsx-a11y \
@@ -109,6 +102,7 @@ npm i -D eslint \
          typescript \
          @typescript-eslint/parser \
          @typescript-eslint/eslint-plugin \
+         eslint-plugin-eslint-comments \
          eslint-plugin-import \
          eslint-plugin-jsdoc \
          eslint-plugin-jsx-a11y \
@@ -133,21 +127,16 @@ Then add the following to your `.eslintrc` file:
 
 As with the default config, environment variables and further React options may need to be configured. See Steps 2 and 3 of [Configuration](#configuration) above.
 
-
-
-
 ## Credits
+
 Our code style and this config set was inspired by and derived from the AirBnB javascript style guide.
 
 [Send some love their way 😍🎉🎊][airbnb]
-
-
 
 [airbnb]: https://github.com/airbnb/javascript
 [typescript]: https://www.typescriptlang.org
 [typescript-eslint]: https://typescript-eslint.io
 [babel-eslint-parser]: https://www.npmjs.com/package/@babel/eslint-parser
-[babel-eslint-plugin]: https://www.npmjs.com/package/@babel/eslint-plugin
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
 [eslint-config-fuelrats-react]: https://www.npmjs.com/package/@fuelrats/eslint-config-react
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y

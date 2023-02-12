@@ -1,27 +1,21 @@
 # @fuelrats/eslint-config Changelog
 
-
 ### Unreleased
-
-
-
-
 
 ### 2.3.0
 
 #### Additions
+
 * Enable new `no-nonoctal-decimal-escape` rule
 
 #### Changes
+
 * Update minimum ESLint version to `v7.14`
-
-
-
-
 
 ### 2.2.0
 
 #### Additions
+
 * Warn when a lint rule is being disabled that doesn't need to be.
 * Enable ESLint v7 rules
   * `default-case-last`
@@ -30,8 +24,8 @@
   * `no-unreachable-loop`
 * Recognize the path alias `~` as an `internal` import in import ordering.
 
-
 #### Changes
+
 * Better and more consistent restricted syntax messages.
 * Disallow explicit null checks via `no-restricted syntax` instead of abusing the combination of `eqeqeq`'s null option and `no-eq-null`
 * add `inheritdoc` to certain `jsdoc` rule `exemptedBy` options so it's consistent with the default config
@@ -50,24 +44,16 @@
 * Enable `ignoreDefaultValues` for `no-magic-numbers` rule
 * Exempt doc blocks with `@yeilds` from `jsdoc/require-returns`
 
-
 ### 2.1.0
 
 #### Changes
+
 * re-enable `import/no-cycle` due to the problems cyclic dependencies cause in most environments.
 * enable `no-undef`'s `typeof` rule. If you are `typeof` checking a global unknown to eslint, you should define it!
-
-
-
-
 
 ### 2.0.0
 
 * Initial release intended for general consumption
-
-
-
-
 
 ### 1.x
 

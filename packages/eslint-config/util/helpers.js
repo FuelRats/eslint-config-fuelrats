@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign -- This just makes things easier. fite me. */
 
-const { isArray } = Array
+const { isArray } = Array;
 
 /**
  * An ESlint rule config array. Our configs only allow string error levels.
@@ -11,7 +11,7 @@ const { isArray } = Array
  * @param {string} message
  */
 function throwError (message) {
-  throw new Error(message)
+  throw new Error(message);
 }
 
 /**
@@ -19,7 +19,7 @@ function throwError (message) {
  * @returns {value is object}
  */
 function isObject (value) {
-  return typeof value === 'object' && value !== null && !isArray(value)
+  return typeof value === 'object' && value !== null && !isArray(value);
 }
 
 /**
@@ -27,7 +27,7 @@ function isObject (value) {
  * @returns {boolean}
  */
 function isNullish (value) {
-  return value === null || typeof value === 'undefined'
+  return value === null || typeof value === 'undefined';
 }
 
 /**
@@ -37,21 +37,21 @@ function isNullish (value) {
 function concatOpt (tValue) {
   return (sValue) => {
     if (isArray(sValue)) {
-      return sValue.concat(tValue)
+      return sValue.concat(tValue);
     }
-    return tValue
-  }
+    return tValue;
+  };
 }
 
 /**
- * @param {...any} rules
+ * @param {...string} rules
  * @returns {object}
  */
 function disable (...rules) {
   return rules.reduce((acc, rule) => {
-    acc[rule] = ['off']
-    return acc
-  }, {})
+    acc[rule] = 0;
+    return acc;
+  }, {});
 }
 
 /**
@@ -61,17 +61,17 @@ function disable (...rules) {
  */
 function mergeProps (source, target) {
   Object.entries(target).forEach(([key, tVal]) => {
-    const mergeResult = deepMerge(source[key], tVal)
+    const mergeResult = deepMerge(source[key], tVal);
     if (typeof mergeResult !== 'undefined') {
       if (mergeResult === null) {
-        delete source[key]
+        delete source[key];
       } else {
-        source[key] = mergeResult
+        source[key] = mergeResult;
       }
     }
-  })
+  });
 
-  return source
+  return source;
 }
 
 /**
@@ -81,91 +81,86 @@ function mergeProps (source, target) {
  */
 function deepMerge (source, target) {
   if (isNullish(target) === true) {
-    return target // let the parent function decide what to do with non-values
+    return target; // let the parent function decide what to do with non-values
   }
 
   if (typeof target === 'function') {
-    return target(source)
+    return target(source);
   }
 
   if (isObject(source) && isObject(target)) {
-    return mergeProps(source, target)
+    return mergeProps(source, target);
   }
 
-  return target
+  return target;
 }
 
 /**
- * @param {object} rules
- * @param {string|RuleConfig} rule
+ * Extends the provided rule through concatenation, adding the provided arguments to the rule array.
+ * This rule is mainly for rules like `no-restricted-globals` with an arbitrary list of config items
+ *
+ * @param {RuleConfig} rule
+ * @param {...any} newArgs
  * @returns {RuleConfig}
  */
-function __getRule (rules, rule) {
-  if (isArray(rule)) {
-    return rule
-  }
-
-  return rules[rule] ?? throwError(
-    `Attempted to reference an unknown rule: '${rule}'. Please provide a valid rule name or config array.`,
-  )
+function concatRule (rule, ...newArgs) {
+  return rule.concat(newArgs);
 }
 
 /**
- * @param {object} rules
- * @param {string|RuleConfig} rule
- * @param {any[]} newArgs
+ * Retrieves the provided rule and merges it's config with the provided config.
+ *
+ * Error level is ignored in this merge, and newArgs should begin with the first rule option.
+ *
+ * To change error level, wrap with {@link warn} or {@link error}.
+ *
+ * use `undefined` to inherit the current setting, `null` to remove the setting entirely.
+ * Arrays are not merged, only replaced. to merge an array, use the {@link concatOpt} helper
+ *
+ * @param {RuleConfig} rule
+ * @param {...any} newArgs
  * @returns {RuleConfig}
  */
-function __concatRule (rules, rule, newArgs = []) {
-  return __getRule(rules, rule).concat(newArgs)
-}
-
-/**
- * @param {object} rules
- * @param {string|RuleConfig} rule
- * @param {any[]} newArgs
- * @returns {RuleConfig}
- */
-function __extendRule (rules, rule, newArgs = []) {
-  const newRule = [...__getRule(rules, rule)]
+function __extendRule (rule, ...newArgs) {
+  const newRule = [...rule];
 
   if (newArgs.length) {
-    const [, ...ruleArgs] = newRule
+    const [, ...ruleArgs] = rule;
 
     newArgs.forEach((arg, idx) => {
-      const mergeResult = deepMerge(ruleArgs[idx], arg)
+      const mergeResult = deepMerge(ruleArgs[idx], arg);
       if (isNullish(mergeResult) === false) {
-        newRule[idx + 1] = mergeResult
+        newRule[idx + 1] = mergeResult;
       }
-    })
+    });
   }
 
-  return newRule
+  return newRule;
 }
 
 /**
- * Sets the error level of a given rule to 'warn'
- * @param {object} rules
+ * Sets the error level of a given rule to the given level
+ * @param {RuleConfig} rule
  * @param {'error'|'warn'|'off'} level
- * @param {string|RuleConfig} rule
  * @returns {RuleConfig}
  */
-function __setLevel (rules, level, rule) {
-  rule = __getRule(rules, rule)
-  rule[0] = level
-  return rule
+function __setLevel (rule, level) {
+  rule[0] = level;
+  return rule;
 }
+
+/* eslint-enable no-param-reassign */
 
 
 module.exports = {
-  __concatRule,
   __extendRule,
-  __getRule,
   __setLevel,
   concatOpt,
+  concatRule,
   deepMerge,
   disable,
   isObject,
   mergeProps,
   throwError,
-}
+};
+

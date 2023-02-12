@@ -2,14 +2,14 @@
  * @file Enforces default exports are internally named the same as their module (file) name.
  * @author Cameron Welter
  */
-'use strict'
+'use strict';
 
 // ------------------------------------------------------------------------------
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../lib/rules/default-export-matches-module-name')
-const RuleTester = require('../../../util/RuleTester')
+const rule = require('../../../lib/rules/default-export-matches-module-name');
+const RuleTester = require('../../../util/RuleTester');
 
 const externalNotMatchModuleNameError = (exportName, moduleName) => {
   return {
@@ -18,8 +18,8 @@ const externalNotMatchModuleNameError = (exportName, moduleName) => {
       exportName,
       moduleName,
     },
-  }
-}
+  };
+};
 
 const notMatchModuleNameError = (exportName, moduleName) => {
   return {
@@ -28,14 +28,14 @@ const notMatchModuleNameError = (exportName, moduleName) => {
       exportName,
       moduleName,
     },
-  }
-}
+  };
+};
 
 // ------------------------------------------------------------------------------
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester()
+const ruleTester = new RuleTester();
 ruleTester.run('default-export-matches-module-name', rule, {
 
   valid: [
@@ -102,4 +102,4 @@ ruleTester.run('default-export-matches-module-name', rule, {
       ],
     },
   ],
-})
+});

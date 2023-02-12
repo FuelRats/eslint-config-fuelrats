@@ -1,4 +1,4 @@
-const importExtensions = require('../util/importExtensions')
+const importExtensions = require('../util/importExtensions');
 
 module.exports = {
   plugins: [
@@ -20,6 +20,7 @@ module.exports = {
     'import/no-unresolved': ['error', {
       commonjs: true,
       caseSensitive: true,
+      caseSensitiveStrict: true,
     }],
 
 
@@ -213,7 +214,7 @@ module.exports = {
     /**
      * Ensure all exports appear after other statements
      */
-    'import/exports-last': ['error'],
+    'import/exports-last': ['off'],
 
 
     /**
@@ -248,11 +249,13 @@ module.exports = {
      * Enforce a convention in module import order
      */
     'import/order': ['error', {
-      alphabetize: {
+      'alphabetize': {
         order: 'asc',
+        orderImportKind: 'asc',
         caseInsensitive: true,
       },
-      groups: [
+      'newlines-between': 'always',
+      'groups': [
         [
           'builtin',
           'external',
@@ -265,7 +268,7 @@ module.exports = {
         ],
         'unknown',
       ],
-      pathGroups: [
+      'pathGroups': [
         {
           pattern: '~/**',
           group: 'internal',
@@ -353,4 +356,4 @@ module.exports = {
       },
     },
   ],
-}
+};

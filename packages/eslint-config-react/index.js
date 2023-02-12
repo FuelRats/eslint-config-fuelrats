@@ -6,4 +6,4 @@ module.exports = {
     './shared',
   ].map(require.resolve),
   parser: '@babel/eslint-parser',
-}
+};

@@ -1,5 +1,5 @@
-const importExtensions = require('./importExtensions')
-const importExtensionsTypescript = require('./importExtensionsTypescript')
+const importExtensions = require('./importExtensions');
+const importExtensionsTypescript = require('./importExtensionsTypescript');
 
 /**
  * @param {string[]} extensions
@@ -10,7 +10,7 @@ function __aliasResolver (extensions, map) {
   return {
     node: { extensions },
     alias: { map, extensions },
-  }
+  };
 }
 
 
@@ -19,7 +19,7 @@ function __aliasResolver (extensions, map) {
  * @returns {object}
  */
 function withAliasResolver (map) {
-  return __aliasResolver(importExtensions, map)
+  return __aliasResolver(importExtensions, map);
 }
 
 /**
@@ -27,7 +27,7 @@ function withAliasResolver (map) {
  * @returns {object}
  */
 function withTSAliasResolver (map) {
-  return __aliasResolver(importExtensionsTypescript, map)
+  return __aliasResolver(importExtensionsTypescript, map);
 }
 
 
@@ -35,4 +35,4 @@ function withTSAliasResolver (map) {
 module.exports = {
   withAliasResolver,
   withTSAliasResolver,
-}
+};

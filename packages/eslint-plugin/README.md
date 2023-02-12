@@ -47,22 +47,17 @@ Or, add `@fuelrats` to the plugins section of your `.eslintrc` configuration fil
 ```
 
 ## Rules
+
 ```
 ✅ = Recommended rule
 🔧 = Auto-fixable with "--fix"
 💭 = provides suggestions to fix the issue
 ```
+
 - [`@fuelrats/default-export-matches-module-name`][]: Enforces default exports are consistently named the same as their module (file) name. (✅)
 - [`@fuelrats/no-mixed-access-class-members`][]: Disallow public class members to share names with private members.  (✅ | 💭)
-
 
 [`@fuelrats/default-export-matches-module-name`]: docs/rules/default-export-matches-module-name.md
 [`@fuelrats/no-mixed-access-class-members`]: docs/rules/no-mixed-access-class-members.md
 
-
-
-
-
-
 [eslint-config-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-config
-[eslint-plugin-fuelrats]: https://www.npmjs.com/package/@fuelrats/eslint-plugin

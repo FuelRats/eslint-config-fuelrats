@@ -80,6 +80,20 @@ module.exports = {
 
 
     /**
+     * Ensure destructuring and symmetric naming of useState hook value and setter variables
+     */
+    'react/hook-use-state': ['error', {
+      allowDestructuredState: true,
+    }],
+
+
+    /**
+     * Enforce sandbox attribute on iframe elements
+     */
+    'react/iframe-missing-sandbox': ['error'],
+
+
+    /**
      * Prevent using `this.state` inside `this.setState`
      */
     'react/no-access-state-in-setstate': ['error'],
@@ -92,6 +106,12 @@ module.exports = {
 
 
     /**
+     * Lifecycle methods should be methods on the prototype, not class fields
+     */
+    'react/no-arrow-function-lifecycle': ['error'],
+
+
+    /**
      * Prevent adjacent inline elements not separated by whitespace
      */
     'react/no-adjacent-inline-elements': ['off'],
@@ -101,7 +121,7 @@ module.exports = {
      * Prevent passing children as props
      */
     'react/no-children-prop': ['error', {
-      allowFunctions: false
+      allowFunctions: false,
     }],
 
 
@@ -148,6 +168,10 @@ module.exports = {
      */
     'react/no-find-dom-node': ['error'],
 
+    /**
+     * Disallow usage of invalid attributes
+     */
+    'react/no-invalid-html-attribute': ['error'],
 
     /**
      * Prevent usage of `isMounted`
@@ -165,6 +189,13 @@ module.exports = {
      * Enforce that namespaces are not used in React elements
      */
     'react/no-namespace': ['error'],
+
+
+    /**
+     * Disallow usage of referential-type variables as default param in functional component
+     */
+    'react/no-object-type-as-default-prop': ['error'],
+
 
     /**
      * Prevent usage of `shouldComponentUpdate` when extending `React.PureComponent`
@@ -322,6 +353,14 @@ module.exports = {
 
 
     /**
+     * Enforce default props alphabetical sorting
+     */
+    'react/sort-default-props': ['error', {
+      ignoreCase: true,
+    }],
+
+
+    /**
      * Enforce propTypes declarations alphabetical sorting
      */
     'react/sort-prop-types': ['error', {
@@ -355,4 +394,4 @@ module.exports = {
      */
     'react/void-dom-elements-no-children': ['error'],
   },
-}
+};

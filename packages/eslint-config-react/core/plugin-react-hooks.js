@@ -16,4 +16,4 @@ module.exports = {
       additionalHooks: '^use.+(Callback|Effect)$',
     }],
   },
-}
+};

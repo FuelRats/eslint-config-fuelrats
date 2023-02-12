@@ -1,4 +1,4 @@
-const { propertyMaxPerLine } = require('@fuelrats/eslint-config/util/constants')
+const { propertyMaxPerLine } = require('@fuelrats/eslint-config/util/constants');
 
 module.exports = {
   plugins: [
@@ -106,6 +106,7 @@ module.exports = {
     'react/jsx-key': ['error', {
       checkFragmentShorthand: true,
       checkKeyMustBeforeSpread: true,
+      warnOnDuplicates: true,
     }],
 
 
@@ -167,6 +168,14 @@ module.exports = {
 
 
     /**
+     * Disallow problematic leaked values from being rendered
+     */
+    'react/jsx-no-leaked-render': ['error', {
+      validStrategies: ['ternary'],
+    }],
+
+
+    /**
      * Prevent usage of unwrapped JSX strings
      */
     'react/jsx-no-literals': ['error'],
@@ -212,6 +221,7 @@ module.exports = {
      * Enforce curly braces or disallow unnecessary curly braces in JSX
      */
     'react/jsx-curly-brace-presence': ['error', {
+      propElementValues: 'always',
       props: 'never',
       children: 'ignore',
     }],
@@ -227,10 +237,12 @@ module.exports = {
       ignore: [],
     }],
 
+
     /**
      * Disallow multiple spaces between inline JSX props (fixable)
      */
     'react/jsx-props-no-multi-spaces': ['error'],
+
 
     /**
      * Disallow JSX props spreading
@@ -238,14 +250,6 @@ module.exports = {
      * _DISABLED: We allow prop spreading. This is quite important when passing props to inputs_
      */
     'react/jsx-props-no-spreading': ['off'],
-
-
-    /**
-     * Enforce default props alphabetical sorting
-     */
-    'react/jsx-sort-default-props': ['error', {
-      ignoreCase: true,
-    }],
 
 
     /**
@@ -297,4 +301,4 @@ module.exports = {
       prop: 'parens-new-line',
     }],
   },
-}
+};

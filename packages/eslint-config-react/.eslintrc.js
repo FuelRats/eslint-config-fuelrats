@@ -1,8 +1,7 @@
-/***************************************************************************\
-  All the credit and love to AirBnB for an amazing config project structure
-  https://github.com/airbnb/javascript
-\***************************************************************************/
-
+/**
+ * All the credit and love to AirBnB for an amazing config project structure
+ * https://github.com/airbnb/javascript
+ */
 module.exports = {
   env: {
     node: true,
@@ -16,4 +15,4 @@ module.exports = {
   parserOptions: {
     requireConfigFile: false,
   },
-}
+};

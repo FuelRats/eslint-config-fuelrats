@@ -1,4 +1,5 @@
-const importExtensionsTs = require('./util/importExtensionsTypescript')
+const util = require('./util');
+const importExtensionsTs = require('./util/importExtensionsTypescript');
 
 module.exports = {
   extends: [
@@ -19,28 +20,28 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
-      rules: {
-        'constructor-super': 'off',
-        'getter-return': 'off',
-        'no-const-assign': 'off',
-        'no-dupe-args': 'off',
-        'no-dupe-class-members': 'off',
-        'no-dupe-keys': 'off',
-        'no-func-assign': 'off',
-        'no-new-symbol': 'off',
-        'no-obj-calls': 'off',
-        'no-redeclare': 'off',
-        'no-this-before-super': 'off',
-        'no-undef': 'off',
-        'no-unreachable': 'off',
-        'no-unsafe-negation': 'off',
-        'valid-typeof': 'off',
-        'import/named': 'off',
-        'import/no-unresolved': 'off',
-        'jsdoc/require-param': 'off',
-        'jsdoc/require-returns': 'off',
-        'jsdoc/require-yields': 'off',
-      },
+      rules: util.disable(
+        'constructor-super',
+        'getter-return',
+        'no-const-assign',
+        'no-dupe-args',
+        'no-dupe-class-members',
+        'no-dupe-keys',
+        'no-func-assign',
+        'no-new-symbol',
+        'no-obj-calls',
+        'no-redeclare',
+        'no-this-before-super',
+        'no-undef',
+        'no-unreachable',
+        'no-unsafe-negation',
+        'valid-typeof',
+        'import/named',
+        'import/no-unresolved',
+        'jsdoc/require-param',
+        'jsdoc/require-returns',
+        'jsdoc/require-yields',
+      ),
     },
   ],
-}
+};

@@ -1,13 +1,12 @@
 module.exports = {
   env: {
-    es2020: true,
+    es2022: true,
   },
   extends: [
-    './core/bestpractices',
-    './core/errors',
-    './core/es6',
-    './core/style',
-    './core/variables',
+    './core/formatting',
+    './core/problems',
+    './core/suggestions',
+    './core/plugin-eslint-comments',
     './core/plugin-import',
     './core/plugin-jsdoc',
   ].map(require.resolve),
@@ -15,4 +14,4 @@ module.exports = {
     sourceType: 'module',
   },
   reportUnusedDisableDirectives: true,
-}
+};

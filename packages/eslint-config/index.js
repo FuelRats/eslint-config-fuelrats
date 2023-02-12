@@ -3,4 +3,4 @@ module.exports = {
     './purejs',
     './plugins/babel',
   ].map(require.resolve),
-}
+};
