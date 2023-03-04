@@ -1,4 +1,4 @@
-const { RuleTester } = require('eslint');
+const { RuleTester } = require('eslint')
 
 RuleTester.setDefaultConfig({
   parser: require.resolve('@babel/eslint-parser'),
@@ -6,6 +6,6 @@ RuleTester.setDefaultConfig({
     sourceType: 'module',
     ecmaVersion: 2020,
   },
-});
+})
 
-module.exports = RuleTester;
+module.exports = RuleTester

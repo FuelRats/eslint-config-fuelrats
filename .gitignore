@@ -2,7 +2,7 @@
 .idea/
 .next
 .env
-.dist
+dist/
 bower_components
 node_modules
 static/compiled

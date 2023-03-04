@@ -1,5 +1,5 @@
-const getModuleName = require('./getModuleName');
-const getNodeIdentifier = require('./getNodeIdentifier');
+const getModuleName = require('./getModuleName')
+const getNodeIdentifier = require('./getNodeIdentifier')
 
 /**
  * @typedef {object} ExportData
@@ -18,7 +18,7 @@ function getExternalExportData (bodyNode) {
     external: true,
     node: bodyNode.source,
     name: getModuleName(bodyNode.source.value),
-  };
+  }
 }
 
 /**
@@ -29,14 +29,14 @@ function getIdentifierExportData (identNode) {
   return {
     node: identNode,
     name: identNode.name,
-  };
+  }
 }
 
 function getExpressionExportData (node) {
   return {
     expression: true,
     node,
-  };
+  }
 }
 
 /**
@@ -48,40 +48,37 @@ function getDefaultExport (programNode) {
   for (const bodyNode of programNode.body) {
     if (bodyNode.type === 'ExportDefaultDeclaration') {
       if (bodyNode.declaration.type.toLowerCase().includes('expression')) {
-        return getExpressionExportData(bodyNode.declaration);
+        return getExpressionExportData(bodyNode.declaration)
       }
 
-      return getIdentifierExportData(getNodeIdentifier(bodyNode.declaration));
+      return getIdentifierExportData(getNodeIdentifier(bodyNode.declaration))
     }
 
     if (bodyNode.type === 'ExportNamedDeclaration') {
       for (const specifierNode of bodyNode.specifiers) {
         if (specifierNode.type === 'ExportDefaultSpecifier') {
           // export default from './Foo'
-          return getExternalExportData(bodyNode);
+          return getExternalExportData(bodyNode)
         }
 
         if (specifierNode.type === 'ExportSpecifier' && getNodeIdentifier(specifierNode.exported).name === 'default') {
-          const localImportNode = getNodeIdentifier(specifierNode.local);
+          const localImportNode = getNodeIdentifier(specifierNode.local)
 
           if (localImportNode.name === 'default') {
             // export { default } from './Foo'
-            return getExternalExportData(bodyNode);
+            return getExternalExportData(bodyNode)
           }
 
           // export { Foo as default } from './Foo'
-          return getIdentifierExportData(localImportNode);
+          return getIdentifierExportData(localImportNode)
         }
       }
     }
   }
 
-  return undefined;
+  return undefined
 }
 
 
-
-
-
-module.exports = getDefaultExport;
+module.exports = getDefaultExport
 

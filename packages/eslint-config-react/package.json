@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-config-react",
-  "version": "2.4.0-canary.23",
+  "version": "0.0.0-dev.1",
   "description": "ESLint config for FuelRats React projects",
   "license": "MIT",
   "author": {
@@ -47,25 +47,36 @@
     "react"
   ],
   "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:copy": "copyfiles package.json LICENSE README.md dist",
+    "build:compile": "tsc",
+    "build": "yarn run clean && yarn run build:compile && yarn run build:copy",
+    "lint": "eslint .",
+    "release": "yarn run build && semantic-release"
+  },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@babel/eslint-plugin": "^7.19.1",
-    "@typescript-eslint/eslint-plugin": "^5.51.0",
-    "@typescript-eslint/parser": "^5.51.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.34.0",
-    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "^40.0.0",
+    "eslint-plugin-jsdoc": "^40.0.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0",
+    "semantic-release": "^20.1.1",
+    "semantic-release-monorepo": "^7.0.5",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "@babel/core": "^7.16",
     "@babel/eslint-parser": "^7.16",
-    "@fuelrats/eslint-config": "^2.4.0-canary.23",
+    "@fuelrats/eslint-config": "^3",
     "@typescript-eslint/parser": "^5",
     "eslint": "^8.28",
     "eslint-plugin-jsx-a11y": "^6.7",
@@ -87,6 +98,5 @@
     "typescript": {
       "optional": true
     }
-  },
-  "stableVersion": "2.3.0"
+  }
 }

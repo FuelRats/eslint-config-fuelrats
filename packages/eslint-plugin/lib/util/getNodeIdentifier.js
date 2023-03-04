@@ -4,18 +4,15 @@
  */
 function getNodeIdentifier (node) {
   if (node.type === 'Identifier') {
-    return node;
+    return node
   }
 
   if (node.id && node.id.type === 'Identifier') {
-    return node.id;
+    return node.id
   }
 
-  return undefined;
+  return undefined
 }
 
 
-
-
-
-module.exports = getNodeIdentifier;
+module.exports = getNodeIdentifier

@@ -2,22 +2,25 @@
  * @file Enforces default exports are internally named the same as their module (file) name.
  * @author Cameron Welter
  */
-'use strict';
+'use strict'
 
-// ------------------------------------------------------------------------------
-// Requirements
-// ------------------------------------------------------------------------------
+/*
+ * ------------------------------------------------------------------------------
+ * Requirements
+ * ------------------------------------------------------------------------------
+ */
 
-const equalsIgnoreCase = require('../util/equalsIgnoreCase');
-const getDefaultExport = require('../util/getDefaultExport');
-const getModuleName = require('../util/getModuleName');
-const getRuleDocUrl = require('../util/getRuleDocUrl');
+const equalsIgnoreCase = require('../util/equalsIgnoreCase')
+const getDefaultExport = require('../util/getDefaultExport')
+const getModuleName = require('../util/getModuleName')
+const getRuleDocUrl = require('../util/getRuleDocUrl')
 
 
-
-// ------------------------------------------------------------------------------
-// Rule Definition
-// ------------------------------------------------------------------------------
+/*
+ * ------------------------------------------------------------------------------
+ * Rule Definition
+ * ------------------------------------------------------------------------------
+ */
 
 module.exports = {
   meta: {
@@ -50,7 +53,7 @@ module.exports = {
   create (context) {
     const [
       args = {},
-    ] = context.options;
+    ] = context.options
 
     const reportNotMatchModuleName = (node, exportName, moduleName, external) => {
       context.report({
@@ -62,29 +65,29 @@ module.exports = {
           exportName,
           moduleName,
         },
-      });
-    };
+      })
+    }
 
     return {
       Program: (programNode) => {
-        const moduleName = getModuleName(context.getFilename());
+        const moduleName = getModuleName(context.getFilename())
         const {
           expression: isExpression,
           external: isExternal,
           name: exportName,
           node: exportIdentNode,
-        } = getDefaultExport(programNode) ?? {};
+        } = getDefaultExport(programNode) ?? {}
 
         if (isExpression) {
           // Fix this later, provide a report which encourages static export declarations
-          return;
+          return
         }
 
         if (exportIdentNode) {
-          let doReport = moduleName !== exportName;
+          let doReport = moduleName !== exportName
 
           if (args.caseInsensitive) {
-            doReport = !equalsIgnoreCase(moduleName, exportName);
+            doReport = !equalsIgnoreCase(moduleName, exportName)
           }
 
           if (doReport) {
@@ -93,10 +96,10 @@ module.exports = {
               exportName,
               moduleName,
               isExternal,
-            );
+            )
           }
         }
       },
-    };
+    }
   },
-};
+}

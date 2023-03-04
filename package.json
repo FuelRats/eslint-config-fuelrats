@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fuelrats",
-  "version": "2.4.0-canary.23",
+  "version": "0.0.0-dev.1",
   "description": "Monorepo for @fuelrats/eslint-config[-react]!",
   "private": true,
   "license": "MIT",
@@ -39,26 +39,37 @@
   ],
   "main": "./packages/eslint-config/index.js",
   "scripts": {
-    "eslint": "yarn workspaces foreach run eslint .",
-    "utoc": "doctoc $(grep --include=\\*.md --exclude-dir=node_modules -Rwl . -e 'START doctoc')"
+    "build": "yarn workspaces foreach run build",
+    "release": "yarn workspaces foreach run release",
+    "lint": "eslint .",
+    "utoc": "doctoc $(grep --include=\\*.md --exclude-dir=node_modules -Rwl . -e 'START doctoc')",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "confusing-browser-globals": "^1.0.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/eslint-plugin": "^7.19.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
     "@fuelrats/eslint-plugin": "portal:packages/eslint-plugin",
+    "@types/confusing-browser-globals": "^1.0.0",
+    "@types/node": "^18.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "copyfiles": "^2.4.1",
     "doctoc": "^2.2.1",
     "eslint": "^8.34.0",
-    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "40.0.0",
+    "eslint-plugin-jsdoc": "^40.0.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "semantic-release": "^20.1.1",
+    "semantic-release-monorepo": "^7.0.5",
+    "typescript": "^4.9.5"
   },
-  "stableVersion": "2.3.0"
+  "packageManager": "yarn@3.4.1"
 }
