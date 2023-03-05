@@ -1,6 +1,7 @@
 name: Release
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -22,13 +23,13 @@ jobs:
       - name: Install Dependencies + Build Distributons
         run: yarn install --immutable
 
-      - name: Lint
-        run: yarn lint
-
       - name: Test Packages
         run: yarn test
 
-      - name: Release
+      - name: Lint
+        run: yarn lint
+
+      - name: Release Packages
         run: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

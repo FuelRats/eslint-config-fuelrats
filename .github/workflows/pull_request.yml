@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies + Build Distributons
         run: yarn install --immutable
 
-      - name: Test
+      - name: Test Packages
         run: yarn test
 
       - name: Lint
