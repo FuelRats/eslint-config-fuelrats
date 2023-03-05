@@ -11,7 +11,7 @@
  */
 
 const rule = require('../../../lib/rules/default-export-matches-module-name')
-const RuleTester = require('../../../util/RuleTester')
+const RuleTester = require('../../util/RuleTester')
 
 const externalNotMatchModuleNameError = (exportName, moduleName) => {
   return {

@@ -4,6 +4,6 @@
     "./**/*",
   ],
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "../../dist/eslint-config",
   },
 }

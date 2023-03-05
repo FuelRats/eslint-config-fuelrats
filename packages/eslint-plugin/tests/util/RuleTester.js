@@ -6,7 +6,7 @@ RuleTester.setDefaultConfig({
     sourceType: 'module',
     ecmaVersion: 'latest',
     babelOptions: {
-      configFile: require.resolve('../babel.config.js'),
+      configFile: require.resolve('./babel.config.js'),
     },
   },
 })

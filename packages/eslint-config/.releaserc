@@ -13,9 +13,8 @@
     [
       "@semantic-release/npm",
       {
-        "pkgRoot": "dist"
+        "pkgRoot": "../../dist/eslint-config"
       }
-    ],
-    "@semantic-release/github"
+    ]
   ]
 }

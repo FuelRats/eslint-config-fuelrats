@@ -1,4 +1,4 @@
-import { sArg } from '@fuelrats/eslint-config/util/internal'
+import { sArg } from './util/internal'
 
 export = {
   env: {

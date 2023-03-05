@@ -11,7 +11,7 @@
  */
 
 const rule = require('../../../lib/rules/no-mixed-access-class-members')
-const RuleTester = require('../../../util/RuleTester')
+const RuleTester = require('../../util/RuleTester')
 
 const noMixedError = (name, output) => {
   return {

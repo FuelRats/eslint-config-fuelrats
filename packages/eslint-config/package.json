@@ -9,7 +9,7 @@
     "url": "https://github.com/UncleClapton"
   },
   "engines": {
-    "node": "^14.17.0 || >=16.0.0"
+    "node": ">=18.0.0"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -47,10 +47,10 @@
   ],
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist",
-    "build:copy": "copyfiles package.json LICENSE README.md dist",
+    "clean": "rm -rf ../../dist/eslint-config",
+    "build:prepare": "node ../../scripts/preparePackage.js eslint-config",
     "build:compile": "tsc",
-    "build": "yarn run clean && yarn run build:compile && yarn run build:copy",
+    "build": "yarn run build:compile && yarn run build:prepare",
     "lint": "eslint .",
     "release": "yarn run build && semantic-release"
   },
@@ -64,7 +64,6 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
-    "copyfiles": "^2.4.1",
     "eslint": "^8.34.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsdoc": "^40.0.1",
