@@ -41,6 +41,7 @@
   "scripts": {
     "build": "yarn workspaces foreach run build",
     "release": "yarn workspaces foreach run release",
+    "test": "yarn workspaces foreach run test",
     "lint": "eslint .",
     "utoc": "doctoc $(grep --include=\\*.md --exclude-dir=node_modules -Rwl . -e 'START doctoc')",
     "postinstall": "yarn build"
@@ -52,6 +53,7 @@
     "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/eslint-plugin": "^7.19.1",
+    "@babel/preset-env": "^7.20.2",
     "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
     "@fuelrats/eslint-plugin": "portal:packages/eslint-plugin",
     "@types/confusing-browser-globals": "^1.0.0",

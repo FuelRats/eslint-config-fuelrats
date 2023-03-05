@@ -28,6 +28,7 @@ module.exports = {
       url: getRuleDocUrl('no-mixed-access-class-members'),
       suggestion: true,
     },
+    hasSuggestions: true,
     fixable: 'code',
     schema: [],
     messages: {
@@ -58,16 +59,16 @@ module.exports = {
     }
 
     function isPrivateType (node) {
-      return ['ClassPrivateProperty', 'ClassPrivateMethod', 'PrivateName'].includes(node.type)
+      const isPrivateNodeType = ['ClassPrivateProperty', 'ClassPrivateMethod', 'PrivateName', 'PrivateIdentifier'].includes(node.type)
+      const isPrivatePropertyDefinition = node.type === 'PropertyDefinition' && node.key?.type === 'PrivateIdentifier'
+      return isPrivateNodeType || isPrivatePropertyDefinition
     }
 
     function getPrivateMemberName (node) {
-      return (
-        isPrivateType(node)
-          && node.key
-          && node.key.id
-          && node.key.id.name
-      ) || undefined
+      if (isPrivateType(node)) {
+        return node.key?.id?.name ?? node.key?.name
+      }
+      return undefined
     }
 
     function enterClass (node) {
@@ -75,7 +76,7 @@ module.exports = {
       const staticNames = []
       const instanceNames = []
 
-      if (node.body && node.body.body) {
+      if (node?.body?.body) {
         node.body.body.forEach((bodyNode) => {
           const name = getPrivateMemberName(bodyNode)
           if (name) {
