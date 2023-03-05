@@ -1,4 +1,4 @@
-name: Test
+name: Release
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
         run: yarn install --immutable
 
       - name: Lint
-        run: yarn Lint
+        run: yarn lint
 
       - name: Test Packages
         run: yarn test
