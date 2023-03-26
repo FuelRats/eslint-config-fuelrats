@@ -62,6 +62,8 @@ function writeDistPackageJson (distPackagePath, packageJson) {
   delete distPackageJson.scripts
   delete distPackageJson.devDependencies
   delete distPackageJson.distFiles
+  delete distPackageJson.resolutions
+  delete distPackageJson.packageManager
 
   // write package.json to dist
   return fsp.writeFile(
