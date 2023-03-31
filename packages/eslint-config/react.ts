@@ -1,11 +1,14 @@
 import { sArg } from './util/internal'
 
 export = {
+  env: {
+    browser: true,
+  },
   extends: [
-    './core/plugin-react',
-    './core/plugin-react-jsx',
-    './core/plugin-react-hooks',
-    './core/plugin-jsx-a11y',
+    './plugins/react',
+    './plugins/react-jsx',
+    './plugins/react-hooks',
+    './plugins/jsx-a11y',
   ].map(sArg(require.resolve)),
   parserOptions: {
     ecmaFeatures: {

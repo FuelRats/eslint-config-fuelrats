@@ -1,53 +1,46 @@
 # [@fuelrats/eslint-config][eslint-config-fuelrats]
 
-* Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
-  * Assumes an ECMAScript 2020 environment with module syntax and [`@babel/core`][babel] as the primary transpiler.
-  * Includes [`@babel/eslint-plugin`][babel-eslint-plugin] for providing core rule compatibility for common babel plugins.
-  * Includes [`eslint-plugin-eslint-comments'][eslint-plugin-eslint-comments] for ensuring eslint directives are consistent and documented.
-  * Includes [`eslint-plugin-import`][eslint-plugin-import] for additional ESModule linting.
-  * Includes [`eslint-plugin-jsdoc`][eslint-plugin-jsdoc] for JSDoc block linting.
-  * Also includes a `purejs` preset which does not enable [`@babel/eslint-parser`][babel-eslint-parser] and [`@babel/eslint-plugin`][babel-eslint-plugin].
-  * Also includes a `typescript` preset which replaces [`@babel/eslint-parser`][babel-eslint-parser] for [`@typescript-eslint/parser`][typescript-eslint].
+ESLint Configurations for The Fuel Rats! Fueling the galaxy, one ship at a time, since 3301.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [Motivation](#motivation)
+- [Installation](#installation)
+  - [Default (Babel)](#default-babel)
+  - [TypeScript](#typescript)
+  - [React](#react)
+  - [Plain JavaScript](#plain-javascript)
+- [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Motivation
 
-The TechRat team of The FuelRats utilize ECMAScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.
+The TechRat team of The FuelRats utilize JavaScript on all fronts. Over time these projects have strayed in code standards as no common base has been shared between them.
 
 `@fuelrats/eslint-config` aims to help unify style and standards across all major FuelRats projects.
 
 ## Installation
 
-Add `@fuelrats/eslint-config` and it's depdendencies to your project.
+Add dependencies for the intended project type, and extend the desired configs.
+
+
+### Default (Babel)
 
 ```bash
 yarn add -D eslint \
             @babel/core \
             @babel/eslint-parser \
             @babel/eslint-plugin \
-            eslint-plugin-eslint-comments \
+            @eslint-community/eslint-plugin-eslint-comments \
             eslint-plugin-import \
             eslint-plugin-jsdoc \
             @fuelrats/eslint-config
 ```
 
-or
-
-```bash
-npm i -D eslint \
-         @babel/core \
-         @babel/eslint-parser \
-         @babel/eslint-plugin \
-         eslint-plugin-eslint-comments \
-         eslint-plugin-import \
-         eslint-plugin-jsdoc \
-         @fuelrats/eslint-config
-```
-
-Then configure eslint accordingly!
-
-## Configuration
-
-1. Add the following to your `.eslintrc` file:
+Then in `.eslintrc`:
 
 ```json
 {
@@ -55,69 +48,74 @@ Then configure eslint accordingly!
 }
 ```
 
-2. Setup additional environment options. This config only enables the `"es2020"` environment. All other env settings are up to your project.
-    * For more information on eslint envrionment settings, visit [the ESLint docs][eslint-env]
+### TypeScript
 
-### Without Babel
+To use this configuration in a TypeScript project, instead of installing the default set of dependencies, install the following:
 
-Babel parser is the default for this config, however not it's not required. a `purejs` preset is also available.
+```bash
+yarn add -D eslint \
+         typescript \
+         @typescript-eslint/eslint-plugin \
+         @typescript-eslint/parser \
+         @eslint-community/eslint-plugin-eslint-comments \
+         eslint-plugin-import \
+         eslint-plugin-jsdoc \
+         @fuelrats/eslint-config
+```
+
+then in `.eslintrc`:
+
+```json
+{
+  "extends": "@fuelrats/eslint-config/typescript",
+  "parserOptions": {
+    "project": "tsconfig.json"
+  }
+}
+```
+
+
+### React
+
+The `react` config is an addon config that may be used in conjunction with either Babel or TypeScript. To add this configuration, install the additional plugins used:
+
+```bash
+yarn add -D eslint-plugin-react \
+            eslint-plugin-react-hooks \
+            eslint-plugin-jsx-a11y
+```
+
+then in `.eslintrc`:
+
+```json
+{
+  "extends": [
+    "@fuelrats/eslint-config", // Or "@fuelrats/eslint-config/typescript"
+    "@fuelrats/eslint-config/react"
+  ]
+}
+```
+
+### Plain JavaScript
+
+In a project without a transpiler? No problem! Babel is an optional addon that extends a base pure JavaScript config.
+
+```bash
+# or `npm i -D ...`
+yarn add -D eslint \
+            @eslint-community/eslint-comments \
+            eslint-plugin-import \
+            eslint-plugin-jsdoc \
+            @fuelrats/eslint-config
+```
+
+Then in `.eslintrc`:
 
 ```json
 {
   "extends": "@fuelrats/eslint-config/purejs"
 }
 ```
-
-Using this preset, you may safely remove `@babel/core`, `@babel/eslint-parser` and `@babel/eslint-plugin` from your dependencies.
-
-## Installation for TypeScript
-
-A [`TypeScript`][typescript] config preset is now in the works! Currently configured rules may change significantly before it's considered stable,
-however it is available in `v2.4.0` and later.
-
-**⚠️WARNING⚠️**
-
-This config is a work in progress, and may not reflect our final TypeScript project code style.
-
-### Install
-
-Install the [`typescript-eslint`][typescript-eslint] dependencies with `@fuelrats/eslint-config` instead of the usual [`@babel/eslint-parser`][babel-eslint-parser] dependencies.
-
-```bash
-yarn add -D eslint \
-            typescript \
-            @typescript-eslint/parser \
-            @typescript-eslint/eslint-plugin \
-            eslint-plugin-eslint-comments \
-            eslint-plugin-import \
-            eslint-plugin-jsdoc \
-            @fuelrats/eslint-config
-```
-
-or
-
-```bash
-npm i -D eslint \
-         typescript \
-         @typescript-eslint/parser \
-         @typescript-eslint/eslint-plugin \
-         eslint-plugin-eslint-comments \
-         eslint-plugin-import \
-         eslint-plugin-jsdoc \
-         @fuelrats/eslint-config
-```
-
-### Configure
-
-Then add the following to your `.eslintrc` file:
-
-```json
-{
-  "extends": "@fuelrats/eslint-config/typescript"
-}
-```
-
-As with the default Babel config, environment variables will still need to be defined. For a full list of supported environment settings, visit [the ESLint docs][eslint-env]
 
 ## Credits
 

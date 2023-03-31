@@ -14,21 +14,15 @@ This is a monorepo for all eslint-related packages. Check them out below!
 
 ### [@fuelrats/eslint-config][eslint-config-fuelrats]
 
-Base ESLint ruleset with [`@babel/eslint-parser`][babel-eslint-parser] as the primary parser. Generally intended for node.js backend projects.
-
-### [@fuelrats/eslint-config-react][eslint-config-fuelrats-react]
-
-Companion config to [`@fuelrats/eslint-config`][eslint-config-fuelrats]. Built specifically for our react projects.
+ESLint configs for Plain JS, Babel, React, & TypeScript projects.
 
 ### [@fuelrats/eslint-plugin][eslint-plugin-fuelrats]
 
-Optional plugin to provide custom lint rules for our projects to follow.
+Optional plugin to provide custom lint rules for our projects.
 
 ## Installation
 
-* For regular javascript or node.js projects, go to [`@fuelrats/eslint-config`][eslint-config-fuelrats].
-* For React projects, go to [`@fuelrats/eslint-config-react`][eslint-config-fuelrats-react].
-* For projects which utilize typescript, see the best corresponding package above
+See [`@fuelrats/eslint-config`][eslint-config-fuelrats]
 
 ## Development
 
@@ -47,12 +41,6 @@ yarn install
 ```
 
 3. Done! 🎉
-
-### Publishing and Versioning
-
-**FOR TECHRATS**
-
-To publish and version the monorepo packages, Read [this](docs/publishing_and_versions.md).
 
 ## Credits
 

@@ -1,9 +1,0 @@
-{
-  "extends": "../../tsconfig.base.json",
-  "include": [
-    "./**/*",
-  ],
-  "compilerOptions": {
-    "outDir": "../../dist/eslint-config-react",
-  },
-}

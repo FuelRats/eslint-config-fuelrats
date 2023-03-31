@@ -15,6 +15,7 @@
       {
         "pkgRoot": "../../dist/eslint-config"
       }
-    ]
+    ],
+    "@semantic-release/github"
   ]
 }

@@ -1366,47 +1366,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fuelrats/eslint-config-react@workspace:packages/eslint-config-react":
-  version: 0.0.0-use.local
-  resolution: "@fuelrats/eslint-config-react@workspace:packages/eslint-config-react"
-  dependencies:
-    "@babel/eslint-parser": ^7.19.1
-    "@babel/eslint-plugin": ^7.19.1
-    "@eslint-community/eslint-plugin-eslint-comments": ^3.2.1
-    "@typescript-eslint/eslint-plugin": ^5.52.0
-    "@typescript-eslint/parser": ^5.52.0
-    eslint: ^8.34.0
-    eslint-plugin-import: ^2.27.5
-    eslint-plugin-jsdoc: ^40.0.1
-    eslint-plugin-jsx-a11y: ^6.7.1
-    eslint-plugin-react: ^7.32.2
-    eslint-plugin-react-hooks: ^4.6.0
-    react: ^18.2.0
-    semantic-release: ^20.1.1
-    semantic-release-monorepo: ^7.0.5
-    typescript: ^4.9.5
-  peerDependencies:
-    "@babel/core": ^7.16
-    "@babel/eslint-parser": ^7.16
-    "@typescript-eslint/parser": ^5
-    eslint: ^8.28
-    eslint-plugin-jsx-a11y: ^6.7
-    eslint-plugin-react: ^7.32
-    eslint-plugin-react-hooks: ^4.4
-    react: ^18
-    typescript: "*"
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    "@babel/eslint-parser":
-      optional: true
-    "@typescript-eslint/parser":
-      optional: true
-    typescript:
-      optional: true
-  languageName: unknown
-  linkType: soft
-
 "@fuelrats/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@fuelrats/eslint-config@workspace:packages/eslint-config"
@@ -1421,6 +1380,7 @@ __metadata:
     eslint: ^8.34.0
     eslint-plugin-import: ^2.27.5
     eslint-plugin-jsdoc: ^40.0.1
+    eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
     react: ^18.2.0
@@ -1437,6 +1397,9 @@ __metadata:
     eslint: ^8.28
     eslint-plugin-import: ^2.27
     eslint-plugin-jsdoc: ^40
+    eslint-plugin-jsx-a11y: ^6.7
+    eslint-plugin-react: ^7.32
+    eslint-plugin-react-hooks: ^4.4
     typescript: "*"
   peerDependenciesMeta:
     "@babel/core":
@@ -1448,6 +1411,12 @@ __metadata:
     "@typescript-eslint/eslint-plugin":
       optional: true
     "@typescript-eslint/parser":
+      optional: true
+    eslint-plugin-jsx-a11y:
+      optional: true
+    eslint-plugin-react:
+      optional: true
+    eslint-plugin-react-hooks:
       optional: true
     typescript:
       optional: true
