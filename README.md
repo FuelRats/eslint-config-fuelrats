@@ -51,5 +51,4 @@ Our code style and this config set was inspired by and derived from the AirBnB j
 [airbnb]: https://github.com/airbnb/javascript
 [babel-eslint-parser]: https://www.npmjs.com/package/@babel/eslint-parser
 [eslint-config-fuelrats]: packages/eslint-config
-[eslint-config-fuelrats-react]: packages/eslint-config-react
 [eslint-plugin-fuelrats]: packages/eslint-plugin

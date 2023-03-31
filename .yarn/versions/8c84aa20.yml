@@ -1,5 +1,4 @@
 releases:
   "@fuelrats/eslint-config": minor
-  "@fuelrats/eslint-config-react": minor
   "@fuelrats/eslint-plugin": minor
   eslint-config-fuelrats: minor
