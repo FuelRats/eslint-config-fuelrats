@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     node: true,
   },
@@ -12,10 +13,6 @@ module.exports = {
         'quote-props': ['error', 'consistent-as-needed'], // since the majority of rules are in quotes with little outliers;
         'max-lines': ['off'], // We're not interested in breaking up large rule files.
       },
-      parserOptions: {
-        requireConfigFile: false,
-        project: './tsconfig.eslint.json',
-      },
     },
     {
       files: '**/*.{ts,tsx}',
@@ -27,7 +24,6 @@ module.exports = {
         'max-lines': ['off'], // We're not interested in breaking up large rule files.
       },
       parserOptions: {
-        requireConfigFile: false,
         project: './tsconfig.eslint.json',
       },
     },
