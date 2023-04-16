@@ -7,6 +7,7 @@ export = {
     './purejs',
     './plugins/typescript',
     './plugins/typescript-extensions',
+    './plugins/jsdoc-typescript',
   ].map(sArg(require.resolve)),
   settings: {
     'import/resolver': {
@@ -36,8 +37,5 @@ export = {
     'valid-typeof',
     'import/named',
     'import/no-unresolved',
-    'jsdoc/require-param',
-    'jsdoc/require-returns',
-    'jsdoc/require-yields',
   ),
 }
