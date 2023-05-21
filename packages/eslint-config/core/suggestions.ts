@@ -15,7 +15,9 @@ export = {
     /**
      * Require braces around arrow function bodies
      */
-    'arrow-body-style': ['warn', 'always'],
+    'arrow-body-style': ['warn', 'as-needed', {
+      requireReturnForObjectLiteral: true,
+    }],
 
 
     /**
