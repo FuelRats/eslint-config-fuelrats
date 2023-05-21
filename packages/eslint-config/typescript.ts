@@ -5,8 +5,8 @@ export = {
   extends: [
     './purejs',
     './plugins/typescript',
-    './plugins/typescript-extensions',
-    './plugins/jsdoc-typescript',
+    './plugins/ext-typescript',
+    './plugins/jsdoc-ts',
   ].map(sArg(require.resolve)),
   settings: {
     'import/resolver': {

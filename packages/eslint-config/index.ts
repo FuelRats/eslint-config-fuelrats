@@ -3,6 +3,6 @@ import { sArg } from './_internal'
 export = {
   extends: [
     './purejs',
-    './plugins/babel',
+    './plugins/ext-babel',
   ].map(sArg(require.resolve)),
 }
