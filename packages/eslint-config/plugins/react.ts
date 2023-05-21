@@ -99,7 +99,7 @@ export = {
     /**
      * Prevent using Array index in key props
      */
-    'react/no-array-index-key': ['error'],
+    'react/no-array-index-key': ['warn'],
 
 
     /**
@@ -280,7 +280,7 @@ export = {
     /**
      * Enforce ES5 or ES6 class for React Components
      */
-    'react/prefer-es6-class': ['error', 'always'],
+    'react/prefer-es6-class': ['warn', 'always'],
 
 
     /**
@@ -298,7 +298,7 @@ export = {
     /**
      * Enforce stateless React Components to be written as a pure function
      */
-    'react/prefer-stateless-function': ['error', {
+    'react/prefer-stateless-function': ['warn', {
       ignorePureComponents: true,
     }],
 
@@ -340,7 +340,7 @@ export = {
     /**
      * Prevent extra closing tags for components without children (fixable)
      */
-    'react/self-closing-comp': ['error'],
+    'react/self-closing-comp': ['warn'],
 
 
     /**
@@ -352,7 +352,7 @@ export = {
     /**
      * Enforce default props alphabetical sorting
      */
-    'react/sort-default-props': ['error', {
+    'react/sort-default-props': ['warn', {
       ignoreCase: true,
     }],
 
@@ -360,7 +360,7 @@ export = {
     /**
      * Enforce propTypes declarations alphabetical sorting
      */
-    'react/sort-prop-types': ['error', {
+    'react/sort-prop-types': ['warn', {
       ignoreCase: true,
       callbacksLast: false,
       requiredFirst: false,
@@ -371,13 +371,13 @@ export = {
     /**
      * Enforce the state initialization style to be either in a constructor or with a class property
      */
-    'react/state-in-constructor': ['error', 'never'],
+    'react/state-in-constructor': ['warn', 'never'],
 
 
     /**
      * Enforce where React component static properties should be positioned.
      */
-    'react/static-property-placement': ['error', 'static public field'],
+    'react/static-property-placement': ['warn', 'static public field'],
 
 
     /**
