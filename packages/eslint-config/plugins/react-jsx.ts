@@ -6,7 +6,7 @@ export = {
     /**
      * Enforce boolean attributes notation in JSX (fixable)
      */
-    'react/jsx-boolean-value': ['error', 'never'],
+    'react/jsx-boolean-value': ['warn', 'never'],
 
 
     /**
@@ -19,19 +19,19 @@ export = {
     /**
      * Validate closing bracket location in JSX (fixable)
      */
-    'react/jsx-closing-bracket-location': ['error', 'after-props'],
+    'react/jsx-closing-bracket-location': ['warn', 'after-props'],
 
 
     /**
      * Validate closing tag location in JSX (fixable)
      */
-    'react/jsx-closing-tag-location': ['error'],
+    'react/jsx-closing-tag-location': ['warn'],
 
 
     /**
      * Enforce or disallow newlines inside of curly braces in JSX attributes and expressions (fixable)
      */
-    'react/jsx-curly-newline': ['error', {
+    'react/jsx-curly-newline': ['warn', {
       multiline: 'require',
       singleline: 'forbid',
     }],
@@ -40,7 +40,7 @@ export = {
     /**
      * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions (fixable)
      */
-    'react/jsx-curly-spacing': ['error', {
+    'react/jsx-curly-spacing': ['warn', {
       when: 'never',
       children: true,
       allowMultiline: true,
@@ -50,27 +50,27 @@ export = {
     /**
      * Enforce or disallow spaces around equal signs in JSX attributes (fixable)
      */
-    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-equals-spacing': ['warn', 'never'],
 
 
     /**
      * Restrict file extensions that may contain JSX
      */
     'react/jsx-filename-extension': ['error', {
-      extensions: ['.js', '.cjs', '.mjs', '.ts', '.jsx', '.tsx'],
+      extensions: ['.js', '.cjs', '.mjs', '.jsx', '.tsx'],
     }],
 
 
     /**
      * Enforce position of the first prop in JSX (fixable)
      */
-    'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+    'react/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
 
 
     /**
      * Enforce shorthand or standard form for React fragments
      */
-    'react/jsx-fragments': ['error', 'syntax'],
+    'react/jsx-fragments': ['warn', 'syntax'],
 
 
     /**
@@ -86,7 +86,7 @@ export = {
     /**
      * Validate JSX indentation (fixable)
      */
-    'react/jsx-indent': ['error', 2, {
+    'react/jsx-indent': ['warn', 2, {
       checkAttributes: false,
       indentLogicalExpressions: true,
     }],
@@ -95,7 +95,7 @@ export = {
     /**
      * Validate props indentation in JSX (fixable)
      */
-    'react/jsx-indent-props': ['error', 2],
+    'react/jsx-indent-props': ['warn', 2],
 
 
     /**
@@ -119,7 +119,7 @@ export = {
     /**
      * Limit maximum of props on a single line in JSX (fixable)
      */
-    'react/jsx-max-props-per-line': ['error', {
+    'react/jsx-max-props-per-line': ['warn', {
       maximum: {
         single: 5,
         multi: 1,
@@ -148,7 +148,7 @@ export = {
     /**
      * Prevent comments from being inserted as text nodes
      */
-    'react/jsx-no-comment-textnodes': ['error'],
+    'react/jsx-no-comment-textnodes': ['off'],
 
 
     /**
