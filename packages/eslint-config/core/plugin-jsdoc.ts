@@ -70,7 +70,7 @@ export = {
     /**
      * Checks the values of specific metadata tags.
      *
-     * https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md#check-values
+     * https://github.com/gajus/eslint-plugin-jsdoc/blob/main/.README/rules/check-values.md
      */
     'jsdoc/check-values': ['off'],
 
@@ -78,9 +78,9 @@ export = {
     /**
      * Expects specific tags to be empty of any content.
      *
-     * https://github.com/gajus/eslint-plugin-jsdoc/blob/master/README.md#empty-tags
+     * https://github.com/gajus/eslint-plugin-jsdoc/blob/main/.README/rules/empty-tags.md
      */
-    'jsdoc/empty-tags': ['off'],
+    'jsdoc/empty-tags': ['warn'],
 
 
     /**
