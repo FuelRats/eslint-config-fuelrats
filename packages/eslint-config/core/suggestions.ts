@@ -1,5 +1,4 @@
-import confusingGlobals from '../util/confusingGlobals'
-import { propertyMaxPerLine } from '../util/constants'
+import { confusingGlobals, propertyMaxPerLine } from '../_internal'
 
 export = {
   rules: {

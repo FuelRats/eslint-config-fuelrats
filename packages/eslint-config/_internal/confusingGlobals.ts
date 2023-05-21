@@ -1,15 +1,15 @@
-import confusingGlobals from 'confusing-browser-globals'
+import cbglobals from 'confusing-browser-globals'
 
 export interface RestrictedGlobal {
   name: string
   message?: string
 }
 
-const globals = confusingGlobals.reduce<RestrictedGlobal[]>(
+export const confusingGlobals = cbglobals.reduce<RestrictedGlobal[]>(
   (acc: RestrictedGlobal[], globProp: string) => {
     switch (globProp) {
-      case 'self': // Removed due to self having use in workers.
-      case 'location': // Removed since location is a commonly used and accepted browser global.
+      case 'self': // Removed due to 'self' having use in workers.
+      case 'location': // Removed since 'location' is a commonly used and accepted browser global.
         // Globals we do not consider confusing.
         break
 
@@ -34,5 +34,3 @@ const globals = confusingGlobals.reduce<RestrictedGlobal[]>(
   },
   [],
 )
-
-export default globals

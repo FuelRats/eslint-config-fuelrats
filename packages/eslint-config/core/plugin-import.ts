@@ -1,4 +1,4 @@
-import { extensions } from '../util/constants'
+import { extList } from '../_internal'
 
 export = {
   plugins: [
@@ -6,9 +6,9 @@ export = {
   ],
   settings: {
     'import/resolver': {
-      node: { extensions },
+      node: { extensions: extList },
     },
-    'import/extensions': extensions,
+    'import/extensions': extList,
     'import/ignore': [
       '\\.(coffee|scss|css|less|hbs|svg|json)$',
     ],

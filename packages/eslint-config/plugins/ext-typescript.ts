@@ -1,15 +1,12 @@
-import coreRules from '../util/coreRules'
+import { coreRules } from '../core'
 
 /**
- * The plugin '@typescript-eslint/eslint-plugin' contains base rule extensions.
- * This config disables the base rule and enables the plugin rule with the base rule's config.
- * TODO: check each rule for extended configuration, and reconfigure as-needed
+ * `@typescript-eslint/eslint-plugin` contains core rule extensions.
+ * When this plugin config is used, the core rules are disabled and the `@babel` rules are enabled.
  */
 export = {
   parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
     /**
      * Enforce consistent brace style for blocks

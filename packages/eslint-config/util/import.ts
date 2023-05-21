@@ -1,6 +1,5 @@
-import { extensions as EcmaScriptExts, extensionsTS as TypeScriptExts } from './constants'
-
-type AliasMap = [string, string][]
+import { AliasMap } from './types'
+import { extList, extListTS } from '../_internal'
 
 function aliasResolver (map: AliasMap, extensions: readonly string[]) {
   return {
@@ -10,9 +9,9 @@ function aliasResolver (map: AliasMap, extensions: readonly string[]) {
 }
 
 export function withAliasResolver (map: AliasMap) {
-  return aliasResolver(map, EcmaScriptExts)
+  return aliasResolver(map, extList)
 }
 
 export function withTSAliasResolver (map: AliasMap) {
-  return aliasResolver(map, TypeScriptExts)
+  return aliasResolver(map, extListTS)
 }

@@ -1,34 +1,39 @@
-export type RuleSeverity = 'error' | 'off' | 'warn'
+import { RuleSet, RuleSeverity } from './types'
 
-export type RuleConfig<OT extends any[] = any[]> = [RuleSeverity, ...OT]
 
-/**
- * Disables a given set of rules
- */
-export function disableRules (...rules: string[]): { [key: string]: RuleConfig<any> } {
-  return rules.reduce<{ [key: string]: RuleConfig<any> }>((acc, rule) => {
-    acc[rule] = ['off']
+export type RuleInput = string | [string, ...any]
+
+export interface RulesetBuilderConfig {
+  error?: RuleInput[]
+  warn?: RuleInput[]
+  off?: string[]
+}
+
+function makeRuleset (severity: RuleSeverity, rules: RuleInput[]): RuleSet {
+  return rules.reduce<RuleSet>((acc, rule) => {
+    if (typeof rule === 'string') {
+      acc[rule] = [severity]
+    } else {
+      const [ruleName, ...args] = rule
+      acc[ruleName] = [severity, ...args]
+    }
+
     return acc
   }, {})
 }
 
 /**
- * Sets the error level of a given rule to the given level
+ * Helper to build a ruleset
  */
-export function setLevel<RC extends RuleConfig> ([_, ...args]: RC, level: RuleConfig[0]): RC {
-  return [level, ...args] as RC
-}
-
-/**
- * Provides a modified rule config with an error level of 'error'. Accepts a rule name or rule config array.
- */
-export function error <RC extends RuleConfig> (rule: RC): RC {
-  return setLevel(rule, 'error')
-}
-
-/**
- * Provides a modified rule config with an error level of 'warn'. Accepts a rule name or rule config array.
- */
-export function warn <RC extends RuleConfig> (rule: RC): RC {
-  return setLevel(rule, 'warn')
+export const ruleset = {
+  build: (config: RulesetBuilderConfig) => {
+    return {
+      ...(config.error && makeRuleset('error', config.error)),
+      ...(config.warn && makeRuleset('warn', config.warn)),
+      ...(config.off && makeRuleset('off', config.off)),
+    }
+  },
+  error: (...newRules: RuleInput[]) => makeRuleset('error', newRules),
+  warn: (...newRules: RuleInput[]) => makeRuleset('warn', newRules),
+  off: (...newRules: string[]) => makeRuleset('off', newRules),
 }

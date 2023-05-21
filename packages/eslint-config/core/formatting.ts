@@ -1,4 +1,4 @@
-import { propertyMaxPerLine } from '../util/constants'
+import { propertyMaxPerLine } from '../_internal'
 
 export = {
   rules: {

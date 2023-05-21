@@ -1,8 +1,8 @@
-import coreRules from '../util/coreRules'
+import { coreRules } from '../core'
 
 /**
- * This plugin config turns off the base rules, and applies the same config to the corresponding babel rules.
- * As such, it does things a bit differently. :)
+ * `@babel/eslint-plugin` is a core rule extension plugin. It adds support for new syntax to core rules.
+ * When this plugin config is used, the core rules are disabled and the `@babel` rules are enabled.
  */
 export = {
   parser: '@babel/eslint-parser',
@@ -10,9 +10,7 @@ export = {
     // workaround for https://github.com/babel/babel/issues/11975
     requireConfigFile: false,
   },
-  plugins: [
-    '@babel',
-  ],
+  plugins: ['@babel'],
   rules: {
     /**
      * require constructor names to begin with a capital letter

@@ -1,6 +1,5 @@
-import { disableRules } from './util'
-import { extensionsTS } from './util/constants'
-import { sArg } from './util/internal'
+import { extListTS, sArg } from './_internal'
+import { ruleset } from './util'
 
 export = {
   extends: [
@@ -11,15 +10,15 @@ export = {
   ].map(sArg(require.resolve)),
   settings: {
     'import/resolver': {
-      node: { extensions: extensionsTS },
+      node: { extensions: extListTS },
     },
-    'import/extensions': extensionsTS,
+    'import/extensions': extListTS,
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
     },
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
-  rules: disableRules(
+  rules: ruleset.off(
     'constructor-super',
     'getter-return',
     'no-const-assign',

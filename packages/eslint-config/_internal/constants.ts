@@ -1,6 +1,6 @@
 export const propertyMaxPerLine = 5 as const
 
-export const extensions = [
+export const extList = [
   '.js',
   '.jsx',
   '.mjs',
@@ -8,8 +8,8 @@ export const extensions = [
   '.json',
 ] as const
 
-export const extensionsTS = [
-  ...extensions,
+export const extListTS = [
+  ...extList,
   '.ts',
   '.tsx',
   '.d.ts',

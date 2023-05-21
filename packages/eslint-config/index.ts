@@ -1,4 +1,4 @@
-import { sArg } from './util/internal'
+import { sArg } from './_internal'
 
 export = {
   extends: [
