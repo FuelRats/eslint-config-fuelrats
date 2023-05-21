@@ -12,8 +12,8 @@ export = {
     /**
      * Checks effect dependencies
      */
-    'react-hooks/exhaustive-deps': ['warn', {
-      additionalHooks: '^use.+(Callback|Effect)$',
+    'react-hooks/exhaustive-deps': ['error', {
+      additionalHooks: '^use.+(Callback|Effect|Event)$',
     }],
   },
 } as const
