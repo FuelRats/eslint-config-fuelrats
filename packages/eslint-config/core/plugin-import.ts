@@ -278,7 +278,7 @@ export = {
           position: 'before',
         },
         {
-          pattern: '~/**',
+          pattern: '~*/**',
           group: 'internal',
         },
       ],
