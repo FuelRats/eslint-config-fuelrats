@@ -73,10 +73,7 @@ export = {
     /**
      * Enforce a specific function type for function components
      */
-    'react/function-component-definition': ['error', {
-      namedComponents: 'function-declaration',
-      unnamedComponents: 'arrow-function',
-    }],
+    'react/function-component-definition': ['off'],
 
 
     /**
