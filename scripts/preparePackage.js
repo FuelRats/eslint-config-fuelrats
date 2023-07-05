@@ -4,7 +4,10 @@ const path = require('path')
 
 const kProjPath = path.resolve(__dirname, '..')
 
-async function getPackageInfo () {
+/**
+ * Gets Package pathing info the package specified in command line arguments.
+ */
+async function getPackagePaths () {
   const knownPackages = await fsp.readdir(path.resolve(kProjPath, 'packages'))
 
   const [,, packageName] = process.argv
@@ -24,13 +27,14 @@ Package name is invalid. Package must be one of:${['', ...knownPackages].join('\
 }
 
 /**
+ * Copies files specified in `files` from `sourcePath` to `targetPath`.
+ *
  * @param {string} sourcePath
  * @param {string} targetPath
  * @param {(string|[string, string])[]} files
  */
 async function copyFiles (sourcePath, targetPath, files) {
   if (Array.isArray(files)) {
-    // copy listed files from packageRoot to DistRoot
     await Promise.all(files.map((file) => {
       const [inFileName, outFileName] = Array.isArray(file) ? file : [file, file]
       return fsp.copyFile(
@@ -42,6 +46,8 @@ async function copyFiles (sourcePath, targetPath, files) {
 }
 
 /**
+ * Copies files in the `common` directory to `targetPath`.
+ *
  * @param {string} targetPath
  */
 async function copyCommonFiles (targetPath) {
@@ -51,11 +57,15 @@ async function copyCommonFiles (targetPath) {
 }
 
 /**
- * @param {string} distPackagePath
+ * Writes a distributable `package.json` file.
+ *
+ * Removes known development fields from `packageJson` and writes the result to `outDir`.
+ *
  * @param {object} packageJson
+ * @param {string} outDir
  * @returns {Promise<void>}
  */
-function writeDistPackageJson (distPackagePath, packageJson) {
+function writeDistPackageJson (packageJson, outDir) {
   const distPackageJson = { ...packageJson }
 
   // remove development fields
@@ -67,30 +77,24 @@ function writeDistPackageJson (distPackagePath, packageJson) {
 
   // write package.json to dist
   return fsp.writeFile(
-    path.resolve(distPackagePath, 'package.json'),
+    path.resolve(outDir, 'package.json'),
     JSON.stringify(distPackageJson, null, 2),
   )
 }
 
 (async function main () {
-  const paths = await getPackageInfo()
+  const paths = await getPackagePaths()
   // eslint-disable-next-line import/no-dynamic-require -- This is fine, we're in a script
   const packageJson = require(paths.packageJson)
 
-  // create dist/packageName
   await fsp.mkdir(paths.dist, { recursive: true })
 
   await Promise.all([
-    // copy common files
     copyCommonFiles(paths.dist),
-
-    // copy dist files
     copyFiles(paths.source, paths.dist, [
       'README.md',
       ...(Array.isArray(packageJson.distFiles) ? packageJson.distFiles : []),
     ]),
-
-    // prepare and copy package.json
-    writeDistPackageJson(paths.dist, packageJson),
+    writeDistPackageJson(packageJson, paths.dist),
   ])
 }())
