@@ -33,7 +33,7 @@ module.exports = {
   types: [
     {
       value: 'config',
-      name: 'config:   ANY functional change to an individual config file.',
+      name: 'config:   A change to the configuration of a SINGLE ESLint Rule. Rule changes should be limited to one rule per commit.',
     },
     {
       value: 'feat',
@@ -49,7 +49,7 @@ module.exports = {
     },
     {
       value: 'docs',
-      name: 'docs:     Documentation only changes. Never use this for README changes.',
+      name: 'docs:     A change to documentation OTHER than README.',
     },
     {
       value: 'style',
