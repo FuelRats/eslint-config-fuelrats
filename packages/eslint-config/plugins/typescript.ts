@@ -29,9 +29,9 @@ export = {
      */
     '@typescript-eslint/ban-ts-comment': ['error', {
       'ts-expect-error': 'allow-with-description',
-      'ts-ignore': 'allow-with-description',
+      'ts-ignore': true,
       'ts-nocheck': 'allow-with-description',
-      'ts-check': 'allow-with-description',
+      'ts-check': false,
       'minimumDescriptionLength': 10,
     }],
 
@@ -68,7 +68,7 @@ export = {
     /**
      * Require or disallow the Record type
      */
-    '@typescript-eslint/consistent-indexed-object-style': ['warn', 'index-signature'],
+    '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
 
 
     /**
