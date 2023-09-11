@@ -1,0 +1,4 @@
+releases:
+  "@fuelrats/eslint-config": minor
+  "@fuelrats/eslint-plugin": minor
+  eslint-config-fuelrats: minor

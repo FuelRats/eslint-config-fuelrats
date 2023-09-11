@@ -1,0 +1,28 @@
+{
+  "extends": "semantic-release-monorepo",
+  "branches": [
+    "main",
+    {
+      "name": "canary",
+      "prerelease": true
+    }
+  ],
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "releaseRules": [
+          { "breaking": true, "release": "major" },
+          { "type": "config", "release": "minor"},
+          { "type": "feat", "release": "minor" },
+          { "type": "fix", "release": "patch" },
+          { "type": "readme", "scope": "eslint-config", "release": "patch" },
+          { "type": "revert", "release": "patch" }
+
+      ]
+    }],
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/npm", {
+      "pkgRoot": "../../dist/eslint-config"
+    }],
+    "@semantic-release/github"
+  ]
+}

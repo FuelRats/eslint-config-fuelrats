@@ -2,9 +2,18 @@
 .idea/
 .next
 .env
-.dist
+dist/
 bower_components
 node_modules
 static/compiled
 static/fonts/font-awesome
 logs/
+
+# Yarn 2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

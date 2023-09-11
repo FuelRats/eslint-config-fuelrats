@@ -1,6 +1,6 @@
 {
   "name": "@fuelrats/eslint-plugin",
-  "version": "2.3.0",
+  "version": "0.0.0-dev.1",
   "description": "Companion rules to @fuelrats/eslint-config",
   "license": "MIT",
   "author": {
@@ -9,7 +9,7 @@
     "url": "https://github.com/UncleClapton"
   },
   "engines": {
-    "node": "^10.13.0 || ^12.13.0 || >=14.0.0"
+    "node": ">=18.0.0"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -45,24 +45,23 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "release": "yarn publish --non-interactive",
-    "release:canary": "yarn publish --tag canary --non-interactive",
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "release": "semantic-release"
   },
   "dependencies": {
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/eslint-parser": "^7.12.1",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-proposal-private-methods": "^7.12.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.12.1",
-    "eslint": "^7.14.0",
-    "mocha": "^8.2.1"
+    "@babel/core": "^7.21.4",
+    "@babel/eslint-parser": "^7.21.3",
+    "@babel/plugin-proposal-export-default-from": "^7.18.10",
+    "@babel/preset-env": "^7.21.4",
+    "eslint": "^8.38.0",
+    "mocha": "^9.2.2",
+    "semantic-release": "^21.0.1",
+    "semantic-release-monorepo": "^7.0.5"
   },
   "peerDependencies": {
-    "@babel/eslint-parser": "^7.11",
-    "eslint": "^7.5"
+    "eslint": "^8"
   }
 }

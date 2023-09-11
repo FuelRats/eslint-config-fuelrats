@@ -1,7 +1,7 @@
 {
   "name": "@fuelrats/eslint-config",
-  "version": "2.3.0",
-  "description": "ESLint config for fuelrats projects",
+  "version": "0.0.0-development",
+  "description": "ESLint config for FuelRats projects",
   "license": "MIT",
   "author": {
     "name": "Cameron Welter",
@@ -9,7 +9,7 @@
     "url": "https://github.com/UncleClapton"
   },
   "engines": {
-    "node": "^10.13.0 || ^12.13.0 || >=14.0.0"
+    "node": ">=16.0.0"
   },
   "bugs": {
     "url": "https://github.com/FuelRats/eslint-config-fuelrats/issues"
@@ -42,34 +42,92 @@
     "eslintconfig",
     "fuelrats",
     "javascript",
-    "ecma2020",
-    "es2020"
+    "typescript",
+    "esnext",
+    "react"
   ],
   "main": "index.js",
   "scripts": {
-    "release": "yarn publish --non-interactive",
-    "release:canary": "yarn publish --tag canary --non-interactive"
+    "clean": "rm -rf ../../dist/eslint-config",
+    "build:prepare": "node ../../scripts/preparePackage.js eslint-config",
+    "build:compile": "tsc",
+    "build": "yarn run build:compile && yarn run build:prepare",
+    "lint": "eslint .",
+    "release": "yarn run build && semantic-release"
+  },
+  "config": {
+    "ipdx": {
+      "requiredOnly": true,
+      "groups": {
+        "babel": ["@babel/core", "@babel/eslint-parser", "@babel/eslint-plugin"],
+        "react": ["eslint-plugin-jsx-a11y", "eslint-plugin-react", "eslint-plugin-react-hooks"],
+        "typescript": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "typescript"]
+      }
+    }
   },
   "dependencies": {
-    "eslint-restricted-globals": "^0.2.0"
+    "confusing-browser-globals": "^1.0.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/eslint-parser": "^7.12.1",
-    "@babel/eslint-plugin": "^7.12.1",
-    "eslint": "^7.14.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "30.5.2",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "react": "^17.0.1"
+    "@babel/core": "^7.21.4",
+    "@babel/eslint-parser": "^7.21.3",
+    "@babel/eslint-plugin": "^7.19.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^40.0.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "react": "^18.2.0",
+    "semantic-release": "21.0.1",
+    "semantic-release-monorepo": "^7.0.5",
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "@babel/core": "^7.11",
-    "@babel/eslint-parser": "^7.11",
-    "@babel/eslint-plugin": "^7.11",
-    "eslint": "^7.14",
-    "eslint-plugin-import": "^2.21",
-    "eslint-plugin-jsdoc": "^28 || ^29 || ^30"
+    "@babel/core": "^7.16",
+    "@babel/eslint-parser": "^7.16",
+    "@babel/eslint-plugin": "^7.16",
+    "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.50",
+    "@typescript-eslint/parser": "^5",
+    "eslint": "^8.28",
+    "eslint-plugin-import": "^2.27",
+    "eslint-plugin-jsdoc": "^40",
+    "eslint-plugin-jsx-a11y": "^6.7",
+    "eslint-plugin-react": "^7.32",
+    "eslint-plugin-react-hooks": "^4.4",
+    "typescript": "*"
+  },
+  "peerDependenciesMeta": {
+    "@babel/core": {
+      "optional": true
+    },
+    "@babel/eslint-parser": {
+      "optional": true
+    },
+    "@babel/eslint-plugin": {
+      "optional": true
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "@typescript-eslint/parser": {
+      "optional": true
+    },
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
   }
 }

@@ -21,5 +21,16 @@ jobs:
           cache: 'yarn'
 
       - name: Install Dependencies + Build Distributons
-        run: yarn install
+        run: yarn install --immutable
 
+      - name: Test Packages
+        run: yarn test
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Release Packages
+        run: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
