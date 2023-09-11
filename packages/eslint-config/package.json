@@ -57,7 +57,7 @@
   },
   "config": {
     "ipdx": {
-      "avoidOptionals": true,
+      "requiredOnly": true,
       "groups": {
         "babel": ["@babel/core", "@babel/eslint-parser", "@babel/eslint-plugin"],
         "react": ["eslint-plugin-jsx-a11y", "eslint-plugin-react", "eslint-plugin-react-hooks"],
